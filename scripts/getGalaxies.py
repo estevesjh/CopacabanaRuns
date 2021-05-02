@@ -3,26 +3,13 @@
 # This code is slow because it loads multiple times the same file but it prevents a memory issue
 
 print('Importing')
+import glob
 import numpy as np
 import healpy as hp
-
-import os
-from time import sleep
 from time import time
 
-import glob
-
-import matplotlib 
-import matplotlib.pyplot as plt
-matplotlib.rcParams.update({'font.size': 16})
-
-import pandas
-
+## local library
 from helper import *
-
-cosmo = FlatLambdaCDM(H0=70, Om0=0.283)
-Mpc2cm = 3.086e+24
-Msol = 1.98847e33
 
 ######### Setting the Code #########
 
