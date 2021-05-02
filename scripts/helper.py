@@ -1,6 +1,4 @@
 #!/usr/bin/env python -W ignore::DeprecationWarning
-# Purpose: Take 1000 galaxy clusters from the Buzzard v2.0 catalog
-# Load files in Parallel only works for getdata()
 
 import numpy as np
 from astropy.table import Table, vstack, join
@@ -23,8 +21,9 @@ from time import sleep
 from time import time
 
 import glob
+import healpy
 
-
+import esutil
 
 import matplotlib 
 import matplotlib.pyplot as plt
@@ -198,6 +197,13 @@ def make_hpx_map(ra,dec,Nside,hpx_file,save=True):
         print('-> %s'%hpx_file)
     return data
 
+def masking_duplicates(hid,z):
+    mask  = (hid < 1e8)&(z<0.34)
+    mask |= (hid > 1e8)&(z>=0.34)
+    mask |= (hid < 1e9)&(z<0.9)
+    mask |= (hid > 1e9)&(z>0.9)
+    return mask
+
 def get_critical_mass(cat2,files_truth,MassCut=1e12,zmin=0.,zmax=1.):
     ### Truth table
     print('Load the halos files')
@@ -205,6 +211,9 @@ def get_critical_mass(cat2,files_truth,MassCut=1e12,zmin=0.,zmax=1.):
     #cat.rename_column('HOST_HALOID','HALOID')
     cat.rename_column('M200C','M200')
 
+    mask = masking_duplicates(cat['HALOID'],cat['Z'])
+    cat  = cat[mask] 
+    
     print('\n Making cuts')
     print('clusters with M200<%.2E and z<%.2f'%(MassCut,zmax))
     cat = cat[(cat['Z']>=zmin)&(cat['Z']<=zmax)]
@@ -322,3 +331,294 @@ def plot_scatter_hist(x,y,xlabel=r'$z$',ylabel=r'$\log(M_{200,c})\,\,[M_{\odot}\
     y_hist_axes.yaxis.set_tick_params(labelsize=0.05, labelcolor='white')
 
     fig.subplots_adjust(hspace=.01, wspace=0.01)
+
+###########################################################################
+##############################Galaxy Selection ############################
+###########################################################################
+    
+class get_galaxy_sample:
+    """ Get Galaxies around a cluster sample for the Buzzard v1.9.9 sample
+    """
+    def __init__(self,hpx,cat):
+        self.hpx = hpx
+        self.cat = cat
+        
+        self.indices  = np.where(cat['hpx8']==hpx)[0]
+        self.hpx_list = self.cat['hpx8'][:]
+        self.hpx_radec= self.cat['hpx8_radec'][:]
+
+        self.t0 = time()
+        print('Healpix %i \n'%(hpx))
+        
+    def get_healpix_neighbours(self,nside=8):
+        _hpx_neighbours = get_healpix_list(self.cat[self.indices],nside=8)
+        hpx_neighbours = np.array([self.match_healpix_to_file(hi) for hi in _hpx_neighbours])
+
+        self.hpx_neighbours = hpx_neighbours
+    
+    def load_files(self,base,amagMax=-18.):
+        #print('starting load_files()')
+        self.files    = [base%(hi) for hi in self.hpx_neighbours]
+
+        colnames      = ['ID', 'HALOID', 'RA', 'DEC', 'Z', 'OMAG', 'OMAGERR', 'AMAG', 'RHALO', 'CENTRAL','M200','R200','MAG_R']
+        
+        amag_cut = amagMax - 5*np.log10(h)
+        mag_mask = 'AMAG[1] < %.2f'%(amag_cut)
+
+        t0= time()
+        g = loadfiles(self.files,mask=mag_mask,columns=colnames)
+        print('loading time: %.2f s \n'%(time()-t0))
+
+        return g
+
+    def get_silver_sample(self,g):
+        #print('starting get_silver_sample()')
+        hid_cls = np.unique(self.cat['HALOID'][self.indices])
+        hid_gal = g['HALOID']
+        
+        t0 = time()
+        ### true members cut
+        match = esutil.numpy_util.match(hid_cls,hid_gal)
+        g_true_members = g[match[1]]
+        #print('matching time: %.2f \n'%(time()-t0))
+
+        return g_true_members
+    
+    def get_golden_sample(self,g):
+        #print('starting get_golden_sample()')
+        t0 = time()
+
+        c           = self.cat[self.indices]
+        cat_golden  = c[c['sample']]
+
+        ## make sky cutout
+        ggold0 = make_healpix_cut(cat_golden,g,nside=1024,r_aper=8)
+
+        ## define new variables
+        ggold = get_galaxy_golden_sample(ggold0,self.hpx)
+
+        #print('time: %.2f s'%(time()-t0))
+        return ggold
+    
+    def compute_cluster_richness(self,gsilver):
+        #print('starting compute_cluster_richness()')
+        gsilver['Mr'] = gsilver['AMAG'][:,1]
+        
+        t0  = time()
+        res = compute_ngals(self.cat[self.indices],gsilver,lcol='Mr')
+
+        columns = res.keys()
+        
+        self.check_richness_columns(columns)
+        for col in columns:
+            self.cat[col][self.indices] = res[col]
+
+        #print('time: %.2f s \n'%(time()-t0))
+
+    
+    def match_healpix_to_file(self,hpx):
+        w, = np.where(self.hpx_radec==hpx)
+        if w.size>0: 
+            hpx_out = self.hpx_list[w][0]
+        else:
+            print('No healpix matched')
+            hpx_out = hpx
+        return hpx_out
+    
+    def check_richness_columns(self,cols):
+        columns = self.cat.columns
+        nsize   = len(self.cat)
+        
+        for col in cols:
+            if col not in columns:
+                self.cat[col] = -1.*np.ones(nsize,dtype=np.float64)
+    
+def aper_match_healpix(rac,decc,redshift,rag,decg,nside=1024,radii  = 8):
+    ## define healpix map
+    hp1024 = healpixTools(nside,nest=True)
+    
+    # 1st step: center healpix list
+    healpix_list = []
+    for ra,dec,zcls in zip(rac,decc,redshift):
+        hps_rad = hp1024._get_healpix_cutout_radec(ra,dec,zcls,radius=radii)
+        healpix_list.append(hps_rad)
+    healpix_list = np.unique(np.hstack(healpix_list))
+    
+    # 2nd step: galaxy healpix number
+    healpix_gals = hp1024.radec_pix(rag,decg).astype(np.int64)
+
+    # 3rd step: match
+    mask = esutil.numpy_util.match(healpix_list,healpix_gals)
+    gidx = mask[1]
+
+    # gidx = np.empty(0,dtype=np.int64)
+    # cidx = np.empty(0,dtype=np.int64)
+    # for i,healpix_clus in enumerate(healpix_list):
+    #     w, = np.where(np.in1d(healpix_gals,healpix_clus))
+    #     gidx = np.append(gidx,w)
+    #     cidx = np.append(cidx,np.full((w.size,),i,dtype=np.int64))
+    
+    return gidx
+
+def make_healpix_cut(cdata,data,nside=1024,r_aper=8):
+    """ Cut circles around each cluster using a healpix map
+    """
+    rac = cdata['RA'][:]
+    decc = cdata['DEC'][:]
+    redshift = cdata['Z'][:]
+    
+    rag = data['RA'][:]
+    decg= data['DEC'][:]
+    
+    gidx = aper_match_healpix(rac,decc,redshift,rag,decg,nside=nside,radii  = 8)
+    return data[gidx]
+
+def computeNgals(g,keys,r200,mag_cut=-19.5,lcol='MAG_R'):
+    ngals = []
+    for idx,r2 in zip(keys,r200):
+        #w, = np.where((g['HALOID']==idx)&((g[lcol]-5*np.log10(h))<=mag_cut)&(g['RHALO']<=r2))
+        w = esutil.numpy_util.where1((g['HALOID']==idx)&((g[lcol]-5*np.log10(h))<=mag_cut)&(g['RHALO']<=r2))
+        ni = w.size
+        ngals.append(ni)
+    return np.array(ngals)
+
+def compute_ngals(cat,gcc,lcol='MAG_R'):
+    cidx = cat['HALOID']
+    r200 = cat['R200'] ## critical radius
+
+    cuts = [-19,-19.5,-20.,-20.5]
+    labels = ["N190","N195","N200","N205"]
+    
+    out = dict().fromkeys(labels)
+    for mc,li in zip(cuts,labels):
+        n200 = computeNgals(gcc,cidx,r200,mag_cut=mc,lcol=lcol)
+        out[li] = n200
+    return out
+
+class healpixTools:
+    """Healpix Operation Tools has a variety of functions which helps on the healpix operations for galaxy cluster science.
+    """
+    def __init__(self,nside,nest=False,h=0.7,Omega_m=0.283):
+        """Starts a healpix map with a given nside and nest option.
+        
+        :param int nside: number of pixs of the map (usually a power of 2).
+        :param bol nest : a boolean variable to order - TRUE (NESTED) or FALSE (RING).
+        :param float h: hubble constant factor (H0 = h*100)
+        :param float Omega_m: current omega matter density
+        """
+        self.nside = nside
+        self.nest  = nest
+        
+        self.cosmo = FlatLambdaCDM(H0=100*h,Om0=Omega_m)
+    
+    def _get_healpix_cutout_radec(self,center_ra,center_dec,zcls,radius=1.):
+        """ Get a healpix list which overlaps a circular cutout of a given radius centered on a given ra,dec coordinate. 
+
+        :params float center_ra: ra coordinate in degrees.
+        :params float center_dec: dec coordinate in degrees.
+        :params float radius: aperture radius in Mpc.
+
+        :returns: healpix list of the healpix values which overlaps the circular cutout.
+        """
+        center_ra_rad = np.radians(center_ra)
+        center_dec_rad = np.radians(center_dec)
+
+        center_vec = np.array([np.cos(center_dec_rad)*np.cos(center_ra_rad),
+                            np.cos(center_dec_rad)*np.sin(center_ra_rad),
+                            np.sin(center_dec_rad)])
+
+        DA = float(self.AngularDistance(zcls))
+        theta = (float(radius)/DA)*rad2deg    ## degrees
+
+        healpix_list = healpy.query_disc(self.nside, center_vec, np.radians(theta), nest=self.nest, inclusive=True)
+
+        return healpix_list
+
+    def get_healpix_cutout_radec(self,ra_list,dec_list,redshift_list,radii=1):
+        """ Get a healpix list which overlaps a circular cutout of a given radius centered on a given ra,dec coordinate. 
+        
+        :params ndarray ra_list: numpy array or list, ra coordinate in degrees.
+        :params ndarray dec_list: dec coordinate in degrees.
+        :params float radius: aperture radius in Mpc.
+        
+        :returns: healpix list of unique healpix values which overlaps all the circules defined by the list of center coordinates.
+        """
+        healpix_list = np.empty((0),dtype=int)
+        for ra,dec,zcls in zip(ra_list,dec_list,redshift_list):
+            hps_rad = self._get_healpix_cutout_radec(ra,dec,zcls,radius=radii)
+            healpix_list = np.append(healpix_list,np.unique(hps_rad))
+        return np.unique(healpix_list)
+
+    def hpix2ang(self,pix):
+        """ Convert pixels to astronomical coordinates ra and dec.
+        
+        :params pix: pixel values [int, ndarray or list]
+        :returns: ra, dec [int, ndarray or list]
+        """
+        lon,lat = healpy.pix2ang(self.nside,pix,nest=self.nest)
+        dec,ra=(90-(lon)*(180/np.pi)),(lat*(180/np.pi))
+        return ra,dec
+
+    def radec_pix(self,ra,dec):
+        """ Convert astronomical coordinates ra and dec to pixels
+        
+        :params ra: ra [int, ndarray or list]
+        :params dec: dec [int, ndarray or list]
+        :returns: pixel values [int, ndarray or list]
+        """
+        return np.array(healpy.ang2pix(self.nside,np.radians(90-dec),np.radians(ra),nest=self.nest),dtype=np.int64)
+    
+    #@vectorize(signature="(),()->()")
+    def AngularDistance(self,z):
+        """Angular distance calculator
+        :params float z: redshift
+        :returns: angular distance in Mpc
+        """
+        DA = ( (self.cosmo.luminosity_distance(z)/(1+z)**2)/u.Mpc ) # em Mpc
+        return DA
+    
+    def match_with_cat(self,df,hpx_clusters,radii=8):
+        healpix_list = []
+        for hpx in np.unique(hpx_clusters):
+            w, = np.where(hpx_clusters==hpx)
+            hp_list = self.get_healpix_cutout_radec(df['ra'].iloc[w],df['dec'].iloc[w],df['redshift'].iloc[w],radii=radii)
+            healpix_list.append([hpx,hp_list])
+        return healpix_list
+
+def get_galaxy_golden_sample(gcc,hpx):
+    print('switinching column names')
+    magNames = ['G','R','I','Z']
+    for i in range(4):
+        magC_i = 'MAG_AUTO_%s'%(magNames[i])
+        mag_i = gcc['OMAG'][:,i]
+
+        magC_erri = 'MAGERR_AUTO_%s'%(magNames[i])
+        mag_erri = gcc['OMAGERR'][:,i]
+        
+        gcc[magC_i] = mag_i
+        gcc[magC_erri] = mag_erri
+
+    gcc.rename_column('Z','z_true')
+
+    gcc['FLAGS_GOLD'] = 0
+    gcc['hpx8']       = hpx
+    gcc['Mr']         = gcc['AMAG'][:,1]
+
+    _, idx = np.unique(np.array(gcc['ID']),return_index=True)
+    gcc = gcc[idx]
+
+    colnames = ['hpx8','ID','HALOID', 'RA', 'DEC', 'z_true',
+                'MAG_AUTO_G','MAG_AUTO_R', 'MAG_AUTO_I', 'MAG_AUTO_Z', 
+                'MAGERR_AUTO_G','MAGERR_AUTO_R', 'MAGERR_AUTO_I', 'MAGERR_AUTO_Z', 
+                'FLAGS_GOLD','Mr', 'RHALO', 'CENTRAL']
+
+    return gcc[colnames]
+
+def save_hdf5_output(gal,cat,outfile):
+    df  = gal.to_pandas()
+    df.to_hdf(outfile, key='members', mode='w')
+
+    gal = 0
+
+    dfc = cat.to_pandas()
+    dfc.to_hdf(outfile, key='cluster', mode='a')

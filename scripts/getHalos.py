@@ -37,9 +37,9 @@ h=0.7
 outdir = '/global/project/projectdirs/des/jesteves/buzzardSelection/v2.0.0/'
 
 fileprefix      = 'buzzard_v2.0.0_{}.fits' 
-file_cls_out_all= outdir+fileprefix.format('hod_halos')
-file_cls_out    = outdir+fileprefix.format('Halos%i_cluster'%(Nhalos))
-file_gal_out    = outdir+fileprefix.format('Halos%i_members'%(Nhalos))
+file_cls_out_all= outdir+fileprefix.format('halos_hod')
+file_cls_out    = outdir+fileprefix.format('%i_halos_cluster'%(Nhalos))
+file_gal_out    = outdir+fileprefix.format('%i_halos_members'%(Nhalos))
 
 hpx_file = outdir+'hpxmap_%i_buzzard_v2.0.0.fits'%Nside
 #######
@@ -62,9 +62,16 @@ healpix = np.array([split_text(infile) for infile in files])
 
 files.sort()
 #######
+#######
+def masking_duplicates(hid,z):
+    mask  = (hid < 1e8)&(z<0.34)
+    mask |= (hid > 1e8)&(z>=0.34)
+    mask |= (hid < 1e9)&(z<0.9)
+    mask |= (hid > 1e9)&(z>0.9)
+    return mask
 
 # ####### only for tests purposes
-#files = files[:3]
+files = files[:5]
 
 ######### Starting the Code #########
 print('loading dataset')
@@ -76,7 +83,12 @@ print('Selecting Galaxy Clusters')
 cluster_mask = 'CENTRAL > 0  && M200 >= %.2e &&  Z>= %.2f && Z<= %.2f'%(MassCut,zmin,zmax)
 
 colnames = ['HALOID','RA','DEC','Z','M200','R200','MAG_R']
-c = loadfiles(files,columns=colnames,mask=cluster_mask)
+cin = loadfiles(files,columns=colnames,mask=cluster_mask)
+
+### remove duplicates
+mask = masking_duplicates(cin['HALOID'],cin['Z'])
+c    = cin[mask]
+
 ncls = len(c)
 print('# clusters:', ncls)
 
@@ -120,8 +132,9 @@ x2=catf['M200']
 
 fresidual = np.log10(x1/(x2+1e-3))
 w = remove_outlier(fresidual)
-catfo= catf
-catf = catf[w]
+#catfo= catf
+catf['bad']    = True
+catf['bad'][w] = False
 catf['hpx8_radec'] = radec_pix(catf['RA'],catf['DEC'],nside=8)
 
 ## spliting sample
@@ -138,10 +151,13 @@ print('->',file_cls_out_all)
 cat_g.write(file_cls_out,format='fits',overwrite=True)
 catf.write(file_cls_out_all,format='fits',overwrite=True)
 
+tf = time()-t0
+print('Final time: %.1f'%(tf))
+
 ## testing plots
 plt.plot([5e12,3e15],[5e12,3e15],'k--')
-plt.scatter(catfo['M200_old'],catfo['M200B'],alpha=0.2)
-plt.scatter(catf['M200_old'],catf['M200B'],alpha=0.2,label='My Selection')
+plt.scatter(catf['M200_old'],catf['M200'],alpha=0.2)
+plt.scatter(catf['M200_old'][w],catf['M200'][w],alpha=0.2,label='My Selection')
 plt.xscale('log')
 plt.yscale('log')
 plt.xlabel('M200m')
@@ -175,3 +191,6 @@ m200 = cat_g['M200B']
 
 plot_scatter_hist(zcls,np.log10(m200),ylabel=r'$\log(M_{halo})$')
 plt.savefig('halo_mass_redshift_distribution.png')
+
+
+plt.scatter(z,hid)
