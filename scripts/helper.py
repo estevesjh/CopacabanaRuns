@@ -29,6 +29,8 @@ import matplotlib
 import matplotlib.pyplot as plt
 matplotlib.rcParams.update({'font.size': 22})
 
+import GCRCatalogs
+
 #from sklearn.model_selection import StratifiedShuffleSplit
 try: from sklearn.model_selection import train_test_split
 except: from sklearn.cross_validation import train_test_split
@@ -353,8 +355,7 @@ class get_galaxy_sample:
     def get_healpix_neighbours(self,nside=8):
         _hpx_neighbours = get_healpix_list(self.cat[self.indices],nside=8)
         hpx_neighbours = np.array([self.match_healpix_to_file(hi) for hi in _hpx_neighbours])
-
-        self.hpx_neighbours = hpx_neighbours
+        self.hpx_neighbours = hpx_neighbours[np.logical_not(np.isnan(hpx_neighbours))].astype(np.int64)
     
     def load_files(self,base,amagMax=-18.):
         #print('starting load_files()')
@@ -371,6 +372,23 @@ class get_galaxy_sample:
 
         return g
 
+    def load_files_gcr(self,catalog,columns,amagMax=-18.):
+        t0= time()
+        amag_cut = amagMax - 5*np.log10(h)
+        mag_mask = 'Mag_true_r_des_z01 < %.2f'%(amag_cut)
+        
+        data = catalog.get_quantities(columns,filters=[mag_mask,'mag_i_lsst < 28.'], native_filters=[(lambda x: np.in1d(x, self.hpx_neighbours), 'healpix_pixel')]) 
+        print('loading time: %.2f s \n'%(time()-t0))
+
+        data = Table(data)
+        data['hpx8'] = self.hpx
+        data.rename_column('halo_id','HALOID')
+        data.rename_column('ra','RA')
+        data.rename_column('dec','DEC')
+        data.rename_column('truth/RHALO','RHALO')
+
+        return data
+
     def get_silver_sample(self,g):
         #print('starting get_silver_sample()')
         hid_cls = np.unique(self.cat['HALOID'][self.indices])
@@ -384,7 +402,7 @@ class get_galaxy_sample:
 
         return g_true_members
     
-    def get_golden_sample(self,g):
+    def get_golden_sample(self,g,new_variables=False):
         #print('starting get_golden_sample()')
         t0 = time()
 
@@ -392,37 +410,47 @@ class get_galaxy_sample:
         cat_golden  = c[c['sample']]
 
         ## make sky cutout
-        ggold0 = make_healpix_cut(cat_golden,g,nside=1024,r_aper=8)
+        ggold = make_healpix_cut(cat_golden,g,nside=1024,r_aper=8)
 
         ## define new variables
-        ggold = get_galaxy_golden_sample(ggold0,self.hpx)
+        if new_variables:
+            ggold = get_galaxy_golden_sample(ggold,self.hpx)
 
         #print('time: %.2f s'%(time()-t0))
         return ggold
     
-    def compute_cluster_richness(self,gsilver):
-        #print('starting compute_cluster_richness()')
-        gsilver['Mr'] = gsilver['AMAG'][:,1]
-        
-        t0  = time()
-        res = compute_ngals(self.cat[self.indices],gsilver,lcol='Mr')
+    def get_virial_mass(self,gsilver):
+        gid, index = np.unique(gsilver['HALOID'][:],return_index=True)
+        m200 = np.array(gsilver['halo_mass'][index])
+        Z    = np.array(gsilver['redshift'][index])
+        r200 = convertM200toR200(m200*h,Z)/h  ## [Mpc/h] in physical units
 
-        columns = res.keys()
+        match = esutil.numpy_util.match(gid,self.cat['HALOID'])
+        self.cat['redshift'][match[1]] = Z[match[0]]
+        self.cat['halo_mass'][match[1]]= m200[match[0]]
+        self.cat['R200'][match[1]]     = r200[match[0]]
+
+    def compute_cluster_richness(self,gsilver,lcol='Mag_true_r_des_z01'):
+        #print('starting compute_cluster_richness()')
+        #gsilver['Mr'] = gsilver['AMAG'][:,1]
+
+        self.check_richness_columns(['redshift','halo_mass'])
+        self.get_virial_mass(gsilver)
         
+        res = compute_ngals(self.cat[self.indices],gsilver,lcol=lcol)
+        columns = res.keys()
         self.check_richness_columns(columns)
         for col in columns:
             self.cat[col][self.indices] = res[col]
-
-        #print('time: %.2f s \n'%(time()-t0))
 
     
     def match_healpix_to_file(self,hpx):
         w, = np.where(self.hpx_radec==hpx)
         if w.size>0: 
-            hpx_out = self.hpx_list[w][0]
+            hpx_out = int(self.hpx_list[w][0])
         else:
             print('No healpix matched')
-            hpx_out = hpx
+            hpx_out = np.nan
         return hpx_out
     
     def check_richness_columns(self,cols):

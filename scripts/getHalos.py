@@ -21,14 +21,14 @@ from helper import *
 ######### Setting the Code #########
 
 ####### Input Variables
-Nhalos = 3000        ## choose the output sample size
-nbins  = 25          ## choose how much bins you divide your whole sample
+Nhalos   = 3000        ## choose the output sample size
+nbins    = 25          ## choose how much bins you divide your whole sample
 nprocess = 4
 
 #######
-rmax = 4               ## maximum radius in Mpc
+rmax       = 4         ## maximum radius in Mpc
 zmin, zmax = 0.1, 1.0  ## for GC
-MassCut = 1e12         ## the low Mass cut
+MassCut    = 1e12      ## the low Mass cut
 Nside=1024
 h=0.7
 #######

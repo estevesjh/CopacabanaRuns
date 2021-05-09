@@ -20,10 +20,11 @@ from joblib import Parallel, delayed
 
 import os
 from time import sleep
+from time import time
 
 import glob
 
-from time import time
+
 
 import matplotlib 
 import matplotlib.pyplot as plt
