@@ -1,6 +1,7 @@
 #!/usr/bin/env python -W ignore::DeprecationWarning
 # Purpose: Take 3000 galaxy clusters from the Buzzard v2.0 catalog
 # This code is slow because it loads multiple times the same file but it prevents a memory issue
+# nohup python scripts/getGalaxies.py > log.out 2> log.err
 
 print('Importing')
 import glob
@@ -27,20 +28,28 @@ cinfile       = outdir+'buzzard_v2.0.0_halos_hod.fits'
 base          = indir + 'truth/Chinchilla-3_lensed_rs_shift_rs_scat_cam.%i.fits'
 
 ######### Starting the Code #########
-cat = Table(getdata(cinfile))
+data = Table(getdata(cinfile))
 
-#### Make cutout
+## Selection only good clusters within redshift < 0.9
+mask = np.logical_not(data['bad'])
+mask&= data['Z']<=0.9
+
+## selected cluster sample
+cat = data[mask]
+
+## Make a different aperture selection for gold/silver sample
 sample = cat['sample']
 nsample= np.logical_not(sample)
 
+r200   = cat['R200'][:]*0.7 ## Mpc
 DA     = AngularDistance(np.array(cat['Z']))
 
 cat['rmax'] = 0.
 cat['rmax'][sample]  = 60*(float(rmax)/DA[sample])*rad2deg ## arcmin
-cat['rmax'][nsample] = 60*(3./DA[nsample])*rad2deg ## arcmin
+cat['rmax'][nsample] = 60*(1.2*r200[nsample]/DA[nsample])*rad2deg ## arcmin
 
 ## for tests purpose
-#cat = cat[:3]
+# cat = cat[:3]
 
 #### healpix list
 hpx_list = np.unique(cat['hpx8'])
@@ -63,14 +72,14 @@ columns+= ['magerr_%s_des'%mag for mag in filters]
 # print('\n')
 
 # given a healpix
-for hpx in hpx_list:
+for hpx in hpx_list[:1]:
     gg = get_galaxy_sample(hpx,cat)
 
     ## find the healpix files around the cluster centers
     gg.get_healpix_neighbours()
 
-    ## load files within Mr<=-18
-    d = gg.load_files_gcr(catalog,columns,amagMax=-18.)
+    ## load files within mag_i<=25.6 (corresponds to +2 dmag at z=0.9) or Mr<=-18.4
+    d = gg.load_files_gcr(catalog,columns,magMax=25.6)
 
     ## get only true members for the silver cluster sample
     ds= gg.get_silver_sample(d)

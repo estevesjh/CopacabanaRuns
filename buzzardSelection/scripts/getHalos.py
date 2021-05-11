@@ -27,7 +27,7 @@ nprocess = 4
 
 #######
 rmax       = 4         ## maximum radius in Mpc
-zmin, zmax = 0.1, 1.0  ## for GC
+zmin, zmax = 0.1, 0.9  ## for GC
 MassCut    = 1e12      ## the low Mass cut
 Nside=1024
 h=0.7
@@ -50,17 +50,24 @@ indir         ='/global/project/projectdirs/des/jderose/Chinchilla/Herd/Chinchil
 files         = glob.glob(indir+'truth/Chinchilla-3_lensed_rs_shift_rs_scat_cam*')
 files_truth   = glob.glob(indir+'halos/Chinchilla-3_halos*')
 
-print('\n'.join(files[:5]))
+mag_file      = '/global/homes/j/jesteves/codes/buzzardAnalysis/buzzardSelection/scripts/files/annis_mags_04_Lcut.txt'
+
+# print('\n'.join(files[:5]))
 
 def split_text(infile):
     return int(infile.split('.')[-2])
 
+## select a patch of the sky; 0deg < dec <30 deg and 0 deg< RA< 60 deg
+rax= np.linspace(0,60.,200)
+dex= np.linspace(0,30.,200)
+ragrid, degrid = np.meshgrid(rax, dex)
+pixels = np.unique(radec_pix(ragrid,degrid,nside=8))
 healpix = np.array([split_text(infile) for infile in files])
-# w, = np.where(healpix<60)
 
-# files = [files[i] for i in w]
-
+w, = np.where(np.in1d(healpix,pixels))
+files = [files[i] for i in w]
 files.sort()
+
 #######
 #######
 def masking_duplicates(hid,z):
@@ -71,9 +78,9 @@ def masking_duplicates(hid,z):
     return mask
 
 # ####### only for tests purposes
-files = files[:5]
+#files = files[:25]
 
-######### Starting the Code #########
+######## Starting the Code #########
 print('loading dataset')
 t0 = time()
 colnames = ['ID', 'HALOID', 'RA', 'DEC', 'Z', 'OMAG', 'OMAGERR', 'AMAG', 'RHALO', 'CENTRAL','M200','R200','MAG_R']
@@ -94,12 +101,12 @@ print('# clusters:', ncls)
 
 ## random selection of halos with mass less than 5 x E13 Msun
 print('Selecting Silver Sample')
-mask = c['M200']<5e13
-cat_silver = get_random_selection(c[mask],Nsize=31000)
+mask = c['M200']*h<5e13
+cat_silver = get_random_selection(c[mask],Nsize=30500)
 
 ## uniform selection of halos with mass greater than 5 x E13 Msun
 print('Selecting Golden Sample')
-cat_golden = get_high_mass_selection(c,Nsize=Nhalos*1.2,nbins=20)
+cat_golden = get_high_mass_selection(c,Nsize=Nhalos,nbins=20,h=h)
 
 print('Mathching Sample')
 ## flag
@@ -124,18 +131,27 @@ ra,dec = catf['RA'], catf['DEC']
 hpx_map = make_hpx_map(ra,dec,Nside,hpx_file)
 hpx_values = np.array(hpx_map['hpx_value'])
 
-print('Computing Area Fraction')
-catf['area_frac'] = compute_area_fraction(catf,hpx_values,rmax=8,nside=Nside)
+# print('Computing Area Fraction')
+# catf['area_frac'] = compute_area_fraction(catf,hpx_values,rmax=8,nside=Nside)
+print('Computing magLim')
+z = catf['Z']
+magLim3 = getMagLimModel(mag_file,z,dm=2)
+catf['magLim'] = magLim3[:,1]                ##i-band
 
+
+print('Selectiong good halos')
 x1=catf['M200_old']
 x2=catf['M200']
 
 fresidual = np.log10(x1/(x2+1e-3))
-w = remove_outlier(fresidual)
+w = remove_outlier(fresidual,ns=1.5)
+
 #catfo= catf
 catf['bad']    = True
 catf['bad'][w] = False
 catf['hpx8_radec'] = radec_pix(catf['RA'],catf['DEC'],nside=8)
+
+print('Golden cluster sample size: %i'%(np.count_nonzero(catf['sample'][w])))
 
 ## spliting sample
 mask = catf['sample']
@@ -151,13 +167,14 @@ print('->',file_cls_out_all)
 cat_g.write(file_cls_out,format='fits',overwrite=True)
 catf.write(file_cls_out_all,format='fits',overwrite=True)
 
-tf = time()-t0
+tf = (time()-t0)/60
 print('Final time: %.1f'%(tf))
 
 ## testing plots
+nbad = np.logical_not(catf['bad'])
 plt.plot([5e12,3e15],[5e12,3e15],'k--')
 plt.scatter(catf['M200_old'],catf['M200'],alpha=0.2)
-plt.scatter(catf['M200_old'][w],catf['M200'][w],alpha=0.2,label='My Selection')
+plt.scatter(catf['M200_old'][nbad],catf['M200'][nbad],alpha=0.2,label='My Selection')
 plt.xscale('log')
 plt.yscale('log')
 plt.xlabel('M200m')
@@ -186,11 +203,12 @@ plt.savefig('healpix_map_halos.png')
 plt.clf()
 
 ### Distribution plot
-zcls = cat_g['Z']
-m200 = cat_g['M200B']
+nbad = np.logical_not(cat_g['bad'])
+zcls = cat_g['Z'][nbad]
+m200 = cat_g['M200'][nbad]*0.7
 
 plot_scatter_hist(zcls,np.log10(m200),ylabel=r'$\log(M_{halo})$')
 plt.savefig('halo_mass_redshift_distribution.png')
 
 
-plt.scatter(z,hid)
+# # # plt.scatter(z,hid)

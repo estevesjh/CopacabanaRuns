@@ -11,7 +11,7 @@ from astropy.io import fits as pyfits
 
 from astropy.cosmology import FlatLambdaCDM
 from astropy import units as u
-import esutil
+from scipy.interpolate import interp1d
 
 import dask
 from joblib import Parallel, delayed
@@ -77,11 +77,11 @@ def get_mask(f,mask):
     fits.close()
     return w
 
-def remove_outlier(x):
+def remove_outlier(x,ns=1.5):
     p16,p84 = np.percentile(x,[16,84])
     iqr = p84-p16
-    nh = p84+2.5*iqr
-    nl = p16-2.5*iqr
+    nh = p84+ns*iqr
+    nl = p16-ns*iqr
     w, = np.where((x>=nl)&(x<=nh))
     return w
 
@@ -246,10 +246,10 @@ def get_random_selection(cat2,Nsize=3000):
     cat3 = Table.from_pandas(test_set)
     return cat3
 
-def get_high_mass_selection(cat2,Nsize=1000,nbins=25):
-    Nsize+= 1200
+def get_high_mass_selection(cat2,Nsize=1000,nbins=25,h=0.7):
+    Nsize+= 1000
 
-    M200 = cat2["M200"]
+    M200 = cat2["M200"]*h
     Mh = M200[cat2["M200"]>=5e13]
     z  = cat2['Z']
     df = cat2.to_pandas()
@@ -350,12 +350,15 @@ class get_galaxy_sample:
         self.hpx_radec= self.cat['hpx8_radec'][:]
 
         self.t0 = time()
-        print('Healpix %i \n'%(hpx))
+        print('\n')
+        print(10*'---')
+        print('Healpix %i'%(hpx))
         
     def get_healpix_neighbours(self,nside=8):
         _hpx_neighbours = get_healpix_list(self.cat[self.indices],nside=8)
-        hpx_neighbours = np.array([self.match_healpix_to_file(hi) for hi in _hpx_neighbours])
+        hpx_neighbours = _hpx_neighbours#np.array([self.match_healpix_to_file(hi) for hi in _hpx_neighbours])
         self.hpx_neighbours = hpx_neighbours[np.logical_not(np.isnan(hpx_neighbours))].astype(np.int64)
+        print('hpx neighbours size: %i'%len(hpx_neighbours))
     
     def load_files(self,base,amagMax=-18.):
         #print('starting load_files()')
@@ -368,16 +371,14 @@ class get_galaxy_sample:
 
         t0= time()
         g = loadfiles(self.files,mask=mag_mask,columns=colnames)
-        print('loading time: %.2f s \n'%(time()-t0))
+        load_time = (time()-t0)/60
+        print('loading time: %.2f s \n'%(load_time))
 
         return g
 
-    def load_files_gcr(self,catalog,columns,amagMax=-18.):
+    def load_files_gcr(self,catalog,columns,magMax=26):
         t0= time()
-        amag_cut = amagMax - 5*np.log10(h)
-        mag_mask = 'Mag_true_r_des_z01 < %.2f'%(amag_cut)
-        
-        data = catalog.get_quantities(columns,filters=[mag_mask,'mag_i_lsst < 28.'], native_filters=[(lambda x: np.in1d(x, self.hpx_neighbours), 'healpix_pixel')]) 
+        data = catalog.get_quantities(columns,filters=['mag_i_lsst <= %.2f'%(magMax)], native_filters=[(lambda x: np.in1d(x, self.hpx_neighbours), 'healpix_pixel')]) 
         print('loading time: %.2f s \n'%(time()-t0))
 
         data = Table(data)
@@ -389,12 +390,13 @@ class get_galaxy_sample:
 
         return data
 
-    def get_silver_sample(self,g):
+    def get_silver_sample(self,g,amagMax=-19.):
         #print('starting get_silver_sample()')
         hid_cls = np.unique(self.cat['HALOID'][self.indices])
-        hid_gal = g['HALOID']
-        
-        t0 = time()
+
+        amag_cut = esutil.numpy_util.where1( g['Mag_true_r_des_z01']<= (amagMax - 5*np.log10(h)) )
+        hid_gal = g['HALOID'][amag_cut]
+
         ### true members cut
         match = esutil.numpy_util.match(hid_cls,hid_gal)
         g_true_members = g[match[1]]
@@ -428,7 +430,6 @@ class get_galaxy_sample:
         match = esutil.numpy_util.match(gid,self.cat['HALOID'])
         self.cat['redshift'][match[1]] = Z[match[0]]
         self.cat['halo_mass'][match[1]]= m200[match[0]]
-        self.cat['R200'][match[1]]     = r200[match[0]]
 
     def compute_cluster_richness(self,gsilver,lcol='Mag_true_r_des_z01'):
         #print('starting compute_cluster_richness()')
@@ -650,3 +651,35 @@ def save_hdf5_output(gal,cat,outfile):
 
     dfc = cat.to_pandas()
     dfc.to_hdf(outfile, key='cluster', mode='a')
+
+def getMagLimModel(auxfile,zvec,dm=0):
+    '''
+    Get the magnitude limit for 0.4L*
+    
+    file columns: z, mag_lim_i, (g-r), (r-i), (i-z)
+    mag_lim = mag_lim + dm
+    
+    input: Galaxy clusters redshift
+    return: mag. limit for each galaxy cluster and for the r,i,z bands
+    output = [maglim_r(array),maglim_i(array),maglim_z(array)]
+    '''
+    annis=np.loadtxt(auxfile)
+    jimz=[i[0] for i in annis]  ## redshift
+    jimgi=[i[1] for i in annis] ## mag(i-band)
+    jimgr=[i[2] for  i in annis]## (g-r) color
+    jimri=[i[3] for i in annis] ## (r-i) color
+    jimiz=[i[4] for i in annis] ## (i-z) color
+    
+    interp_magi=interp1d(jimz,jimgi,fill_value='extrapolate')
+    interp_gr=interp1d(jimz,jimgr,fill_value='extrapolate')
+    interp_ri=interp1d(jimz,jimri,fill_value='extrapolate')
+    interp_iz=interp1d(jimz,jimiz,fill_value='extrapolate')
+
+    mag_i,color_ri,color_iz = interp_magi(zvec),interp_ri(zvec),interp_iz(zvec)
+    mag_r, mag_z = (color_ri+mag_i),(mag_i-color_iz)
+
+    maglim_r, maglim_i, maglim_z = (mag_r+dm),(mag_i+dm),(mag_z+dm)
+
+    magLim = np.array([maglim_r, maglim_i, maglim_z])
+    
+    return magLim.transpose()
