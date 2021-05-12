@@ -1,7 +1,7 @@
 #!/usr/bin/env python -W ignore::DeprecationWarning
 # Purpose: Take 3000 galaxy clusters from the Buzzard v2.0 catalog
 # This code is slow because it loads multiple times the same file but it prevents a memory issue
-# nohup python scripts/getGalaxies.py > log.out 2> log.err
+# nohup python scripts/getGalaxies.py &> log.out 2> log.err &
 
 print('Importing')
 import glob
@@ -36,6 +36,8 @@ mask&= data['Z']<=0.9
 
 ## selected cluster sample
 cat = data[mask]
+_, index = np.unique(cat['HALOID'],return_index=True)
+cat = cat[index]
 
 ## Make a different aperture selection for gold/silver sample
 sample = cat['sample']
@@ -46,7 +48,7 @@ DA     = AngularDistance(np.array(cat['Z']))
 
 cat['rmax'] = 0.
 cat['rmax'][sample]  = 60*(float(rmax)/DA[sample])*rad2deg ## arcmin
-cat['rmax'][nsample] = 60*(1.2*r200[nsample]/DA[nsample])*rad2deg ## arcmin
+cat['rmax'][nsample] = 60*(3./DA[nsample])*rad2deg ## arcmin
 
 ## for tests purpose
 # cat = cat[:3]
@@ -71,8 +73,9 @@ columns+= ['magerr_%s_des'%mag for mag in filters]
 # print('\n'.join(sorted(columns)))
 # print('\n')
 
+total_time = []
 # given a healpix
-for hpx in hpx_list[:1]:
+for hpx in hpx_list:
     gg = get_galaxy_sample(hpx,cat)
 
     ## find the healpix files around the cluster centers
@@ -104,3 +107,13 @@ for hpx in hpx_list[:1]:
     
     ## drop the other samples
     ds = dg = 0
+
+    total_time.append(hpx_time)
+
+total_time = np.array(total_time)
+average_time = np.mean(total_time)
+my_total_time = np.sum(total_time) /60 # hours
+
+print('It is done!')
+print('Average time: %.2f minutes'%(average_time))
+print('Total time: %.2f hours \n'%my_total_time)

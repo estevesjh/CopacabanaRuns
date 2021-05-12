@@ -337,7 +337,7 @@ def plot_scatter_hist(x,y,xlabel=r'$z$',ylabel=r'$\log(M_{200,c})\,\,[M_{\odot}\
 ###########################################################################
 ##############################Galaxy Selection ############################
 ###########################################################################
-    
+
 class get_galaxy_sample:
     """ Get Galaxies around a cluster sample for the Buzzard v1.9.9 sample
     """
@@ -350,13 +350,12 @@ class get_galaxy_sample:
         self.hpx_radec= self.cat['hpx8_radec'][:]
 
         self.t0 = time()
-        print('\n')
         print(10*'---')
         print('Healpix %i'%(hpx))
         
     def get_healpix_neighbours(self,nside=8):
         _hpx_neighbours = get_healpix_list(self.cat[self.indices],nside=8)
-        hpx_neighbours = _hpx_neighbours#np.array([self.match_healpix_to_file(hi) for hi in _hpx_neighbours])
+        hpx_neighbours = np.array([self.match_healpix_to_file(hi) for hi in _hpx_neighbours])
         self.hpx_neighbours = hpx_neighbours[np.logical_not(np.isnan(hpx_neighbours))].astype(np.int64)
         print('hpx neighbours size: %i'%len(hpx_neighbours))
     
@@ -379,7 +378,8 @@ class get_galaxy_sample:
     def load_files_gcr(self,catalog,columns,magMax=26):
         t0= time()
         data = catalog.get_quantities(columns,filters=['mag_i_lsst <= %.2f'%(magMax)], native_filters=[(lambda x: np.in1d(x, self.hpx_neighbours), 'healpix_pixel')]) 
-        print('loading time: %.2f s \n'%(time()-t0))
+        load_time = (time()-t0)/60
+        print('loading time: %.2f min \n'%(load_time))
 
         data = Table(data)
         data['hpx8'] = self.hpx
@@ -390,12 +390,10 @@ class get_galaxy_sample:
 
         return data
 
-    def get_silver_sample(self,g,amagMax=-19.):
+    def get_silver_sample(self,g):
         #print('starting get_silver_sample()')
         hid_cls = np.unique(self.cat['HALOID'][self.indices])
-
-        amag_cut = esutil.numpy_util.where1( g['Mag_true_r_des_z01']<= (amagMax - 5*np.log10(h)) )
-        hid_gal = g['HALOID'][amag_cut]
+        hid_gal = g['HALOID']
 
         ### true members cut
         match = esutil.numpy_util.match(hid_cls,hid_gal)
@@ -433,7 +431,6 @@ class get_galaxy_sample:
 
     def compute_cluster_richness(self,gsilver,lcol='Mag_true_r_des_z01'):
         #print('starting compute_cluster_richness()')
-        #gsilver['Mr'] = gsilver['AMAG'][:,1]
 
         self.check_richness_columns(['redshift','halo_mass'])
         self.get_virial_mass(gsilver)
@@ -450,7 +447,7 @@ class get_galaxy_sample:
         if w.size>0: 
             hpx_out = int(self.hpx_list[w][0])
         else:
-            print('No healpix matched')
+            print('Error: No healpix matched')
             hpx_out = np.nan
         return hpx_out
     

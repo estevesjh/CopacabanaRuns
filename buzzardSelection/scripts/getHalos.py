@@ -113,10 +113,6 @@ print('Mathching Sample')
 cat_silver['sample'] = False
 cat_golden['sample'] = True
 
-catf = vstack([cat_golden,cat_silver])
-keys, idx = np.unique(catf['HALOID'],return_index=True) ## unique keys
-catf = catf[idx]
-
 print('Geting Critical Mass')
 ## catf is whole sample with M200 added
 ## catb is the halos data
@@ -134,10 +130,13 @@ hpx_values = np.array(hpx_map['hpx_value'])
 # print('Computing Area Fraction')
 # catf['area_frac'] = compute_area_fraction(catf,hpx_values,rmax=8,nside=Nside)
 print('Computing magLim')
+catf = vstack([cat_golden,cat_silver])
+keys, idx = np.unique(catf['HALOID'],return_index=True) ## unique keys
+catf = catf[idx]
+
 z = catf['Z']
 magLim3 = getMagLimModel(mag_file,z,dm=2)
 catf['magLim'] = magLim3[:,1]                ##i-band
-
 
 print('Selectiong good halos')
 x1=catf['M200_old']
