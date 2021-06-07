@@ -29,7 +29,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 matplotlib.rcParams.update({'font.size': 22})
 
-import GCRCatalogs
+#import GCRCatalogs
 
 #from sklearn.model_selection import StratifiedShuffleSplit
 try: from sklearn.model_selection import train_test_split
@@ -246,17 +246,17 @@ def get_random_selection(cat2,Nsize=3000):
     cat3 = Table.from_pandas(test_set)
     return cat3
 
-def get_high_mass_selection(cat2,Nsize=1000,nbins=25,h=0.7):
+def get_high_mass_selection(cat2,Nsize=1000,zmin=0.1,zmax=1.,nbins=25,h=0.7):
     Nsize+= 1000
 
     M200 = cat2["M200"]*h
     Mh = M200[cat2["M200"]>=5e13]
-    z  = cat2['Z']
+    z  = cat2['redshift']
     df = cat2.to_pandas()
 
     data = []
     mbins = np.logspace(np.log10(np.min(Mh)),np.log10(np.max(Mh)),nbins)
-    zbins = np.linspace(0.1,1.,11)
+    zbins = np.linspace(zmin,zmax,11)
     for zl,zh in zip(zbins[:-1],zbins[1:]):
         for ml,mh in zip(mbins[:-1],mbins[1:]):
             w, = np.where((M200>=ml)&(M200<=mh)&(z<=zh)&(z>=zl))
