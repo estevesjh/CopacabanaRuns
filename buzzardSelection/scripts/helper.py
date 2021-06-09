@@ -108,10 +108,10 @@ def convertM200toR200(M200,z):
     R200 = np.power( M200/(200*4*np.pi*rho/3) , 1/3.  )
     return R200
 
-def AngularDistance(z):
+def _AngularDistance(z):
     DA = ( (cosmo.luminosity_distance(z)/(1+z)**2)/u.Mpc ) # em Mpc
     return DA
-AngularDistance = np.vectorize(AngularDistance)
+AngularDistance = np.vectorize(_AngularDistance)
 
 rad2deg = 180/np.pi
 ## functions
