@@ -13,12 +13,14 @@ import matplotlib.gridspec as gridspec
 import scipy.integrate as integrate
 from scipy.interpolate import interp1d
 
-import seaborn as sns; sns.set(color_codes=True)
-# plt.rcParams.update({'font.size': 16})
-sns.set_style("whitegrid")
+import pandas as pd
 
-# sns.set_style("white")
-# sns.set_context("talk", font_scale=1.2)
+import seaborn as sns; sns.set(color_codes=True)
+#plt.rcParams.update({'font.size': 16})
+#sns.set_style("whitegrid")
+
+sns.set_style("whitegrid")
+sns.set_context("talk", font_scale=1.2)
 
 ## local libraries
 import sys
@@ -989,102 +991,8 @@ import sys
 sys.path.append("/home/s1/jesteves/git/ccopa/python/")
 from main import copacabana
 
-class viewMembershipSelection:
-    def __init__(self,cfg='../config_files/config_copa_dc2.yaml',dataset='cosmoDC2'):
-        self.copa = copacabana(cfg,dataset=dataset)
-
-        self.datasets   = defaultdict(dict)
-        self.curves     = defaultdict(dict)
-
-        self.cluster_vars  = ['CID','redshift']
-        self.galaxy_vars   = ['dmag','zoffset','Rn']
-        self.probabilities = ['Pmem','Pz','Pr','Pc','pz0','True']
-        
-        self.columns = self.cluster_vars+self.galaxy_vars+self.probabilities
-
-    def load_data(self,run_name):
-        gal = self.copa.load_copa_out('members',run_name)
-        gal['True'] = gal['True'].astype(np.int)
-        self.gal = gal
-        self.datasets[run_name] = gal[self.columns]
-    
-    def compute_precision_recall_curves(self,run_name,prob='Pmem',th='True'):
-        scores= self.datasets[run_name][prob]
-        true  = self.datasets[run_name][th]
-        
-        precisions, recalls, thresholds = precision_recall_curve(true, scores)
-        
-        idx = np.argmax(recalls*precisions)
-        
-        optimal = {'idx':idx,'purity':precisions[idx],'completeness':recalls[idx],'thresholds':thresholds[idx]}
-        
-        self.curves[run_name]['purity'] = precisions[:-1]
-        self.curves[run_name]['completeness'] = recalls[:-1]
-        self.curves[run_name]['thresholds'] = thresholds
-        self.curves[run_name]['optimal'] = optimal
-
-    def plot_purity_completeness(self,run,ax=None,color='b',optimal=True):
-        if ax is None: ax = plt.axes()
-
-        y = self.curves[run]['purity']
-        x = self.curves[run]['completeness']
-
-        opt_y = self.curves[run]['optimal']['purity']
-        opt_x = self.curves[run]['optimal']['completeness']
-
-        label = "%s: P=%.2f,  C=%.2f"%(run,opt_y,opt_x)
-
-        ymin, ymax = np.min(y)-0.05,np.max(y)+0.05
-        ## plot purity and completeness curves 
-        ax.plot(x,y, color=color, linewidth=2, ls='solid', label=label)
-
-        ## draw red lines on the optimal points
-        if optimal:
-            self._plot_optimal(run,'completeness','purity',ax=ax,color=color)
-
-        ax.grid(True)                      
-        ticks0 = np.arange(0.,1.01,0.1)
-        ax.set_xticks(ticks0)
-        ax.set_yticks(ticks0)
-        ax.set_ylim(ymin,ymax)
-        ax.set_xlim(-0.01,1.01)
-
-    def plot_precision_recall_vs_threshold(self,run,ls='.',ax=None,c1='b',optimal=False):
-        if ax is None: ax = plt.axes()
-
-        y1 = self.curves[run]['purity']
-        y2 = self.curves[run]['completeness']
-        x  = self.curves[run]['thresholds']
-
-        ## plot purity and completeness curves 
-        ax.plot(x,y1, color=c1, label="Purity"      , linewidth=2, ls='--')
-        ax.plot(x,y2, color=c1, label="Completeness", linewidth=2, ls='solid')
-
-        ## draw red lines on the optimal points
-        if optimal:
-            self._plot_optimal(run,'thresholds','purity'      ,ax=ax,color=color)
-            self._plot_optimal(run,'thresholds','completeness',ax=ax,color=color)
-
-        ax.grid(True)                      
-        ax.set_ylim(0.0,1.)
-        ax.set_xlim(-0.01,1.01)
-        ticks0 = np.arange(0.,1.01,0.1)
-        ax.set_xticks(ticks0)
-        ax.set_yticks(ticks0)
-
-    def _plot_optimal(self,run_name,xcol,ycol,ax=None,color='r'):
-        if ax is None: ax = plt.axes()
-
-        opt_x = self.curves[run_name]['optimal'][xcol]
-        opt_y = self.curves[run_name]['optimal'][ycol]
-
-        ax.plot([opt_x, opt_x], [0., opt_y], "k:",label='_')
-        ax.plot([0., opt_x], [opt_y, opt_y], "k:",label='_')
-        ax.scatter([opt_x], [opt_y], color=color,s=100,label='_')
-
-
 class viewClusters:
-    def __init__(self,cfg='../config_files/config_copa_dc2.yaml',dataset='cosmoDC2'):
+    def __init__(self,cfg='/home/s1/jesteves/git/ccopa/config_files/config_buzzard_v2.yaml',dataset='buzzard_v2'):
         self.copa = copacabana(cfg,dataset=dataset)
 
         self.models  = defaultdict(dict)
@@ -1104,9 +1012,10 @@ class viewClusters:
                              "outlier_frac": get_outlier_frac}
         pass
 
-    def load_data(self,run_name):
-        cat = self.copa.load_copa_out('cluster',run_name)
-        self.df  = cat.to_pandas()
+    def load_data(self,run_name,ncut=0.01):
+        dat = self.copa.load_copa_out('cluster',run_name)
+        cat = dat[(dat['redshift']<=0.7)&(dat['Ngals_true']>ncut)].copy()
+        #self.df  = cat.to_pandas()
         
         self.models[run_name]['predictors'] = np.array(cat[self.predictors])
         self.models[run_name]['regressors'] = np.array(cat[self.regressors])
@@ -1286,11 +1195,12 @@ class viewClusters:
         l2 = r'outlier: %.2f'%(of)
 
         xbins = np.linspace(xmin,xmax,50)
-        _ = axs.hist(residual,bins=xbins,label=l1,histtype='step',lw=3)
-        _ = axs.hist(residual[mask],bins=xbins,label=l2,histtype='step',lw=3)
-        axs.axvline(bias,color='k',ls='--')
-        axs.axvline(xup,color='r',ls='--')
-        axs.axvline(xlo,color='r',ls='--')
+        if sigma_nmad>0.01:
+            _ = axs.hist(residual,bins=xbins,label=l1,histtype='step',lw=3)
+            _ = axs.hist(residual[mask],bins=xbins,label=l2,histtype='step',lw=3)
+            axs.axvline(bias,color='k',ls='--')
+            axs.axvline(xup,color='r',ls='--')
+            axs.axvline(xlo,color='r',ls='--')
 
         #plt.yscale('log')
         axs.set_xlabel(xlabel,fontsize=20)
@@ -1311,7 +1221,7 @@ class viewClusters:
         yb_err= self.metrics[run][xcol][metric][ycol]
         xb_err= [lower,upper]
         
-        xmin,xmax = 0.8*(np.min(xbins)-2*yb_err[0]), 1.2*(np.max(xbins))
+        xmin,xmax = 0.8*(np.nanmin(xbins)), 1.2*(np.nanmax(xbins))
         xlims = (xmin,xmax)
         
         mask  = np.logical_not(np.isnan(x)|np.isnan(y))
@@ -1328,8 +1238,8 @@ class viewClusters:
     def plot_residual(self,run,xcol,ycol,ax=None,xlog=False,color='r',points=True,units='',shift=0.):
         if ax is None: ax = plt.axes()
         xmean,ymean,sigma,of,lower,upper = self.get_residual_metrics_binned(run,xcol,ycol,log_residual=False)
-        ymin,ymax = np.mean(ymean-3*sigma),np.mean(ymean+3*sigma)
-        xmin,xmax = 0.8*np.min(xmean-lower),1.2*np.max(xmean+upper)
+        ymin,ymax = np.nanmean(ymean-3*sigma),np.nanmean(ymean+3*sigma)
+        xmin,xmax = 0.8*np.nanmin(xmean-lower),1.2*np.nanmax(xmean+upper)
         ylabel = r'$%s/%s_{true}$'%(ycol,ycol)
 
         if points:
@@ -1346,6 +1256,321 @@ class viewClusters:
         if xlog:
             ax.set_xscale('log')
 
+def _plot_scaling_relation(x,y,xb,yb,xb_err,yb_err,xlims,xcol,ycol,li='_',color='b',points=False,axs=None,fit=False,title='',log_scale=True):
+    if axs is None: axs = plt.axes()
+    
+    ## linear fit
+    linreg=lin_reg(x,y)
+    
+    idx = np.argsort(x)
+    xt,yh = x[idx],linreg['Yhat'][idx]
+
+    b0 = round(linreg['b0'],3)
+    b1 = round(linreg['b1'],3)
+    cb_u, cb_l = linreg['cb_u'], linreg['cb_l']
+    
+    ## Plot
+    if fit:
+        axs.plot(xt,yh, color="r",label='y=%.2f+%.2fx'%(b0,b1))
+        axs.fill_between(xt, cb_l, cb_u, color="gray", alpha=0.25, label='_nolabel_')
+        axs.plot(xt,cb_l, color="r", label='_nolabel_')
+        axs.plot(xt,cb_u, color="r", label='_nolabel_')
+
+    if points:
+        sc = axs.scatter(x,y,s=75, alpha=0.1, color='gray')
+
+    axs.errorbar(xb,yb,xerr=xb_err,yerr=yb_err,color=color,linewidth=2.,fmt='o',label=li)
+    axs.plot(np.linspace(xlims[0],xlims[1]),np.linspace(xlims[0],xlims[1]),linestyle='--',color='k')
+    
+    if log_scale:
+        xlims = np.where(xlims<1.,2.,xlims)
+        axs.set_xscale('log')
+        axs.set_yscale('log')
+    
+    axs.set_ylim(xlims)
+    axs.set_xlim(xlims)
+    
+    axs.set_xlabel(xcol,fontsize=22)
+    axs.set_ylabel(ycol,fontsize=22)
+    axs.legend(fontsize=12)
+    
+    #axs.set_title(run,fontsize=22)
+    #fig.tight_layout()
+def lin_reg(X,Y):
+    barX=np.mean(X); barY=np.mean(Y)
+    XminusbarX=X-barX; YminusbarY=Y-barY
+    b1=sum(XminusbarX*YminusbarY)/sum(XminusbarX**2)
+    b0=barY-b1*barX
+    Yhat=b0+b1*X
+    e_i=Y-Yhat
+    sse=np.sum(e_i**2)
+    ssr=np.sum((Yhat-barY )**2)
+    n=len(X)
+    MSE=sse/np.float(n-2)
+
+    s_of_yh_hat=np.sqrt(MSE*(1.0/n+(X-barX)**2/sum(XminusbarX**2)))
+    W=np.sqrt(2.0*st.f.ppf(0.95,2,n-2))
+
+    cb_upper=Yhat+W*s_of_yh_hat
+    cb_lower=Yhat-W*s_of_yh_hat
+    idx=np.argsort(X)
+
+    return {'Yhat':Yhat,'b0':b0,'b1':b1,'cb_u':cb_upper[idx], 'cb_l': cb_lower[idx]}
+
+    
+def group_by(x,keys):
+    return [x[idx] for idx in keys]
+
+def get_bins_group_indices(x,bins):
+    idx  = np.argsort(x)
+    ## to avoid the boundary condition of the digitize function as xlow <= x < xup
+    mybins = bins.copy()
+    mybins[-1] += 0.1
+    inds = np.digitize(x,mybins)
+    return np.split(idx, np.unique(inds[idx], return_index=True)[1][1:])
+    
+def get_bins_group(x,y,bins):
+    idx  = np.argsort(x)
+    ## to avoid the boundary condition of the digitize function as xlow <= x < xup
+    mybins = bins.copy()
+    mybins[-1] += 0.1
+    inds = np.digitize(x,mybins)
+    return np.split(y[idx], np.unique(inds[idx], return_index=True)[1][1:])
+    
+def get_binned_mean(x,y,bins):
+    y     = filter_nan_inf(y)
+    y     = np.where(y==-99,0.,y)
+    x     = filter_nan_inf(x)
+    sum_y = np.histogram(x, bins, weights=y)[0]
+    nobjs = np.histogram(x, bins)[0]
+    return sum_y/nobjs
+    
+def get_bins(variable,xedges):
+    nbins   = len(xedges)-1
+    indices = np.full_like(variable,-99,dtype=np.int)
+    xbins   = np.full_like(variable,-99,dtype=np.float)
+
+    means = (xedges[1:]+xedges[:-1])/2.
+    for i in range(nbins):
+        idx = np.where((variable >= xedges[i]) & (variable <= xedges[i + 1]))[0]
+        xbins[idx]   = means[i]
+        indices[idx] = i
+    return indices, xbins
+
+def get_log(x):
+    xlog = np.log10(x)
+    xlog[np.isinf(xlog)] = -99
+    xlog[np.isnan(xlog)] = -99
+    return xlog
+
+def get_frac_residual(x,y):
+    res = y/(x+1e-6)
+    log_res = get_log(res)
+    return res,log_res
+
+def mad(data, axis=None):
+    return np.median(np.abs(data - np.median(data)))
+
+def median_absolute_dev(x,y):
+    res, log_res = get_frac_residual(x,y)
+    return 10**mad(log_res[log_res>-99])
+
+def bias_log_res(x,y):
+    res, log_res = get_frac_residual(x,y)
+    mask = log_res>-99.
+    return 10**np.median(log_res[mask])-1.
+
+def fractional_error_stdev(x, y):
+    res, log_res = get_frac_residual(x,y)
+    score = np.std(log_res[log_res>-99])
+    return 10**score-1.
+
+def fractional_error_percentile(x, y):
+    res, log_res = get_frac_residual(x,y)
+    mask = log_res>-99.
+    if np.count_nonzero(mask)>2:
+        p16 = np.percentile(log_res[mask], 16)
+        p84 = np.percentile(log_res[mask], 84)
+        score = 0.5*(p84-p16)
+    else:
+        score = -99
+    return 10**score-1.
+
+def get_sigmaNMAD(x,y):
+    sigmaNMAD = 1.4*(median_absolute_dev(x,y)-1.)
+    return sigmaNMAD
+
+def get_outlier_frac(x,y):
+    res, log_res = get_frac_residual(x,y)
+    sigmaNMAD = 1.4*mad(log_res[log_res>-99])
+    bias      = np.nanmedian(log_res[log_res>-99])
+    out       = np.where(np.abs((log_res-bias)>=3.*sigmaNMAD))[0]
+    frac      = 1.*out.size/x.size
+    return frac
+
+def get_oulier_mask(log_res):
+    sigmaNMAD = 1.4*mad(log_res[log_res>-99])
+    bias      = np.nanmedian(log_res[log_res>-99])
+    out       = np.where(np.abs((log_res-bias)>=3.*sigmaNMAD))[0]
+    return out
+    
+def r2_score(x,y):
+    """ returns non-aggregate version of r2 score.
+
+    based on r2_score() function from sklearn (http://sklearn.org)
+    """
+    res, log_res = get_frac_residual(x,y)
+    mask = log_res>-99.
+    return sklearn.metrics.r2_score(x[mask],y[mask]) 
+
+def filter_nan_inf(x):
+    mask = np.isinf(x)|np.isnan(x)
+    x[mask] = -99.
+    return x
+
+class viewMembershipSelection:
+    def __init__(self,cfg='../config_files/config_copa_dc2.yaml',dataset='cosmoDC2'):
+        self.copa = copacabana(cfg,dataset=dataset)
+
+        self.datasets   = defaultdict(dict)
+        self.curves     = defaultdict(dict)
+
+        self.cluster_vars  = ['CID','redshift']
+        self.galaxy_vars   = ['dmag','zoffset','Rn','mass','rabs','iobs','kii']
+        self.probabilities = ['Pmem','Pz','Pr','Pc','pz0','True']
+        
+        self.columns = self.cluster_vars+self.galaxy_vars+self.probabilities
+
+    def load_data(self,run_name):
+        gal = self.copa.load_copa_out('members',run_name)
+        gal['True'] = gal['True'].astype(np.int)
+        self.gal = gal
+        self.datasets[run_name] = gal[self.columns]
+    
+    def compute_precision_recall_curves(self,run_name,prob='Pmem',th='True'):
+        scores= self.datasets[run_name][prob]
+        true  = self.datasets[run_name][th]
+        
+        precisions, recalls, thresholds = precision_recall_curve(true, scores)
+        
+        idx = np.argmax(recalls*precisions)
+        
+        optimal = {'idx':idx,'purity':precisions[idx],'completeness':recalls[idx],'thresholds':thresholds[idx]}
+        
+        self.curves[run_name]['purity'] = precisions[:-1]
+        self.curves[run_name]['completeness'] = recalls[:-1]
+        self.curves[run_name]['thresholds'] = thresholds
+        self.curves[run_name]['optimal'] = optimal
+
+    def plot_purity_completeness(self,run,ax=None,color='b',optimal=True):
+        if ax is None: ax = plt.axes()
+
+        y = self.curves[run]['purity']
+        x = self.curves[run]['completeness']
+
+        opt_y = self.curves[run]['optimal']['purity']
+        opt_x = self.curves[run]['optimal']['completeness']
+
+        label = "%s: P=%.2f,  C=%.2f"%(run,opt_y,opt_x)
+
+        ymin, ymax = np.min(y)-0.05,np.max(y)+0.05
+        ## plot purity and completeness curves 
+        ax.plot(x,y, color=color, linewidth=2, ls='solid', label=label)
+
+        ## draw red lines on the optimal points
+        if optimal:
+            self._plot_optimal(run,'completeness','purity',ax=ax,color=color)
+
+        ax.grid(True)                      
+        ticks0 = np.arange(0.,1.01,0.1)
+        ax.set_xticks(ticks0)
+        ax.set_yticks(ticks0)
+        ax.set_ylim(ymin,ymax)
+        ax.set_xlim(-0.01,1.01)
+
+    def plot_precision_recall_vs_threshold(self,run,ls='.',ax=None,c1='b',optimal=False):
+        if ax is None: ax = plt.axes()
+
+        y1 = self.curves[run]['purity']
+        y2 = self.curves[run]['completeness']
+        x  = self.curves[run]['thresholds']
+
+        ## plot purity and completeness curves 
+        ax.plot(x,y1, color=c1, label="Purity"      , linewidth=2, ls='--')
+        ax.plot(x,y2, color=c1, label="Completeness", linewidth=2, ls='solid')
+
+        ## draw red lines on the optimal points
+        if optimal:
+            self._plot_optimal(run,'thresholds','purity'      ,ax=ax,color=color)
+            self._plot_optimal(run,'thresholds','completeness',ax=ax,color=color)
+
+        ax.grid(True)                      
+        ax.set_ylim(0.0,1.)
+        ax.set_xlim(-0.01,1.01)
+        ticks0 = np.arange(0.,1.01,0.1)
+        ax.set_xticks(ticks0)
+        ax.set_yticks(ticks0)
+
+    def _plot_optimal(self,run_name,xcol,ycol,ax=None,color='r'):
+        if ax is None: ax = plt.axes()
+
+        opt_x = self.curves[run_name]['optimal'][xcol]
+        opt_y = self.curves[run_name]['optimal'][ycol]
+
+        ax.plot([opt_x, opt_x], [0., opt_y], "k:",label='_')
+        ax.plot([0., opt_x], [opt_y, opt_y], "k:",label='_')
+        ax.scatter([opt_x], [opt_y], color=color,s=100,label='_')
+
+def lin_reg(X,Y):
+    barX=np.mean(X); barY=np.mean(Y)
+    XminusbarX=X-barX; YminusbarY=Y-barY
+    b1=sum(XminusbarX*YminusbarY)/sum(XminusbarX**2)
+    b0=barY-b1*barX
+    Yhat=b0+b1*X
+    e_i=Y-Yhat
+    sse=np.sum(e_i**2)
+    ssr=np.sum((Yhat-barY )**2)
+    n=len(X)
+    MSE=sse/np.float(n-2)
+
+    s_of_yh_hat=np.sqrt(MSE*(1.0/n+(X-barX)**2/sum(XminusbarX**2)))
+    W=np.sqrt(2.0*st.f.ppf(0.95,2,n-2))
+
+    cb_upper=Yhat+W*s_of_yh_hat
+    cb_lower=Yhat-W*s_of_yh_hat
+    idx=np.argsort(X)
+
+    return {'Yhat':Yhat,'b0':b0,'b1':b1,'cb_u':cb_upper[idx], 'cb_l': cb_lower[idx]}
+
+def get_dataFrame_residual(vc,runs):
+    out = []
+    for run in runs:
+        df = pd.DataFrame(columns=['runs']+vc.predictors)
+        for col in vc.predictors:
+            res = vc.models[run]['residual'][col]
+            df[col] = res
+        df['runs']     = np.repeat(run,len(res))
+        out.append(df)
+    odf = pd.concat(out)
+    return odf
+
+def box_plot(planets,ycol,ax=None,xlims=(0.,2.6)):
+    #f, ax = plt.subplots(figsize=(7, 6))
+    
+    # Plot the orbital period with horizontal boxes
+    sns.boxplot(x=ycol, y="runs", data=planets,
+                whis=[4, 96], width=.6, palette="husl",ax=ax)
+
+    # Add in points to show each observation
+    # sns.stripplot(x=ycol, y="runs", data=planets,
+    #               size=2, color=".3", linewidth=0)
+
+    # Tweak the visual presentation
+    ax.xaxis.grid(True)
+    ax.set_xlim(xlims)
+    ax.set(ylabel="")
+    ax.set_xlabel('$%s/%s_{TRUE}$'%(ycol,ycol),fontsize=18)
+    #sns.despine(trim=True, left=True,ax=ax)
 ########################################
 ########################################
 
