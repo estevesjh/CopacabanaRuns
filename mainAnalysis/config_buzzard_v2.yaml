@@ -18,14 +18,14 @@ r_in : 4.
 r_out: 6.
 
 ## pz0 factor
-pz_factor: 0.82
+pz_factor: 0.835
 
 ## relative mag cut; dmag_lim only works if mag_selection is empty
 mag_model_file: /home/s1/jesteves/git/ccopa/aux_files/annis_mags_04_Lcut.txt
 mag_selection : 02Lstar
 dmag_lim: 3
 
-## cluster aperture radii, it can be a number in Mpc, values: hod/r200 (simulation)
+## cluster aperture radii, it can be a number in Mpc, values: rhod/r200 (simulation)
 r_aper_model : r200
 r_aper_value : 
 
@@ -42,7 +42,7 @@ z_model_file : /home/s1/jesteves/git/ccopa/aux_files/zwindow_model_buzzard_dnf.t
 ## Healpixel config
 healpixel_setup : True
 #healpixel_list  : [0, 16, 32]
-healpixel_list  : [0, 16, 17, 18, 19, 20, 22, 32, 33, 34, 35, 38, 44, 45, 46, 47]
+healpixel_list  : [17, 18, 19, 20, 22, 32, 33, 34, 35, 38, 44, 45, 46, 47]
 ## for the whole sample use the pixel list below
 
 
@@ -53,3 +53,5 @@ bma_number_of_chunks: 500
 ## stellar population libray file
 lib_inPath: /data/des61.a/data/pbarchi/galaxyClusters/simha_miles_Nov2016/
 
+# root = '/home/s1/jesteves/git/buzzardAnalysis/mainAnalysis/'
+# vc = viewClusters(cfg=root+'config_buzzard_v2.yaml')
