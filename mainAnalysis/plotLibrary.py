@@ -1014,7 +1014,7 @@ class viewClusters:
 
     def load_data(self,run_name,ncut=0.01):
         dat = self.copa.load_copa_out('cluster',run_name)
-        cat = dat[(dat['redshift']<=0.7)&(dat['Ngals_true']>ncut)].copy()
+        cat = dat[(dat['redshift']>=0.2)&(dat['redshift']<=0.65)&(dat['Ngals_true']>ncut)].copy()
         #self.df  = cat.to_pandas()
         
         self.models[run_name]['predictors'] = np.array(cat[self.predictors])

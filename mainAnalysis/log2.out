@@ -1,0 +1,832 @@
+master file: 
+ /data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00541.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00542.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00543.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00544.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00545.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00546.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00547.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00548.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00549.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00550.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00551.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00552.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00553.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00554.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00555.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00556.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00557.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00558.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00559.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00560.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00561.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00562.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00563.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00564.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00565.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00566.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00567.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00568.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00569.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00570.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00571.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00572.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00573.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00574.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00575.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00610.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00616.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00618.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00709.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00710.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00711.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00713.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00715.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00716.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00717.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00718.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00719.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00720.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00721.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00722.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00723.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00724.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00725.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00726.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00728.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00729.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00730.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00731.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00740.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00741.hdf5
+outdir: /data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/
+tile path: /data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles
+
+
+-------------------------
+Starting BMA
+divided in nchunks: 540
+each tile divided in 9 chunks 
+
+Healpixel: 00541
+making bma cutout
+sample size: 167076 
+
+Healpixel: 00542
+making bma cutout
+sample size: 176279 
+
+Healpixel: 00543
+making bma cutout
+sample size: 228561 
+
+Healpixel: 00544
+making bma cutout
+sample size: 321010 
+
+Healpixel: 00545
+making bma cutout
+sample size: 221488 
+
+Healpixel: 00546
+making bma cutout
+sample size: 315487 
+
+Healpixel: 00547
+making bma cutout
+sample size: 260864 
+
+Healpixel: 00548
+making bma cutout
+sample size: 244234 
+
+Healpixel: 00549
+making bma cutout
+sample size: 193422 
+
+Healpixel: 00550
+making bma cutout
+sample size: 208476 
+
+Healpixel: 00551
+making bma cutout
+sample size: 292572 
+
+Healpixel: 00552
+making bma cutout
+sample size: 214916 
+
+Healpixel: 00553
+making bma cutout
+sample size: 307267 
+
+Healpixel: 00554
+making bma cutout
+sample size: 308664 
+
+Healpixel: 00555
+making bma cutout
+sample size: 211050 
+
+Healpixel: 00556
+making bma cutout
+sample size: 258897 
+
+Healpixel: 00557
+making bma cutout
+sample size: 236207 
+
+Healpixel: 00558
+making bma cutout
+sample size: 264731 
+
+Healpixel: 00559
+making bma cutout
+sample size: 394036 
+
+Healpixel: 00560
+making bma cutout
+sample size: 292353 
+
+Healpixel: 00561
+making bma cutout
+sample size: 215092 
+
+Healpixel: 00562
+making bma cutout
+sample size: 251132 
+
+Healpixel: 00563
+making bma cutout
+sample size: 221359 
+
+Healpixel: 00564
+making bma cutout
+sample size: 188910 
+
+Healpixel: 00565
+making bma cutout
+sample size: 210716 
+
+Healpixel: 00566
+making bma cutout
+sample size: 304480 
+
+Healpixel: 00567
+making bma cutout
+sample size: 276298 
+
+Healpixel: 00568
+making bma cutout
+sample size: 254995 
+
+Healpixel: 00569
+making bma cutout
+sample size: 332615 
+
+Healpixel: 00570
+making bma cutout
+sample size: 155343 
+
+Healpixel: 00571
+making bma cutout
+sample size: 317360 
+
+Healpixel: 00572
+making bma cutout
+sample size: 310018 
+
+Healpixel: 00573
+making bma cutout
+sample size: 160630 
+
+Healpixel: 00574
+making bma cutout
+sample size: 328895 
+
+Healpixel: 00575
+making bma cutout
+sample size: 253506 
+
+Healpixel: 00610
+making bma cutout
+sample size: 144884 
+
+Healpixel: 00616
+making bma cutout
+sample size: 177315 
+
+Healpixel: 00618
+making bma cutout
+sample size: 189573 
+
+Healpixel: 00709
+making bma cutout
+sample size: 132556 
+
+Healpixel: 00710
+making bma cutout
+sample size: 131360 
+
+Healpixel: 00711
+making bma cutout
+sample size: 309751 
+
+Healpixel: 00713
+making bma cutout
+sample size: 106756 
+
+Healpixel: 00715
+making bma cutout
+sample size: 97132 
+
+Healpixel: 00716
+making bma cutout
+sample size: 347786 
+
+Healpixel: 00717
+making bma cutout
+sample size: 259572 
+
+Healpixel: 00718
+making bma cutout
+sample size: 299508 
+
+Healpixel: 00719
+making bma cutout
+sample size: 281813 
+
+Healpixel: 00720
+making bma cutout
+sample size: 199080 
+
+Healpixel: 00721
+making bma cutout
+sample size: 194964 
+
+Healpixel: 00722
+making bma cutout
+sample size: 230903 
+
+Healpixel: 00723
+making bma cutout
+sample size: 248106 
+
+Healpixel: 00724
+making bma cutout
+sample size: 172521 
+
+Healpixel: 00725
+making bma cutout
+sample size: 182752 
+
+Healpixel: 00726
+making bma cutout
+sample size: 155941 
+
+Healpixel: 00728
+making bma cutout
+sample size: 309115 
+
+Healpixel: 00729
+making bma cutout
+sample size: 177169 
+
+Healpixel: 00730
+making bma cutout
+sample size: 205025 
+
+Healpixel: 00731
+making bma cutout
+sample size: 36715 
+
+Healpixel: 00740
+making bma cutout
+sample size: 117127 
+
+Healpixel: 00741
+making bma cutout
+sample size: 325754 
+
+temp files
+input : [['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/input_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/input_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/input_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/input_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/input_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/input_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/input_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/input_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/input_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/input_008.hdf5']]
+output: [['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/output_008.hdf5'], ['/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/output_000.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/output_001.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/output_002.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/output_003.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/output_004.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/output_005.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/output_006.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/output_007.hdf5', '/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/output_008.hdf5']]
+bma parallel
+starting parallel process
+runing on the following batches: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215
+ 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233
+ 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251
+ 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269
+ 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287
+ 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305
+ 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323
+ 324 325 326 327 328 329 330 331 332 333 334 335 336 337 338 339 340 341
+ 342 343 344 345 346 347 348 349 350 351 352 353 354 355 356 357 358 359
+ 360 361 362 363 364 365 366 367 368 369 370 371 372 373 374 375 376 377
+ 378 379 380 381 382 383 384 385 386 387 388 389 390 391 392 393 394 395
+ 396 397 398 399 400 401 402 403 404 405 406 407 408 409 410 411 412 413
+ 414 415 416 417 418 419 420 421 422 423 424 425 426 427 428 429 430 431
+ 432 433 434 435 436 437 438 439 440 441 442 443 444 445 446 447 448 449
+ 450 451 452 453 454 455 456 457 458 459 460 461 462 463 464 465 466 467
+ 468 469 470 471 472 473 474 475 476 477 478 479 480 481 482 483 484 485
+ 486 487 488 489 490 491 492 493 494 495 496 497 498 499 500 501 502 503
+ 504 505 506 507 508 509 510 511 512 513 514 515 516 517 518 519 520 521
+ 522 523 524 525 526 527 528 529 530 531 532 533 534 535 536 537 538 539]
+ended smass calc
+stellarMass total time: 463.45 min 
+
+wrapping up temp files
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00541/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00541.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00542/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00542.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00543/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00543.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00544/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00544.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00545/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00545.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00546/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00546.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00547/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00547.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00548/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00548.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00549/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00549.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00550/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00550.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00551/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00551.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00552/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00552.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00553/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00553.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00554/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00554.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00555/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00555.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00556/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00556.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00557/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00557.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00558/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00558.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00559/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00559.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00560/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00560.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00561/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00561.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00562/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00562.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00563/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00563.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00564/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00564.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00565/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00565.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00566/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00566.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00567/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00567.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00568/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00568.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00569/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00569.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00570/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00570.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00571/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00571.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00572/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00572.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00573/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00573.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00574/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00574.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00575/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00575.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00610/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00610.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00616/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00616.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00618/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00618.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00709/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00709.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00710/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00710.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00711/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00711.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00713/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00713.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00715/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00715.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00716/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00716.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00717/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00717.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00718/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00718.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00719/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00719.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00720/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00720.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00721/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00721.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00722/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00722.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00723/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00723.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00724/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00724.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00725/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00725.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00726/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00726.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00728/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00728.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00729/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00729.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00730/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00730.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00731/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00731.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00740/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00740.hdf5 
+
+all files combined with success
+bma out files
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/output_006.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/output_007.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/temp_file/00741/output_008.hdf5
+Error: output table doesnt match input table
+/data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/tiles/buzzard_v2.0.0_rm_lgt20_copa_00741.hdf5 
+
+all files combined with success
+
+
+Total time: 7.76 hours
