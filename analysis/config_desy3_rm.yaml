@@ -1,9 +1,9 @@
 ##### Buzzard v2.0 imput files
 ## copacabana master files
-members_infile   : /data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3/tiles/buzzard_y3_v2.0.0_golden_{:02d}.hdf
-cluster_infile   : /data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3/halos/buzzard_y3_v2.0.0_golden_halos.fits
-master_outfile   : /data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3/output/buzzard_v2.0.0_copa_{:05d}.hdf5
-columns_yaml_file: /home/s1/jesteves/git/ccopa/config_files/buzzard_v2_grc_columns.yaml
+members_infile   : /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_subsampled.fits
+cluster_infile   : /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_subsampled_hpx8_{:05d}.hdf5
+master_outfile   : /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_subsampled_copa_v2.1_{:05d}.hdf5
+columns_yaml_file: /data/des61.a/data/johnny/DESY3/projects/CopacabanaRuns/analysis/buzzard_v2_grc_columns.yaml
 pixelmap_file    : 
 
 
@@ -23,7 +23,7 @@ pz_factor: 0.835
 ## relative mag cut; dmag_lim only works if mag_selection is empty
 mag_model_file: /home/s1/jesteves/git/ccopa/aux_files/annis_mags_04_Lcut.txt
 mag_selection : 02Lstar
-dmag_lim: 3
+dmag_lim: 2
 
 ## cluster aperture radii, it can be a number in Mpc, values: rhod/r200 (simulation)
 r_aper_model : r200
@@ -37,12 +37,11 @@ copa_number_of_chunks: 100
 # 2nd model: a gaussian distribution centered on zcls+bias with a std dependeding on redshift
 # 2nd model is a text file with: z, bias, std
 z_window     : 0.03
-z_model_file : /home/s1/jesteves/git/ccopa/aux_files/zwindow_model_buzzard_dnf.txt
+z_model_file : /data/des61.a/data/johnny/DESY3/projects/CopacabanaRuns/analysis/modelDNF_correction_z_gold_2_2.txt
 
 ## Healpixel config
 healpixel_setup : True
-#healpixel_list  : [0, 16, 32]
-healpixel_list  : [17, 18, 19, 20, 22, 32, 33, 34, 35, 38, 44, 45, 46, 47]
+healpixel_list  : [0,  2, 256, 257, 259, 260, 261, 262, 263, 269, 271, 272, 273, 274, 275, 276, 277, 278, 279]
 ## for the whole sample use the pixel list below
 
 
@@ -52,6 +51,3 @@ bma_number_of_chunks: 500
 
 ## stellar population libray file
 lib_inPath: /data/des61.a/data/pbarchi/galaxyClusters/simha_miles_Nov2016/
-
-# root = '/home/s1/jesteves/git/buzzardAnalysis/mainAnalysis/'
-# vc = viewClusters(cfg=root+'config_buzzard_v2.yaml')

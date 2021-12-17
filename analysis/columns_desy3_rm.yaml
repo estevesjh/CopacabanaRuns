@@ -1,0 +1,24 @@
+## Buzzard v2.0.0.3 from GCRCatalogs
+
+# cluster_columns
+HALOID   : MEM_MATCH_ID
+RA       : RA
+DEC      : DEC
+redshift : Z_LAMBDA
+M200_true: LAMBDA_CHISQ
+R200_true: R_LAMBDA
+tile     : hpx2
+
+# master_columns
+---
+HALOID: id
+GID   : coadd_object_id
+RA    : ra
+DEC   : dec
+z_true: z_mean_dnf
+z     : z_mean_dnf
+zerr  : z_sigma_dnf
+Mr    : sof_cm_mag_corrected_r
+mag   : ['sof_cm_mag_corrected_g','sof_cm_mag_corrected_r','sof_cm_mag_corrected_i','sof_cm_mag_corrected_z']
+magerr: ['sof_cm_mag_err_g','sof_cm_mag_err_r','sof_cm_mag_err_i','sof_cm_mag_err_z']
+tile  : tile
