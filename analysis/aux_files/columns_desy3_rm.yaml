@@ -21,4 +21,5 @@ zerr  : z_sigma_dnf
 Mr    : sof_cm_mag_corrected_r
 mag   : ['sof_cm_mag_corrected_g','sof_cm_mag_corrected_r','sof_cm_mag_corrected_i','sof_cm_mag_corrected_z']
 magerr: ['sof_cm_mag_err_g','sof_cm_mag_err_r','sof_cm_mag_err_i','sof_cm_mag_err_z']
+FLAG  : flags_gold
 tile  : tile

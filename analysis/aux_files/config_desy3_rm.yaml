@@ -3,7 +3,7 @@
 members_infile   : /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_subsampled_hpx8_{:05d}.hdf5
 cluster_infile   : /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_subsampled.fits
 master_outfile   : /data/des61.a/data/johnny/DESY3/data/output/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_subsampled_copa_v2.1_{:05d}.hdf5
-columns_yaml_file: /data/des61.a/data/johnny/DESY3/projects/CopacabanaRuns/analysis/columns_desy3_rm.yaml
+columns_yaml_file: /data/des61.a/data/johnny/DESY3/projects/CopacabanaRuns/analysis/aux_files/columns_desy3_rm.yaml
 pixelmap_file    : 
 
 
