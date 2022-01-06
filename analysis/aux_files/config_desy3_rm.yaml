@@ -41,9 +41,9 @@ z_model_file : /data/des61.a/data/johnny/DESY3/projects/CopacabanaRuns/analysis/
 
 ## Healpixel config
 healpixel_setup : True
-healpixel_list  : [0,  2, 256, 257, 259, 260, 261, 262, 263, 269, 271, 272, 273, 274, 275, 276,277,278,279]
+#healpixel_list  : [0,  2, 256, 257, 259, 260, 261, 262, 263, 269, 271, 272, 273, 274, 275, 276,277,278,279]
 #healpixel_list  : [0,  2, 256, 257, 259, 260, 261, 262, 263, 269, 271, 272, 273, 274, 275, 276]
-#healpixel_list  : [277, 278, 279]
+healpixel_list  : [0]
 
 
 ## for the whole sample use the pixel list below

@@ -8,6 +8,7 @@ redshift : Z_LAMBDA
 M200_true: LAMBDA_CHISQ
 R200_true: R_LAMBDA
 tile     : tile
+MASKFRAC : SCALEVAL 
 
 # master_columns
 ---
