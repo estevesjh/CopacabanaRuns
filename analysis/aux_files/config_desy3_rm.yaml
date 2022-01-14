@@ -41,9 +41,8 @@ z_model_file : /data/des61.a/data/johnny/DESY3/projects/CopacabanaRuns/analysis/
 
 ## Healpixel config
 healpixel_setup : True
-#healpixel_list  : [0,  2, 256, 257, 259, 260, 261, 262, 263, 269, 271, 272, 273, 274, 275, 276,277,278,279]
-#healpixel_list  : [0,  2, 256, 257, 259, 260, 261, 262, 263, 269, 271, 272, 273, 274, 275, 276]
-healpixel_list  : [0]
+healpixel_list  : [0,  2, 256, 257, 259, 260, 261, 262, 263, 269, 271, 272, 273, 274, 275, 276,277,278,279]
+#healpixel_list  : [0,259,260]
 
 
 ## for the whole sample use the pixel list below
@@ -51,7 +50,7 @@ healpixel_list  : [0]
 
 ######## bma setup #######
 ## paralell
-bma_number_of_chunks: 500
+bma_number_of_chunks: 650
 
 ## stellar population libray file
 lib_inPath: /data/des61.a/data/pbarchi/galaxyClusters/simha_miles_Nov2016/
