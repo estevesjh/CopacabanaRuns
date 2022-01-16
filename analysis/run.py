@@ -30,10 +30,11 @@ for run, zfile, zw in zip(runs,pz_files,z_widths):
     print('run     : %s'%run)
     print('zfile   : %s'%zfile)
     print('zwindow : %.2f'%zw)
-    if zw==-1.:
-        copa.kwargs['z_window'] = zw
-        copa.run_copa_healpix(run,   pz_file=zfile, nCores=60)
-        #copa.compute_muStar(  run, overwrite=True)
+    if zw>=-1.:
+        #copa.kwargs['z_window'] = zw
+        #copa.run_copa_healpix(run,   pz_file=zfile, nCores=60)
+        #copa.run_bma_healpix(run, nCores=60, overwrite=True, remove_temp_files=False)
+        copa.compute_muStar(run, overwrite=True)
     print(5*'---')
     print('\n')
 
