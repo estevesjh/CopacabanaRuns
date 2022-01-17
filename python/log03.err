@@ -1,0 +1,13 @@
+nohup: ignoring input
+/cvmfs/des.opensciencegrid.org/fnal/anaconda2/envs/des18a/lib/python2.7/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+/home/s1/jesteves/git/ccopa/python/make_input_files/pre_processing_copa.py:305: UserWarning: Multiprocessing-backed parallel loops cannot be nested, setting n_jobs=1
+  npoints=npoints) for i in range(len(keys)))
+/home/s1/jesteves/git/ccopa/python/make_input_files/pre_processing_copa.py:305: UserWarning: Multiprocessing-backed parallel loops cannot be nested, setting n_jobs=1
+  npoints=npoints) for i in range(len(keys)))
+/home/s1/jesteves/git/ccopa/python/make_input_files/pre_processing_copa.py:305: UserWarning: Multiprocessing-backed parallel loops cannot be nested, setting n_jobs=1
+  npoints=npoints) for i in range(len(keys)))
+/home/s1/jesteves/git/ccopa/python/make_input_files/pre_processing_copa.py:305: UserWarning: Multiprocessing-backed parallel loops cannot be nested, setting n_jobs=1
+  npoints=npoints) for i in range(len(keys)))
+/home/s1/jesteves/git/ccopa/python/make_input_files/pre_processing_copa.py:305: UserWarning: Multiprocessing-backed parallel loops cannot be nested, setting n_jobs=1
+  npoints=npoints) for i in range(len(keys)))

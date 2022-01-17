@@ -1,0 +1,523 @@
+master file: 
+ /data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00000.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00002.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00256.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00257.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00259.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00260.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00261.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00262.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00263.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00269.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00271.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00272.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00273.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00274.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00275.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00276.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00277.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00278.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00279.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00280.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00281.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00282.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00283.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00284.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00285.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00286.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00291.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00292.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00293.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00294.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00295.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00296.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00297.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00298.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00299.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00300.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00304.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00305.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00320.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00321.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00322.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00323.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00328.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00329.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00330.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00331.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00352.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00362.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00518.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00519.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00521.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00522.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00523.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00524.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00525.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00526.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00527.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00528.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00529.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00530.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00531.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00532.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00533.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00534.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00535.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00536.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00537.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00538.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00539.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00540.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00541.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00542.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00543.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00544.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00545.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00546.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00547.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00548.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00549.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00550.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00551.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00552.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00553.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00554.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00555.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00556.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00557.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00558.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00559.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00560.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00561.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00562.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00563.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00564.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00565.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00566.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00567.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00568.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00569.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00570.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00571.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00572.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00573.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00574.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00575.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00608.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00610.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00616.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00618.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00709.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00710.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00711.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00713.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00715.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00716.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00717.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00718.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00719.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00720.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00721.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00722.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00723.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00724.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00725.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00726.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00727.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00728.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00729.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00730.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00731.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00732.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00737.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00740.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00741.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00752.hdf5
+/data/des61.a/data/johnny/DESY3/data/output/tiles/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_copa_v2.1_00767.hdf5
+outdir: /data/des61.a/data/johnny/DESY3/data/output/
+tile path: /data/des61.a/data/johnny/DESY3/data/output/tiles
+Running pre_processing_healpix() instead 
+
+cluster columns
+{'MASKFRAC': 'SCALEVAL', 'redshift': 'Z_LAMBDA', 'M200_true': 'LAMBDA_CHISQ', 'R200_true': 'R_LAMBDA', 'RA': 'RA', 'HALOID': 'MEM_MATCH_ID', 'tile': 'tile', 'DEC': 'DEC'}
+tile : 0
+counts: 546
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00000.hdf5
+ngals : 1.00e+06
+Writing Master File
+Partial time: 137.70 s 
+
+tile : 2
+counts: 3
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00002.hdf5
+ngals : 1.84e+04
+Writing Master File
+Partial time: 2.48 s 
+
+tile : 256
+counts: 1534
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00256.hdf5
+ngals : 2.16e+06
+Writing Master File
+Partial time: 521.03 s 
+
+tile : 257
+counts: 2312
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00257.hdf5
+ngals : 3.03e+06
+Writing Master File
+Partial time: 819.00 s 
+
+tile : 259
+counts: 5
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00259.hdf5
+ngals : 3.03e+04
+Writing Master File
+Partial time: 4.96 s 
+
+tile : 260
+counts: 2689
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00260.hdf5
+ngals : 3.59e+06
+Writing Master File
+Partial time: 1086.62 s 
+
+tile : 261
+counts: 2991
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00261.hdf5
+ngals : 3.72e+06
+Writing Master File
+Partial time: 1295.74 s 
+
+tile : 262
+counts: 69
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00262.hdf5
+ngals : 2.74e+05
+Writing Master File
+Partial time: 16.58 s 
+
+tile : 263
+counts: 222
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00263.hdf5
+ngals : 4.98e+05
+Writing Master File
+Partial time: 42.20 s 
+
+tile : 269
+counts: 235
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00269.hdf5
+ngals : 4.66e+05
+Writing Master File
+Partial time: 39.44 s 
+
+tile : 271
+counts: 1238
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00271.hdf5
+ngals : 1.82e+06
+Writing Master File
+Partial time: 296.93 s 
+
+tile : 272
+counts: 2619
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00272.hdf5
+ngals : 3.40e+06
+Writing Master File
+Partial time: 1007.76 s 
+
+tile : 273
+counts: 3020
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00273.hdf5
+ngals : 3.68e+06
+Writing Master File
+Partial time: 1147.29 s 
+
+tile : 274
+counts: 268
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00274.hdf5
+ngals : 6.85e+05
+Writing Master File
+Partial time: 48.31 s 
+
+tile : 275
+counts: 2234
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00275.hdf5
+ngals : 3.38e+06
+Writing Master File
+Partial time: 764.16 s 
+
+tile : 276
+counts: 2608
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00276.hdf5
+ngals : 3.80e+06
+Writing Master File
+Partial time: 941.66 s 
+
+tile : 277
+counts: 2649
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00277.hdf5
+ngals : 3.63e+06
+Writing Master File
+Partial time: 1033.40 s 
+
+tile : 278
+counts: 2788
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00278.hdf5
+ngals : 3.93e+06
+Writing Master File
+Partial time: 1167.58 s 
+
+tile : 279
+counts: 1566
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00279.hdf5
+ngals : 2.08e+06
+Writing Master File
+Partial time: 439.43 s 
+
+tile : 280
+counts: 1900
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00280.hdf5
+ngals : 3.00e+06
+Writing Master File
+Partial time: 588.00 s 
+
+tile : 281
+counts: 2623
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00281.hdf5
+ngals : 3.68e+06
+Writing Master File
+Partial time: 979.63 s 
+
+tile : 282
+counts: 2782
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00282.hdf5
+ngals : 3.94e+06
+Writing Master File
+Partial time: 1091.90 s 
+
+tile : 283
+counts: 1750
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00283.hdf5
+ngals : 2.17e+06
+Writing Master File
+Partial time: 472.99 s 
+
+tile : 284
+counts: 1650
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00284.hdf5
+ngals : 2.06e+06
+Writing Master File
+Partial time: 430.23 s 
+
+tile : 285
+counts: 7
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00285.hdf5
+ngals : 4.67e+04
+Writing Master File
+Partial time: 10.82 s 
+
+tile : 286
+counts: 15
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00286.hdf5
+ngals : 5.28e+04
+Writing Master File
+Partial time: 21.55 s 
+
+tile : 291
+counts: 247
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00291.hdf5
+ngals : 6.75e+05
+Writing Master File
+Partial time: 58.88 s 
+
+tile : 292
+counts: 320
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00292.hdf5
+ngals : 5.45e+05
+Writing Master File
+Partial time: 51.80 s 
+
+tile : 293
+counts: 1845
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00293.hdf5
+ngals : 2.41e+06
+Writing Master File
+Partial time: 533.61 s 
+
+tile : 294
+counts: 1791
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00294.hdf5
+ngals : 2.67e+06
+Writing Master File
+Partial time: 583.91 s 
+
+tile : 295
+counts: 259
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00295.hdf5
+ngals : 5.44e+05
+Writing Master File
+Partial time: 54.14 s 
+
+tile : 296
+counts: 250
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00296.hdf5
+ngals : 7.51e+05
+Writing Master File
+Partial time: 66.19 s 
+
+tile : 297
+counts: 1591
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00297.hdf5
+ngals : 2.73e+06
+Writing Master File
+Partial time: 569.42 s 
+
+tile : 298
+counts: 1396
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00298.hdf5
+ngals : 2.82e+06
+Writing Master File
+Partial time: 549.87 s 
+
+tile : 299
+counts: 175
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00299.hdf5
+ngals : 6.01e+05
+Writing Master File
+Partial time: 61.22 s 
+
+tile : 300
+counts: 220
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00300.hdf5
+ngals : 5.39e+05
+Writing Master File
+Partial time: 43.33 s 
+
+tile : 304
+counts: 784
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00304.hdf5
+ngals : 1.41e+06
+Writing Master File
+Partial time: 167.42 s 
+
+tile : 305
+counts: 16
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00305.hdf5
+ngals : 5.15e+04
+Writing Master File
+Partial time: 16.20 s 
+
+tile : 320
+counts: 2020
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00320.hdf5
+ngals : 3.67e+06
+Writing Master File
+Partial time: 732.89 s 
+
+tile : 321
+counts: 123
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00321.hdf5
+ngals : 4.14e+05
+Writing Master File
+Partial time: 46.73 s 
+
+tile : 322
+counts: 2395
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00322.hdf5
+ngals : 4.03e+06
+Writing Master File
+Partial time: 969.48 s 
+
+tile : 323
+counts: 1200
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00323.hdf5
+ngals : 2.13e+06
+Writing Master File
+Partial time: 321.09 s 
+
+tile : 328
+counts: 2656
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00328.hdf5
+ngals : 3.92e+06
+Writing Master File
+Partial time: 1050.01 s 
+
+tile : 329
+counts: 1499
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00329.hdf5
+ngals : 2.68e+06
+Writing Master File
+Partial time: 479.08 s 
+
+tile : 330
+counts: 1912
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00330.hdf5
+ngals : 2.96e+06
+Writing Master File
+Partial time: 622.84 s 
+
+tile : 331
+counts: 113
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00331.hdf5
+ngals : 2.89e+05
+Writing Master File
+Partial time: 32.07 s 
+
+tile : 352
+counts: 293
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00352.hdf5
+ngals : 5.45e+05
+Writing Master File
+Partial time: 52.24 s 
+
+tile : 362
+counts: 1
+Loading Data
+infile: /data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00362.hdf5

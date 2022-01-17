@@ -1,0 +1,24 @@
+nohup: ignoring input
+/cvmfs/des.opensciencegrid.org/fnal/anaconda2/envs/des18a/lib/python2.7/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Traceback (most recent call last):
+  File "run_prepare.py", line 19, in <module>
+    copa.make_input_file()
+  File "/home/s1/jesteves/git/ccopa/python/main.py", line 123, in make_input_file
+    self.pre_processing_healpix(healpix_list=healpix_list)
+  File "/home/s1/jesteves/git/ccopa/python/main.py", line 85, in pre_processing_healpix
+    data   = table_to_dict(upload_dataFrame(infile,keys='members'))
+  File "/home/s1/jesteves/git/ccopa/python/make_input_files/make_input_datasets.py", line 676, in upload_dataFrame
+    hdf = pd.HDFStore(infile, mode='r')
+  File "/home/s1/jesteves/.local/lib/python2.7/site-packages/pandas/io/pytables.py", line 488, in __init__
+    self.open(mode=mode, **kwargs)
+  File "/home/s1/jesteves/.local/lib/python2.7/site-packages/pandas/io/pytables.py", line 603, in open
+    self._handle = tables.open_file(self._path, self._mode, **kwargs)
+  File "/home/s1/jesteves/.local/lib/python2.7/site-packages/tables/file.py", line 320, in open_file
+    return File(filename, mode, title, root_uep, filters, **kwargs)
+  File "/home/s1/jesteves/.local/lib/python2.7/site-packages/tables/file.py", line 784, in __init__
+    self._g_new(filename, mode, **params)
+  File "tables/hdf5extension.pyx", line 374, in tables.hdf5extension.File._g_new
+  File "/home/s1/jesteves/.local/lib/python2.7/site-packages/tables/utils.py", line 157, in check_file_access
+    raise IOError("``%s`` does not exist" % (filename,))
+IOError: ``/data/des61.a/data/johnny/DESY3/data/cutouts/y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_00362.hdf5`` does not exist
