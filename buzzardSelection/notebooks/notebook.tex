@@ -1,0 +1,702 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{selectGW\_map}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    \hypertarget{get-galaxies-from-halos}{%
+\section{Get Galaxies From Halos}\label{get-galaxies-from-halos}}
+
+info:
+https://cdcvs.fnal.gov/redmine/projects/des-clusters/wiki/ClustDataVecY3
+path:
+/data/des81.b/data/mariaeli/y3\_buzz/Buzzard-3\_v2.0\_Y3a\_mastercat/
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{matplotlib.pyplot} \PY{k+kn}{as} \PY{n+nn}{plt}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k+kn}{as} \PY{n+nn}{np}
+        
+        \PY{k+kn}{from} \PY{n+nn}{astropy.table} \PY{k+kn}{import} \PY{n}{Table}\PY{p}{,} \PY{n}{vstack}
+        \PY{k+kn}{from} \PY{n+nn}{astropy.io.fits} \PY{k+kn}{import} \PY{n}{getdata}
+        
+        \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k+kn}{as} \PY{n+nn}{pd}
+        \PY{k+kn}{import} \PY{n+nn}{healpy} \PY{k+kn}{as} \PY{n+nn}{hp}
+        
+        \PY{k+kn}{import} \PY{n+nn}{esutil}
+\end{Verbatim}
+
+
+    \hypertarget{load}{%
+\subsection{Load}\label{load}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{k+kn}{import} \PY{n+nn}{h5py}
+        
+        \PY{n}{path}   \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{/data/des81.b/data/mariaeli/y3\PYZus{}buzz/Buzzard\PYZhy{}3\PYZus{}v2.0\PYZus{}Y3a\PYZus{}mastercat/}\PY{l+s+s1}{\PYZsq{}}
+        \PY{c+c1}{\PYZsh{} path   = \PYZsq{}/global/project/projectdirs/des/jderose/Chinchilla/Herd/Chinchilla\PYZhy{}3/v1.9.8/sampleselection/Y3a/mastercat/\PYZsq{}}
+        \PY{n}{fname}  \PY{o}{=} \PY{n}{path}\PY{o}{+}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Buzzard\PYZus{}v2.0\PYZus{}Y3a\PYZus{}gold.h5}\PY{l+s+s1}{\PYZsq{}}
+        \PY{n}{fname\PYZus{}bpz} \PY{o}{=} \PY{n}{path}\PY{o}{+}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Buzzard\PYZus{}v2.0\PYZus{}Y3a\PYZus{}bpz.h5}\PY{l+s+s1}{\PYZsq{}}
+        \PY{n}{fname\PYZus{}aux}  \PY{o}{=} \PY{n}{path}\PY{o}{+}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Buzzard\PYZhy{}3\PYZus{}v2.0\PYZus{}Y3a\PYZus{}mastercat.h5}\PY{l+s+s1}{\PYZsq{}}
+        
+        \PY{n}{master} \PY{o}{=} \PY{n}{h5py}\PY{o}{.}\PY{n}{File}\PY{p}{(}\PY{n}{fname}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{indexes}\PY{o}{=} \PY{n}{h5py}\PY{o}{.}\PY{n}{File}\PY{p}{(}\PY{n}{fname\PYZus{}aux}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/cvmfs/des.opensciencegrid.org/fnal/anaconda2/envs/des18a/lib/python2.7/site-packages/h5py/\_\_init\_\_.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from .\_conv import register\_converters as \_register\_converters
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{o}{!}ls /data/des81.b/data/mariaeli/y3\PYZus{}buzz/Buzzard\PYZhy{}3\PYZus{}v2.0\PYZus{}Y3a\PYZus{}mastercat/
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+buzzard\_1.9.9\_3y3a\_rsshift\_run.h5  Buzzard\_v2.0\_Y3a\_gold.h5
+Buzzard-3\_v2.0\_Y3a\_mastercat.h5    Buzzard\_v2.0\_Y3a\_shape.h5
+Buzzard\_v2.0\_Y3a\_bpz.h5		   nohup.out
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{k}{def} \PY{n+nf}{show\PYZus{}h5\PYZus{}group}\PY{p}{(}\PY{n}{name}\PY{p}{,}\PY{n}{node}\PY{p}{)}\PY{p}{:}
+            \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{} show all the h5 groups}
+        \PY{l+s+sd}{    Example:}
+        \PY{l+s+sd}{    fmaster = h5py.File(copa.master\PYZus{}fname,\PYZsq{}r\PYZsq{})}
+        \PY{l+s+sd}{    fmaster.visititems(show\PYZus{}h5\PYZus{}group)}
+        
+        \PY{l+s+sd}{    \PYZsh{}\PYZsh{} https://stackoverflow.com/questions/45562169/traverse\PYZhy{}hdf5\PYZhy{}file\PYZhy{}tree\PYZhy{}and\PYZhy{}continue\PYZhy{}after\PYZhy{}return}
+        \PY{l+s+sd}{    \PYZsq{}\PYZsq{}\PYZsq{}}
+            \PY{k}{if} \PY{n+nb}{isinstance}\PY{p}{(}\PY{n}{node}\PY{p}{,} \PY{n}{h5py}\PY{o}{.}\PY{n}{Group}\PY{p}{)}\PY{p}{:}
+                \PY{k}{print}\PY{p}{(}\PY{n}{name}\PY{p}{,}\PY{n}{node}\PY{p}{)}
+            \PY{k}{return} \PY{n+nb+bp}{None}
+        
+        \PY{k}{def} \PY{n+nf}{show\PYZus{}h5\PYZus{}dataset}\PY{p}{(}\PY{n}{name}\PY{p}{,}\PY{n}{node}\PY{p}{)}\PY{p}{:}
+            \PY{k}{if} \PY{n+nb}{isinstance}\PY{p}{(}\PY{n}{node}\PY{p}{,} \PY{n}{h5py}\PY{o}{.}\PY{n}{Dataset}\PY{p}{)}\PY{p}{:}
+                \PY{k}{print}\PY{p}{(}\PY{n}{name}\PY{p}{,}\PY{n}{node}\PY{p}{)}
+            \PY{k}{return} \PY{n+nb+bp}{None}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{columns} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{hpix\PYZus{}16384}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{haloid}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{coadd\PYZus{}object\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ra}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dec}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{rhalo}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+        \PY{n}{columns}\PY{o}{+}\PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mag\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{p}{(}\PY{n}{ix}\PY{p}{)} \PY{k}{for} \PY{n}{ix} \PY{o+ow}{in} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{z}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{]}
+        \PY{n}{columns}\PY{o}{+}\PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mag\PYZus{}err\PYZus{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{p}{(}\PY{n}{ix}\PY{p}{)} \PY{k}{for} \PY{n}{ix} \PY{o+ow}{in} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{i}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{z}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{]}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{columns}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}6}]:} ['hpix\_16384',
+         'haloid',
+         'coadd\_object\_id',
+         'ra',
+         'dec',
+         'rhalo',
+         'mag\_g',
+         'mag\_r',
+         'mag\_i',
+         'mag\_z',
+         'mag\_err\_g',
+         'mag\_err\_r',
+         'mag\_err\_i',
+         'mag\_err\_z']
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{n}{master}\PY{o}{.}\PY{n}{visititems}\PY{p}{(}\PY{n}{show\PYZus{}h5\PYZus{}dataset}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+(u'catalog/gold/coadd\_object\_id', <HDF5 dataset "coadd\_object\_id": shape (1504210222,), type ">i8">)
+(u'catalog/gold/dec', <HDF5 dataset "dec": shape (1504210222,), type ">f4">)
+(u'catalog/gold/flags\_gold', <HDF5 dataset "flags\_gold": shape (1504210222,), type ">i8">)
+(u'catalog/gold/flux\_g', <HDF5 dataset "flux\_g": shape (1504210222,), type ">f4">)
+(u'catalog/gold/flux\_i', <HDF5 dataset "flux\_i": shape (1504210222,), type ">f4">)
+(u'catalog/gold/flux\_r', <HDF5 dataset "flux\_r": shape (1504210222,), type ">f4">)
+(u'catalog/gold/flux\_z', <HDF5 dataset "flux\_z": shape (1504210222,), type ">f4">)
+(u'catalog/gold/haloid', <HDF5 dataset "haloid": shape (1504210222,), type ">i8">)
+(u'catalog/gold/hpix\_16384', <HDF5 dataset "hpix\_16384": shape (1504210222,), type ">i8">)
+(u'catalog/gold/ivar\_g', <HDF5 dataset "ivar\_g": shape (1504210222,), type ">f4">)
+(u'catalog/gold/ivar\_i', <HDF5 dataset "ivar\_i": shape (1504210222,), type ">f4">)
+(u'catalog/gold/ivar\_r', <HDF5 dataset "ivar\_r": shape (1504210222,), type ">f4">)
+(u'catalog/gold/ivar\_z', <HDF5 dataset "ivar\_z": shape (1504210222,), type ">f4">)
+(u'catalog/gold/m200', <HDF5 dataset "m200": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_err\_g', <HDF5 dataset "mag\_err\_g": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_err\_i', <HDF5 dataset "mag\_err\_i": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_err\_r', <HDF5 dataset "mag\_err\_r": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_err\_z', <HDF5 dataset "mag\_err\_z": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_g', <HDF5 dataset "mag\_g": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_g\_lensed', <HDF5 dataset "mag\_g\_lensed": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_g\_true', <HDF5 dataset "mag\_g\_true": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_i', <HDF5 dataset "mag\_i": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_i\_lensed', <HDF5 dataset "mag\_i\_lensed": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_i\_true', <HDF5 dataset "mag\_i\_true": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_r', <HDF5 dataset "mag\_r": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_r\_lensed', <HDF5 dataset "mag\_r\_lensed": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_r\_true', <HDF5 dataset "mag\_r\_true": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_z', <HDF5 dataset "mag\_z": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_z\_lensed', <HDF5 dataset "mag\_z\_lensed": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mag\_z\_true', <HDF5 dataset "mag\_z\_true": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mcal\_flux\_i', <HDF5 dataset "mcal\_flux\_i": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mcal\_flux\_r', <HDF5 dataset "mcal\_flux\_r": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mcal\_flux\_z', <HDF5 dataset "mcal\_flux\_z": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mcal\_ivar\_i', <HDF5 dataset "mcal\_ivar\_i": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mcal\_ivar\_r', <HDF5 dataset "mcal\_ivar\_r": shape (1504210222,), type ">f4">)
+(u'catalog/gold/mcal\_ivar\_z', <HDF5 dataset "mcal\_ivar\_z": shape (1504210222,), type ">f4">)
+(u'catalog/gold/px', <HDF5 dataset "px": shape (1504210222,), type ">f4">)
+(u'catalog/gold/py', <HDF5 dataset "py": shape (1504210222,), type ">f4">)
+(u'catalog/gold/pz', <HDF5 dataset "pz": shape (1504210222,), type ">f4">)
+(u'catalog/gold/r200', <HDF5 dataset "r200": shape (1504210222,), type ">f4">)
+(u'catalog/gold/ra', <HDF5 dataset "ra": shape (1504210222,), type ">f4">)
+(u'catalog/gold/rhalo', <HDF5 dataset "rhalo": shape (1504210222,), type ">f4">)
+(u'catalog/gold/sdss\_sedid', <HDF5 dataset "sdss\_sedid": shape (1504210222,), type ">i8">)
+(u'catalog/gold/vx', <HDF5 dataset "vx": shape (1504210222,), type ">f4">)
+(u'catalog/gold/vy', <HDF5 dataset "vy": shape (1504210222,), type ">f4">)
+(u'catalog/gold/vz', <HDF5 dataset "vz": shape (1504210222,), type ">f4">)
+(u'masks/gold/hpix', <HDF5 dataset "hpix": shape (24697974,), type "<i8">)
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{indexes}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{index}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{o}{.}\PY{n}{visititems}\PY{p}{(}\PY{n}{show\PYZus{}h5\PYZus{}dataset}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+(u'bpz/match\_gold', <HDF5 dataset "match\_gold": shape (1504210222,), type "<i8">)
+(u'bpz/select', <HDF5 dataset "select": shape (1504210222,), type "<i8">)
+(u'coadd\_object\_id', <HDF5 dataset "coadd\_object\_id": shape (1504210222,), type "<i8">)
+(u'gold/select', <HDF5 dataset "select": shape (1504210222,), type "<i8">)
+(u'maglim/select', <HDF5 dataset "select": shape (2388988,), type "<i8">)
+(u'mask/fracgood', <HDF5 dataset "fracgood": shape (21590657,), type "<i8">)
+(u'mask/hpix', <HDF5 dataset "hpix": shape (21590657,), type "<i8">)
+(u'mask/zmax', <HDF5 dataset "zmax": shape (21590657,), type "<i8">)
+(u'metacal/match\_gold', <HDF5 dataset "match\_gold": shape (1504210222,), type "<i8">)
+(u'redmagic/combined\_sample\_fid/match\_gold', <HDF5 dataset "match\_gold": shape (3041935,), type "<i8">)
+(u'redmagic/combined\_sample\_fid/random\_10xdownsample\_select', <HDF5 dataset "random\_10xdownsample\_select": shape (30419350,), type "<i8">)
+(u'redmagic/combined\_sample\_fid/random\_select', <HDF5 dataset "random\_select": shape (123296252,), type "<i8">)
+(u'redmagic/combined\_sample\_fid/select', <HDF5 dataset "select": shape (3041935,), type "<i8">)
+(u'redmagic/highdens/match\_gold', <HDF5 dataset "match\_gold": shape (2884359,), type "<i8">)
+(u'redmagic/highdens/random\_select', <HDF5 dataset "random\_select": shape (94341550,), type "<i8">)
+(u'redmagic/highdens/select', <HDF5 dataset "select": shape (2695823,), type "<i8">)
+(u'redmagic/higherlum/match\_gold', <HDF5 dataset "match\_gold": shape (510848,), type "<i8">)
+(u'redmagic/higherlum/random\_select', <HDF5 dataset "random\_select": shape (94336080,), type "<i8">)
+(u'redmagic/higherlum/select', <HDF5 dataset "select": shape (475010,), type "<i8">)
+(u'redmagic/highlum/match\_gold', <HDF5 dataset "match\_gold": shape (2049142,), type "<i8">)
+(u'redmagic/highlum/random\_select', <HDF5 dataset "random\_select": shape (94340054,), type "<i8">)
+(u'redmagic/highlum/select', <HDF5 dataset "select": shape (1917971,), type "<i8">)
+(u'select', <HDF5 dataset "select": shape (103106417,), type "<i8">)
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{select}     \PY{o}{=} \PY{n}{indexes}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{index/gold/select}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{p}{:}\PY{p}{]}
+        \PY{n}{mag\PYZus{}i}      \PY{o}{=} \PY{n}{master}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{catalog/gold/mag\PYZus{}i}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{p}{:}\PY{p}{]}\PY{p}{[}\PY{n}{select}\PY{p}{]}
+        \PY{n}{maglim\PYZus{}idx} \PY{o}{=} \PY{n}{select}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{where}\PY{p}{(}\PY{n}{mag\PYZus{}i}\PY{o}{\PYZlt{}}\PY{o}{=}\PY{l+m+mf}{17.}\PY{p}{)}\PY{p}{]}
+        \PY{c+c1}{\PYZsh{}hpx16384   = master[\PYZsq{}catalog/gold/hpix\PYZus{}16384\PYZsq{}][:][maglim\PYZus{}idx]}
+        
+        \PY{n}{ra}   \PY{o}{=} \PY{n}{master}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{catalog/gold/ra}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{p}{:}\PY{p}{]}\PY{p}{[}\PY{n}{maglim\PYZus{}idx}\PY{p}{]}
+        \PY{n}{dec}   \PY{o}{=} \PY{n}{master}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{catalog/gold/dec}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{p}{:}\PY{p}{]}\PY{p}{[}\PY{n}{maglim\PYZus{}idx}\PY{p}{]}
+        \PY{c+c1}{\PYZsh{}mids       = master[\PYZsq{}catalog/gold/coadd\PYZus{}object\PYZus{}id\PYZsq{}][:][maglim\PYZus{}idx]}
+        
+        \PY{c+c1}{\PYZsh{}maglim\PYZus{}idx = select[np.where(mag\PYZus{}i\PYZlt{}=24.)]}
+        \PY{n}{select}\PY{o}{=}\PY{n}{mag\PYZus{}i}\PY{o}{=}\PY{l+m+mi}{0}
+        
+        \PY{n}{master}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+        \PY{n}{indexes}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \hypertarget{query-gw-sky-map}{%
+\subsection{Query GW Sky Map}\label{query-gw-sky-map}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{fname} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{/data/des70.b/data/palmese/bayestar\PYZhy{}sims/HLVK\PYZus{}O4/bns/fits/flatten/845.fits.gz}\PY{l+s+s1}{\PYZsq{}}
+         \PY{n}{hpx\PYZus{}map} \PY{o}{=} \PY{n}{Table}\PY{p}{(}\PY{n}{getdata}\PY{p}{(}\PY{n}{fname}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{n}{hpx\PYZus{}map}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}11}]:} <Table length=50331648>
+                  PROB                DISTMU       {\ldots}        DISTNORM       
+                float64              float64       {\ldots}        float64        
+         ---------------------- ------------------ {\ldots} ----------------------
+         1.5713738532000388e-14 53.262045194654014 {\ldots} 0.00035022646103991407
+         1.5713738532000388e-14 53.262045194654014 {\ldots} 0.00035022646103991407
+         1.5713738532000388e-14 53.262045194654014 {\ldots} 0.00035022646103991407
+         1.5713738532000388e-14 53.262045194654014 {\ldots} 0.00035022646103991407
+         1.5713738532000388e-14 53.262045194654014 {\ldots} 0.00035022646103991407
+         1.5713738532000388e-14 53.262045194654014 {\ldots} 0.00035022646103991407
+         1.5713738532000388e-14 53.262045194654014 {\ldots} 0.00035022646103991407
+         1.5713738532000388e-14 53.262045194654014 {\ldots} 0.00035022646103991407
+         1.5713738532000388e-14 53.262045194654014 {\ldots} 0.00035022646103991407
+         1.5713738532000388e-14 53.262045194654014 {\ldots} 0.00035022646103991407
+                            {\ldots}                {\ldots} {\ldots}                    {\ldots}
+         2.3116993709760397e-62  75.07054877940361 {\ldots} 0.00013496488406821247
+         2.3116993709760397e-62  75.07054877940361 {\ldots} 0.00013496488406821247
+         2.3116993709760397e-62  75.07054877940361 {\ldots} 0.00013496488406821247
+         2.3116993709760397e-62  75.07054877940361 {\ldots} 0.00013496488406821247
+         2.3116993709760397e-62  75.07054877940361 {\ldots} 0.00013496488406821247
+         2.3116993709760397e-62  75.07054877940361 {\ldots} 0.00013496488406821247
+         2.3116993709760397e-62  75.07054877940361 {\ldots} 0.00013496488406821247
+         2.3116993709760397e-62  75.07054877940361 {\ldots} 0.00013496488406821247
+         2.3116993709760397e-62  75.07054877940361 {\ldots} 0.00013496488406821247
+         2.3116993709760397e-62  75.07054877940361 {\ldots} 0.00013496488406821247
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{hpx} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{hpx\PYZus{}map}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{PROB}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{i} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{flipud}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{argsort}\PY{p}{(}\PY{n}{hpx}\PY{p}{)}\PY{p}{)}
+         \PY{n}{sorted\PYZus{}credible\PYZus{}levels} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{cumsum}\PY{p}{(}\PY{n}{hpx}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}
+         \PY{n}{credible\PYZus{}levels} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{empty\PYZus{}like}\PY{p}{(}\PY{n}{sorted\PYZus{}credible\PYZus{}levels}\PY{p}{)}
+         \PY{n}{credible\PYZus{}levels}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{=} \PY{n}{sorted\PYZus{}credible\PYZus{}levels}
+         \PY{n}{hpx\PYZus{}90percent}\PY{p}{,} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{where}\PY{p}{(}\PY{n}{credible\PYZus{}levels} \PY{o}{\PYZlt{}}\PY{o}{=} \PY{l+m+mf}{0.9}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}14}]:} \PY{k}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsh{} pix: }\PY{l+s+si}{\PYZpc{}i}\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{p}{(}\PY{n}{credible\PYZus{}levels}\PY{o}{.}\PY{n}{size}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\# pix: 50331648
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{nside} \PY{o}{=} \PY{l+m+mi}{16384}
+         \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{:}
+             \PY{n}{factor} \PY{o}{=} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{i}
+             \PY{k}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Nside, Npix: }\PY{l+s+si}{\PYZpc{}i}\PY{l+s+s1}{, }\PY{l+s+si}{\PYZpc{}i}\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{p}{(}\PY{n}{nside}\PY{o}{/}\PY{n}{factor}\PY{p}{,}\PY{n}{hp}\PY{o}{.}\PY{n}{nside2npix}\PY{p}{(}\PY{n}{nside}\PY{o}{/}\PY{n}{factor}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Nside, Npix: 8192, 805306368
+Nside, Npix: 4096, 201326592
+Nside, Npix: 2730, 89434800
+Nside, Npix: 2048, 50331648
+Nside, Npix: 1638, 32196528
+Nside, Npix: 1365, 22358700
+Nside, Npix: 1170, 16426800
+Nside, Npix: 1024, 12582912
+Nside, Npix: 910, 9937200
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}17}]:} \PY{c+c1}{\PYZsh{}\PYZsh{} Degrade Buzzard Map}
+         \PY{n}{nside\PYZus{}gw} \PY{o}{=} \PY{l+m+mi}{2048}
+         \PY{n}{npix} \PY{o}{=} \PY{n}{hp}\PY{o}{.}\PY{n}{nside2npix}\PY{p}{(}\PY{n}{nside\PYZus{}gw}\PY{p}{)}
+             
+         \PY{n}{thetas}\PY{p}{,}\PY{n}{phis} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{l+m+mi}{90}\PY{o}{\PYZhy{}}\PY{n}{dec}\PY{p}{)}\PY{p}{,}\PY{n}{np}\PY{o}{.}\PY{n}{radians}\PY{p}{(}\PY{n}{ra}\PY{p}{)}
+         
+         \PY{c+c1}{\PYZsh{} Go from radec to HEALPix coordinates }
+         \PY{n}{hpx2048} \PY{o}{=} \PY{n}{hp}\PY{o}{.}\PY{n}{ang2pix}\PY{p}{(}\PY{n}{nside\PYZus{}gw}\PY{p}{,} \PY{n}{thetas}\PY{p}{,} \PY{n}{phis}\PY{p}{,} \PY{n}{nest}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{)}
+         
+         \PY{n}{hpxmap} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{n}{npix}\PY{p}{,} \PY{n}{dtype}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{float}\PY{p}{)}
+         \PY{n}{w}\PY{p}{,} \PY{n}{values} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{unique}\PY{p}{(}\PY{n}{hpx2048}\PY{p}{,}\PY{n}{return\PYZus{}counts}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{)}
+         \PY{n}{hpxmap}\PY{p}{[}\PY{n}{w}\PY{p}{]} \PY{o}{=} \PY{n}{values}
+\end{Verbatim}
+
+
+    \hypertarget{plot-maps}{%
+\subsection{Plot Maps}\label{plot-maps}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}18}]:} \PY{k+kn}{import} \PY{n+nn}{healpy} \PY{k+kn}{as} \PY{n+nn}{hp}
+         \PY{n}{hp}\PY{o}{.}\PY{n}{mollview}\PY{p}{(}\PY{n}{credible\PYZus{}levels}\PY{p}{,} \PY{n}{nest}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,} \PY{n}{title}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{GW Map}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_20_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}19}]:} \PY{n}{hp}\PY{o}{.}\PY{n}{mollview}\PY{p}{(}\PY{n}{hpxmap}\PY{p}{,} \PY{n}{nest}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,} \PY{n}{title}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Buzzard Map}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_21_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{healpix-matching}{%
+\subsection{Healpix Matching}\label{healpix-matching}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}20}]:} \PY{n}{hpx\PYZus{}90percent}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}20}]:} array([33930176, 33930177, 33930178, {\ldots}, 35389309, 35389310, 35389311])
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}21}]:} \PY{n}{match}  \PY{o}{=} \PY{n}{esutil}\PY{o}{.}\PY{n}{numpy\PYZus{}util}\PY{o}{.}\PY{n}{match}\PY{p}{(}\PY{n}{hpx\PYZus{}90percent}\PY{p}{,}\PY{n}{hpx2048}\PY{p}{)}
+         \PY{n}{indices}\PY{o}{=} \PY{n}{maglim\PYZus{}idx}\PY{p}{[}\PY{n}{match}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{]}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}22}]:} \PY{l+m+mf}{1.}\PY{o}{*}\PY{n}{match}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{size}\PY{o}{/}\PY{n}{hpx2048}\PY{o}{.}\PY{n}{size}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}22}]:} 0.008673531111798152
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}23}]:} \PY{l+m+mf}{1.}\PY{o}{*}\PY{n}{match}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{size}\PY{o}{/}\PY{n}{hpx\PYZus{}90percent}\PY{o}{.}\PY{n}{size}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}23}]:} 0.04485887096774194
+\end{Verbatim}
+            
+    \hypertarget{querying-matched-sample}{%
+\subsection{Querying matched sample}\label{querying-matched-sample}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{k}{def} \PY{n+nf}{load\PYZus{}hdf\PYZus{}files}\PY{p}{(}\PY{n}{infile}\PY{p}{,}\PY{n}{indices}\PY{p}{,}\PY{n}{columns}\PY{p}{,}\PY{n}{path}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{catalog/gold/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{:}
+             \PY{n}{master} \PY{o}{=} \PY{n}{h5py}\PY{o}{.}\PY{n}{File}\PY{p}{(}\PY{n}{infile}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{gold}   \PY{o}{=} \PY{n}{master}\PY{p}{[}\PY{n}{path}\PY{p}{]}
+             
+             \PY{n}{mydict} \PY{o}{=} \PY{n+nb}{dict}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{fromkeys}\PY{p}{(}\PY{n}{columns}\PY{p}{)}
+             \PY{k}{for} \PY{n}{col} \PY{o+ow}{in} \PY{n}{columns}\PY{p}{:}
+                 \PY{n}{mydict}\PY{p}{[}\PY{n}{col}\PY{p}{]} \PY{o}{=} \PY{n}{gold}\PY{p}{[}\PY{n}{col}\PY{p}{]}\PY{p}{[}\PY{p}{:}\PY{p}{]}\PY{p}{[}\PY{n}{indices}\PY{p}{]}
+             
+             \PY{n}{master}\PY{o}{.}\PY{n}{close}\PY{p}{(}\PY{p}{)}
+             \PY{k}{return} \PY{n}{Table}\PY{p}{(}\PY{n}{mydict}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}27}]:} \PY{n}{fname}  \PY{o}{=} \PY{n}{path}\PY{o}{+}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Buzzard\PYZus{}v2.0\PYZus{}Y3a\PYZus{}gold.h5}\PY{l+s+s1}{\PYZsq{}}
+         \PY{n}{data} \PY{o}{=} \PY{n}{load\PYZus{}hdf\PYZus{}files}\PY{p}{(}\PY{n}{fname}\PY{p}{,}\PY{n}{indices}\PY{p}{,}\PY{n}{columns}\PY{p}{,}\PY{n}{path}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{catalog/gold/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{n}{fname\PYZus{}bpz} \PY{o}{=} \PY{n}{path}\PY{o}{+}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Buzzard\PYZus{}v2.0\PYZus{}Y3a\PYZus{}bpz.h5}\PY{l+s+s1}{\PYZsq{}}
+        \PY{n}{zdata} \PY{o}{=} \PY{n}{load\PYZus{}hdf\PYZus{}files}\PY{p}{(}\PY{n}{fname\PYZus{}bpz}\PY{p}{,}\PY{n}{indices}\PY{p}{,}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{coadd\PYZus{}object\PYZus{}id}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{z}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{,}\PY{n}{path}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{catalog/bpz/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{n}{data}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{n}{zdata}
+\end{Verbatim}
+
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}
