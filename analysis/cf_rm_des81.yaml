@@ -1,0 +1,56 @@
+##### Buzzard v2.0 imput files
+## copacabana master files
+members_infile   : /data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/tiles/buzzard_y3_v2.0.0_redmapper_heidi_lgt5_lw20_copper_hpx8_{:05d}.hdf5
+cluster_infile   : /data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/halos/buzzard-1.9.8_3y3a_run_halos_lambda_lgt5_lw20.fits
+master_outfile   : /data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/buzzard_v2.0.0_rm_lgt5_lw20_copa_{:05d}.hdf5
+columns_yaml_file: /home/s1/jesteves/git/ccopa/config_files/buzzard_v2_grc_columns.yaml
+pixelmap_file    : 
+
+
+######## copa setup #######
+zmin_gal: 0.0
+zmax_gal: 1.5
+dz_max  : 0.3
+
+## radial cuts
+rmax : 3.
+r_in : 4.
+r_out: 6.
+
+## pz0 factor
+pz_factor: 0.835
+
+## relative mag cut; dmag_lim only works if mag_selection is empty
+mag_model_file: /home/s1/jesteves/git/ccopa/aux_files/annis_mags_04_Lcut.txt
+mag_selection : 02Lstar
+dmag_lim: 3
+
+## cluster aperture radii, it can be a number in Mpc, values: rhod/r200 (simulation)
+r_aper_model : r200
+r_aper_value : 
+
+## parallel process
+copa_number_of_chunks: 100
+
+## Photo-z setup
+# 1st model: a gaussian distribution centered on zcls with a std of z_window
+# 2nd model: a gaussian distribution centered on zcls+bias with a std dependeding on redshift
+# 2nd model is a text file with: z, bias, std
+z_window     : 0.03
+z_model_file : /home/s1/jesteves/git/ccopa/aux_files/zwindow_model_buzzard_dnf.txt
+
+## Healpixel config
+healpixel_setup : True
+## for the whole sample use the pixel list below
+#healpixel_list  : [522,523]
+healpixel_list  : [519, 522, 523, 524, 525, 526, 527, 528, 529, 530]
+
+######## bma setup #######
+## paralell
+bma_number_of_chunks: 1500
+
+## stellar population libray file
+lib_inPath: /data/des61.a/data/pbarchi/galaxyClusters/simha_miles_Nov2016/
+
+# root = '/home/s1/jesteves/git/buzzardAnalysis/mainAnalysis/'
+# vc = viewClusters(cfg=root+'config_buzzard_v2.yaml')
