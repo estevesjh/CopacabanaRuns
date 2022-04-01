@@ -1,2 +1,3 @@
-# buzzardAnalysis
-Here I outline my steps for the Buzzard v2.0 selection.
+# Copacabana Runs
+
+This repo stores the information about all the copacabana runs after, Buzzard v2.0.
