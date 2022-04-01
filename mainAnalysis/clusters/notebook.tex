@@ -1,0 +1,1481 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{0.rhod-compare-perfomance}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    \hypertarget{cluster-results}{%
+\section{Cluster Results}\label{cluster-results}}
+
+\hypertarget{multiple-runs}{%
+\subsubsection{Multiple runs}\label{multiple-runs}}
+
+In this notebook we show the results of the cluster estimations for
+different Copacabana runs.
+
+    \hypertarget{importing-packages}{%
+\subsubsection{Importing Packages}\label{importing-packages}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{from} \PY{n+nn}{astropy.table} \PY{k+kn}{import} \PY{n}{Table}\PY{p}{,} \PY{n}{vstack}
+        \PY{k+kn}{from} \PY{n+nn}{astropy.io.fits} \PY{k+kn}{import} \PY{n}{getdata}
+        
+        \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k+kn}{as} \PY{n+nn}{pd}
+        
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k+kn}{as} \PY{n+nn}{np}
+        
+        \PY{k+kn}{from} \PY{n+nn}{collections} \PY{k+kn}{import} \PY{n}{defaultdict}
+        \PY{k+kn}{from} \PY{n+nn}{matplotlib} \PY{k+kn}{import} \PY{n}{pylab}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib.pyplot} \PY{k+kn}{as} \PY{n+nn}{plt}
+        
+        \PY{k+kn}{from} \PY{n+nn}{scipy} \PY{k+kn}{import} \PY{n}{stats}
+        \PY{k+kn}{import} \PY{n+nn}{sklearn}
+        
+        \PY{k+kn}{import} \PY{n+nn}{scipy.stats} \PY{k+kn}{as} \PY{n+nn}{st}
+        \PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k+kn}{as} \PY{n+nn}{sns}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{sns}\PY{o}{.}\PY{n}{set\PYZus{}style}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{whitegrid}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{k+kn}{import} \PY{n+nn}{sys}
+        \PY{n}{sys}\PY{o}{.}\PY{n}{path}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{/home/s1/jesteves/git/buzzardAnalysis/mainAnalysis/}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{k+kn}{from} \PY{n+nn}{plotLibrary} \PY{k+kn}{import} \PY{n}{viewClusters}\PY{p}{,}\PY{n}{box\PYZus{}plot}\PY{p}{,} \PY{n}{get\PYZus{}dataFrame\PYZus{}residual}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/cvmfs/des.opensciencegrid.org/fnal/anaconda2/envs/des18a/lib/python2.7/site-packages/h5py/\_\_init\_\_.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from .\_conv import register\_converters as \_register\_converters
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Using Modified sklearn.mixture.GMM, modified to allow data weights
+
+    \end{Verbatim}
+
+    \hypertarget{loading-data}{%
+\subsubsection{Loading Data}\label{loading-data}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{c+c1}{\PYZsh{}\PYZsh{} the run we take a look into is:}
+        \PY{n}{pz\PYZus{}labels} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gauss001}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gauss003}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{gauss005}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n+nb+bp}{None}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dnf\PYZus{}model}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+        \PY{n}{runs}\PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZhy{}rhod\PYZhy{}m0}\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{k}{li} for li in pz\PYZus{}labels[:\PYZhy{}2]]
+        \PY{n}{runs}\PY{o}{+}\PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dnf\PYZhy{}rhod\PYZhy{}m0}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{dnf003\PYZhy{}rhod\PYZhy{}m0}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+        \PY{c+c1}{\PYZsh{}runs= [run1,run2,run3,run4]}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{c+c1}{\PYZsh{}runs=[\PYZsq{}gauss003\PYZhy{}r200\PYZsq{},\PYZsq{}gauss005\PYZhy{}r200\PYZsq{},\PYZsq{}emuBPZ\PYZhy{}r200\PYZsq{}]}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{root} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{/home/s1/jesteves/git/ccopa/}\PY{l+s+s1}{\PYZsq{}}
+        \PY{n}{vc} \PY{o}{=} \PY{n}{viewClusters}\PY{p}{(}\PY{n}{cfg}\PY{o}{=}\PY{n}{root}\PY{o}{+}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{config\PYZus{}files/config\PYZus{}buzzard\PYZus{}v2.yaml}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{k}{for} \PY{n}{run} \PY{o+ow}{in} \PY{n}{runs}\PY{p}{:}
+            \PY{k}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{run: }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{k}{run})
+            \PY{n}{vc}\PY{o}{.}\PY{n}{load\PYZus{}data}\PY{p}{(}\PY{n}{run}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+master file: 
+ /data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00000.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00016.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00017.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00018.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00019.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00020.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00022.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00032.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00033.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00034.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00035.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00038.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00044.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00045.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00046.hdf5
+/data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles/buzzard\_v2.0.0\_copa\_golden\_00047.hdf5
+outdir: /data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/
+tile path: /data/des61.a/data/johnny/Buzzard/Buzzard\_v2.0.0/y3/output/tiles
+run: gauss001-rhod-m0
+run: gauss003-rhod-m0
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/home/s1/jesteves/git/buzzardAnalysis/mainAnalysis/plotLibrary.py:1861: RuntimeWarning: divide by zero encountered in log10
+  xlog = np.log10(x)
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+run: gauss005-rhod-m0
+run: dnf-rhod-m0
+run: dnf003-rhod-m0
+
+    \end{Verbatim}
+
+    \hypertarget{residuals-and-metrics}{%
+\subsubsection{Residuals and Metrics}\label{residuals-and-metrics}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{k}{for} \PY{n}{run} \PY{o+ow}{in} \PY{n}{runs}\PY{p}{:}
+            \PY{n}{vc}\PY{o}{.}\PY{n}{compute\PYZus{}residuals}\PY{p}{(}\PY{n}{run}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}8}]:} \PY{k}{for} \PY{n}{run} \PY{o+ow}{in} \PY{n}{runs}\PY{p}{:}
+            \PY{n}{vc}\PY{o}{.}\PY{n}{eval\PYZus{}all\PYZus{}metrics}\PY{p}{(}\PY{n}{run}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{heading\PYZus{}properties} \PY{o}{=} \PY{p}{[}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{font\PYZhy{}size}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{16px}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+        \PY{n}{cell\PYZus{}properties} \PY{o}{=} \PY{p}{[}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{font\PYZhy{}size}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{16px}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{]}
+        \PY{n}{dfstyle} \PY{o}{=} \PY{p}{[}\PY{n+nb}{dict}\PY{p}{(}\PY{n}{selector}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{th}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{props}\PY{o}{=}\PY{n}{heading\PYZus{}properties}\PY{p}{)}\PY{p}{,}\PYZbs{}
+         \PY{n+nb}{dict}\PY{p}{(}\PY{n}{selector}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{td}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{props}\PY{o}{=}\PY{n}{cell\PYZus{}properties}\PY{p}{)}\PY{p}{]}
+        
+        \PY{c+c1}{\PYZsh{}df.style.set\PYZus{}table\PYZus{}styles(dfstyle)}
+\end{Verbatim}
+
+
+    \hypertarget{summary-statistics-for-the-whole-sample}{%
+\subsubsection{Summary Statistics for the whole
+sample}\label{summary-statistics-for-the-whole-sample}}
+
+Here we compute some statiscial properties of the ratio \(= x/x_{true}\)
+where x =\{\(N_{gals},\mu_{\star},R_{200}\)\}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{stats\PYZus{}all} \PY{o}{=} \PY{n}{vc}\PY{o}{.}\PY{n}{show\PYZus{}metrics\PYZus{}table\PYZus{}all}\PY{p}{(}\PY{n}{runs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
+         \PY{k}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Statistics for the whole sample}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{stats\PYZus{}all}\PY{o}{.}\PY{n}{style}\PY{o}{.}\PY{n}{set\PYZus{}table\PYZus{}styles}\PY{p}{(}\PY{n}{dfstyle}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Statistics for the whole sample
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}10}]:} <pandas.io.formats.style.Styler at 0x7f6ba3373b50>
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{n}{stats\PYZus{}all} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{p}{[}\PY{n}{vc}\PY{o}{.}\PY{n}{show\PYZus{}metrics\PYZus{}table\PYZus{}all}\PY{p}{(}\PY{n}{run}\PY{p}{)} \PY{k}{for} \PY{n}{run} \PY{o+ow}{in} \PY{n}{runs}\PY{p}{]}\PY{p}{)}
+         \PY{n}{stats\PYZus{}all}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{run}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{repeat}\PY{p}{(}\PY{n}{runs}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}
+         \PY{n}{stats\PYZus{}all} \PY{o}{=} \PY{n}{stats\PYZus{}all}\PY{o}{.}\PY{n}{sort\PYZus{}index}\PY{p}{(}\PY{p}{)}
+         \PY{n}{stats\PYZus{}all}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{predictor}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]} \PY{o}{=} \PY{n}{stats\PYZus{}all}\PY{o}{.}\PY{n}{index}
+         \PY{n}{stats\PYZus{}all} \PY{o}{=} \PY{n}{stats\PYZus{}all}\PY{o}{.}\PY{n}{set\PYZus{}index}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{run}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{c+c1}{\PYZsh{}stats\PYZus{}all}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{stats\PYZus{}all}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{where}\PY{p}{(}\PY{n}{stats\PYZus{}all}\PY{o}{.}\PY{n}{predictor}\PY{o}{==}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MU}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{]}\PY{o}{.}\PY{n}{style}\PY{o}{.}\PY{n}{set\PYZus{}table\PYZus{}styles}\PY{p}{(}\PY{n}{dfstyle}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}13}]:} <pandas.io.formats.style.Styler at 0x7f6b9e470f90>
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}14}]:} \PY{n}{stats\PYZus{}all}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{where}\PY{p}{(}\PY{n}{stats\PYZus{}all}\PY{o}{.}\PY{n}{predictor}\PY{o}{==}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{]}\PY{o}{.}\PY{n}{style}\PY{o}{.}\PY{n}{set\PYZus{}table\PYZus{}styles}\PY{p}{(}\PY{n}{dfstyle}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}14}]:} <pandas.io.formats.style.Styler at 0x7f6ba341f550>
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{stats\PYZus{}all}\PY{o}{.}\PY{n}{iloc}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{where}\PY{p}{(}\PY{n}{stats\PYZus{}all}\PY{o}{.}\PY{n}{predictor}\PY{o}{==}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{R200}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{]}\PY{o}{.}\PY{n}{style}\PY{o}{.}\PY{n}{set\PYZus{}table\PYZus{}styles}\PY{p}{(}\PY{n}{dfstyle}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}15}]:} <pandas.io.formats.style.Styler at 0x7f6b9e4949d0>
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{k}{for} \PY{n}{run} \PY{o+ow}{in} \PY{n}{runs}\PY{p}{:}
+             \PY{k}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{run: }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{k}{run})
+             \PY{n}{ntrue} \PY{o}{=} \PY{n}{vc}\PY{o}{.}\PY{n}{models}\PY{p}{[}\PY{n}{run}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{regressors}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+             \PY{n}{nobjs} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{count\PYZus{}nonzero}\PY{p}{(}\PY{n}{ntrue}\PY{o}{\PYZgt{}}\PY{l+m+mf}{10.}\PY{p}{)}
+             \PY{k}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Nobj: }\PY{l+s+si}{\PYZpc{}i}\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{k}{nobjs})
+             \PY{k}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Frac: }\PY{l+s+si}{\PYZpc{}.2f}\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{p}{(}\PY{l+m+mf}{1.}\PY{o}{*}\PY{n}{nobjs}\PY{o}{/}\PY{n}{ntrue}\PY{o}{.}\PY{n}{size}\PY{p}{)}\PY{p}{)}
+             \PY{k}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+run: gauss001-rhod-m0
+Nobj: 1265
+Frac: 0.46
+
+
+run: gauss003-rhod-m0
+Nobj: 1404
+Frac: 0.51
+
+
+run: gauss005-rhod-m0
+Nobj: 1485
+Frac: 0.54
+
+
+run: dnf-rhod-m0
+Nobj: 1286
+Frac: 0.47
+
+
+run: dnf003-rhod-m0
+Nobj: 1287
+Frac: 0.47
+
+
+
+    \end{Verbatim}
+
+    \hypertarget{residuals-distribution}{%
+\subsubsection{Residuals Distribution}\label{residuals-distribution}}
+
+    Residuals
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}17}]:} \PY{n}{df} \PY{o}{=} \PY{n}{get\PYZus{}dataFrame\PYZus{}residual}\PY{p}{(}\PY{n}{vc}\PY{p}{,}\PY{n}{runs}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}18}]:} \PY{n}{fig}\PY{p}{,} \PY{n}{axs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{all}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{14}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.25}\PY{p}{,}\PY{n}{wspace}\PY{o}{=}\PY{l+m+mf}{0.15}\PY{p}{)}
+         
+         \PY{n}{box\PYZus{}plot}\PY{p}{(}\PY{n}{df}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{n}{xlims}\PY{o}{=}\PY{p}{(}\PY{l+m+mf}{0.}\PY{p}{,}\PY{l+m+mf}{2.2}\PY{p}{)}\PY{p}{)}
+         \PY{n}{box\PYZus{}plot}\PY{p}{(}\PY{n}{df}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MU}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{xlims}\PY{o}{=}\PY{p}{(}\PY{l+m+mf}{0.}\PY{p}{,}\PY{l+m+mf}{2.2}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_24_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}19}]:} \PY{n}{nruns}\PY{o}{=}\PY{l+m+mi}{5}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}20}]:} \PY{n}{fig}\PY{p}{,} \PY{n}{axs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{n}{nruns}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{all}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{sharex}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{all}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{14}\PY{p}{,}\PY{p}{(}\PY{l+m+mf}{3.5}\PY{p}{)}\PY{o}{*}\PY{n}{nruns}\PY{p}{)}\PY{p}{)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.20}\PY{p}{,}\PY{n}{wspace}\PY{o}{=}\PY{l+m+mf}{0.05}\PY{p}{)}
+         
+         \PY{n}{axs} \PY{o}{=} \PY{n}{axs}\PY{o}{.}\PY{n}{T}
+         \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{:}
+             \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{nruns}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{vc}\PY{o}{.}\PY{n}{plot\PYZus{}residual\PYZus{}distribution}\PY{p}{(}\PY{n}{runs}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{,}\PY{n}{vc}\PY{o}{.}\PY{n}{predictors}\PY{p}{[}\PY{n}{j}\PY{p}{]}\PY{p}{,}\PY{n}{axs}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{n}{j}\PY{p}{,}\PY{n}{i}\PY{p}{]}\PY{p}{,}\PY{n}{log\PYZus{}residual}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{,}\PY{n}{xlims}\PY{o}{=}\PY{p}{(}\PY{l+m+mf}{0.3}\PY{p}{,}\PY{l+m+mf}{3.}\PY{p}{)}\PY{p}{)}
+                 \PY{k}{if} \PY{n}{i}\PY{o}{\PYZlt{}}\PY{p}{(}\PY{n}{nruns}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{:}
+                     \PY{n}{axs}\PY{p}{[}\PY{n}{j}\PY{p}{,}\PY{n}{i}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{l+m+mf}{0.}\PY{p}{,}\PY{l+m+mf}{2.3}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}20}]:} (0.0, 2.3)
+\end{Verbatim}
+            
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_26_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Log Residual
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}21}]:} \PY{n}{fig}\PY{p}{,} \PY{n}{axs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{n}{nruns}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{all}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{sharex}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{all}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{14}\PY{p}{,}\PY{p}{(}\PY{l+m+mf}{3.5}\PY{p}{)}\PY{o}{*}\PY{n}{nruns}\PY{p}{)}\PY{p}{)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.20}\PY{p}{,}\PY{n}{wspace}\PY{o}{=}\PY{l+m+mf}{0.05}\PY{p}{)}
+         
+         \PY{n}{axs} \PY{o}{=} \PY{n}{axs}\PY{o}{.}\PY{n}{T}
+         \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)}\PY{p}{:}
+             \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{nruns}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{vc}\PY{o}{.}\PY{n}{plot\PYZus{}residual\PYZus{}distribution}\PY{p}{(}\PY{n}{runs}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{,}\PY{n}{vc}\PY{o}{.}\PY{n}{predictors}\PY{p}{[}\PY{n}{j}\PY{p}{]}\PY{p}{,}\PY{n}{axs}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{n}{j}\PY{p}{,}\PY{n}{i}\PY{p}{]}\PY{p}{,}\PY{n}{log\PYZus{}residual}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,}\PY{n}{xlims}\PY{o}{=}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.4}\PY{p}{,}\PY{l+m+mf}{0.7}\PY{p}{)}\PY{p}{)}
+                 \PY{k}{if} \PY{n}{i}\PY{o}{\PYZlt{}}\PY{p}{(}\PY{n}{nruns}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{:}
+                     \PY{n}{axs}\PY{p}{[}\PY{n}{j}\PY{p}{,}\PY{n}{i}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.4}\PY{p}{,}\PY{l+m+mf}{0.7}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}21}]:} (-0.4, 0.7)
+\end{Verbatim}
+            
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_28_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{binned-analysis}{%
+\subsubsection{Binned Analysis}\label{binned-analysis}}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}22}]:} \PY{n}{myperc} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{1.}\PY{p}{,}\PY{l+m+mi}{15}\PY{p}{,}\PY{l+m+mi}{30}\PY{p}{,}\PY{l+m+mi}{45}\PY{p}{,}\PY{l+m+mi}{60}\PY{p}{,}\PY{l+m+mi}{75}\PY{p}{,}\PY{l+m+mi}{90}\PY{p}{,}\PY{l+m+mi}{95}\PY{p}{,}\PY{l+m+mf}{97.5}\PY{p}{,}\PY{l+m+mi}{100}\PY{p}{]}\PY{p}{)}
+         \PY{c+c1}{\PYZsh{} myperc = np.array([1.,15,45,70,90,97.5,100])}
+         \PY{n}{mycols} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MU\PYZus{}TRUE}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{R200\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{redshift}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M200\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         \PY{n}{mybins} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+         \PY{k}{for} \PY{n}{cols} \PY{o+ow}{in} \PY{n}{mycols}\PY{p}{:}
+             \PY{n}{mybins}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{nanpercentile}\PY{p}{(}\PY{n}{vc}\PY{o}{.}\PY{n}{models}\PY{p}{[}\PY{n}{runs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{]}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{aux\PYZus{}vars}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{[}\PY{n}{cols}\PY{p}{]}\PY{p}{,}\PY{n}{myperc}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}23}]:} \PY{n}{mybins}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{]} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{linspace}\PY{p}{(}\PY{l+m+mf}{0.1}\PY{p}{,}\PY{l+m+mf}{0.7}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{n}{vc}\PY{o}{.}\PY{n}{make\PYZus{}bins}\PY{p}{(}\PY{n}{runs}\PY{p}{,}\PY{o}{*}\PY{n}{mybins}\PY{p}{)}
+         \PY{k}{for} \PY{n}{run} \PY{o+ow}{in} \PY{n}{runs}\PY{p}{:}
+             \PY{n}{vc}\PY{o}{.}\PY{n}{compute\PYZus{}bin\PYZus{}statstics}\PY{p}{(}\PY{n}{run}\PY{p}{)}
+             \PY{n}{vc}\PY{o}{.}\PY{n}{eval\PYZus{}all\PYZus{}metrics}\PY{p}{(}\PY{n}{run}\PY{p}{,}\PY{n}{binned}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/home/s1/jesteves/git/buzzardAnalysis/mainAnalysis/plotLibrary.py:1861: RuntimeWarning: invalid value encountered in log10
+  xlog = np.log10(x)
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}25}]:} \PY{n}{x} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{arange}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{runs}\PY{p}{)}\PY{p}{)}
+         \PY{n}{colors} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{n}{sns}\PY{o}{.}\PY{n}{color\PYZus{}palette}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{n}{xx}\PY{p}{]} \PY{k}{for} \PY{n}{xx} \PY{o+ow}{in} \PY{n}{x}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}26}]:} \PY{n}{fig}\PY{p}{,} \PY{n}{axs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{14}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{,}\PY{n}{sharex}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{all}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{sharey}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{all}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.25}\PY{p}{,}\PY{n}{wspace}\PY{o}{=}\PY{l+m+mf}{0.3}\PY{p}{)}
+         
+         \PY{n}{axs} \PY{o}{=} \PY{n}{axs}\PY{o}{.}\PY{n}{flatten}\PY{p}{(}\PY{n}{order}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{F}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{k}{for} \PY{n}{i}\PY{p}{,}\PY{n}{co}\PY{p}{,}\PY{n}{run} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{runs}\PY{p}{)}\PY{p}{)}\PY{p}{,}\PY{n}{colors}\PY{p}{,}\PY{n}{runs}\PY{p}{)}\PY{p}{:}
+             \PY{k}{if} \PY{n}{i}\PY{o}{\PYZgt{}}\PY{l+m+mi}{3}\PY{p}{:}
+                 \PY{k}{break}
+             \PY{n}{vc}\PY{o}{.}\PY{n}{plot\PYZus{}scaling\PYZus{}relation}\PY{p}{(}\PY{n}{vc}\PY{o}{.}\PY{n}{regressors}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{n}{vc}\PY{o}{.}\PY{n}{predictors}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{n}{run}\PY{p}{,}\PY{n}{points}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,}\PY{n}{axs}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{co}\PY{p}{)}
+         
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{l+m+mf}{0.7}\PY{p}{,}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{l+m+mf}{0.7}\PY{p}{,}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+/cvmfs/des.opensciencegrid.org/fnal/anaconda2/envs/des18a/lib/python2.7/site-packages/matplotlib/axes/\_base.py:3449: UserWarning: Attempted to set non-positive ylimits for log-scale axis; invalid limits will be ignored.
+  'Attempted to set non-positive ylimits for log-scale axis; '
+/cvmfs/des.opensciencegrid.org/fnal/anaconda2/envs/des18a/lib/python2.7/site-packages/matplotlib/axes/\_base.py:3129: UserWarning: Attempted to set non-positive xlimits for log-scale axis; invalid limits will be ignored.
+  'Attempted to set non-positive xlimits for log-scale axis; '
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}26}]:} (0.7, 192.0)
+\end{Verbatim}
+            
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_34_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}27}]:} \PY{n}{fig}\PY{p}{,} \PY{n}{axs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{14}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}\PY{p}{)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.30}\PY{p}{,}\PY{n}{wspace}\PY{o}{=}\PY{l+m+mf}{0.35}\PY{p}{)}
+         
+         \PY{k}{for} \PY{n}{co}\PY{p}{,}\PY{n}{run} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{colors}\PY{p}{,}\PY{n}{runs}\PY{p}{)}\PY{p}{:}
+             \PY{n}{vc}\PY{o}{.}\PY{n}{plot\PYZus{}scaling\PYZus{}relation}\PY{p}{(}\PY{n}{vc}\PY{o}{.}\PY{n}{regressors}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{n}{vc}\PY{o}{.}\PY{n}{predictors}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{n}{run}\PY{p}{,}\PY{n}{points}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{,}\PY{n}{axs}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{co}\PY{p}{)}
+             \PY{n}{vc}\PY{o}{.}\PY{n}{plot\PYZus{}scaling\PYZus{}relation}\PY{p}{(}\PY{n}{vc}\PY{o}{.}\PY{n}{regressors}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{vc}\PY{o}{.}\PY{n}{predictors}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{run}\PY{p}{,}\PY{n}{points}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{,}\PY{n}{axs}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{co}\PY{p}{)}
+             \PY{n}{vc}\PY{o}{.}\PY{n}{plot\PYZus{}scaling\PYZus{}relation}\PY{p}{(}\PY{n}{vc}\PY{o}{.}\PY{n}{regressors}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{vc}\PY{o}{.}\PY{n}{predictors}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{run}\PY{p}{,}\PY{n}{points}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{,}\PY{n}{axs}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{co}\PY{p}{,}\PY{n}{log\PYZus{}scale}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{)}
+         
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{l+m+mf}{0.7}\PY{p}{,}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{l+m+mf}{0.7}\PY{p}{,}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{l+m+mf}{0.5}\PY{p}{,}\PY{l+m+mf}{3.}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{l+m+mf}{0.5}\PY{p}{,}\PY{l+m+mf}{3.}\PY{p}{)}
+         
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_35_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \hypertarget{binned-residuals}{%
+\subsubsection{Binned Residuals}\label{binned-residuals}}
+
+Our results for instance can be dependent on redshift, cluster mass or
+richness. In order to check, in this section we split the sample in bins
+of this quantities and we take a look into the residuals.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}28}]:} \PY{n}{ycol}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MU}\PY{l+s+s1}{\PYZsq{}}
+         \PY{n}{xcol}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M200\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}29}]:} \PY{n}{fig}\PY{p}{,} \PY{n}{axs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{col}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{14}\PY{p}{)}\PY{p}{)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{,}\PY{n}{wspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{)}
+         
+         \PY{k}{for} \PY{n}{co}\PY{p}{,}\PY{n}{run} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{colors}\PY{p}{,}\PY{n}{runs}\PY{p}{)}\PY{p}{:}
+             \PY{n}{vc}\PY{o}{.}\PY{n}{plot\PYZus{}residual}\PY{p}{(}\PY{n}{run}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{redshift}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{n}{xlog}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{co}\PY{p}{,}\PY{n}{points}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{)}
+             \PY{c+c1}{\PYZsh{} vc.plot\PYZus{}residual(run2,\PYZsq{}redshift\PYZsq{},ycol,ax=axs[0],xlog=False,color=\PYZsq{}b\PYZsq{},points=False,shift=0.01)}
+             \PY{n}{vc}\PY{o}{.}\PY{n}{plot\PYZus{}residual}\PY{p}{(}\PY{n}{run}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M200\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{xlog}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{co}\PY{p}{,}\PY{n}{points}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{,}\PY{n}{units}\PY{o}{=}\PY{l+s+sa}{r}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{  [\PYZdl{}M\PYZus{}\PYZob{}}\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{odot\PYZcb{}}\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{, h\PYZca{}\PYZob{}\PYZhy{}1\PYZcb{}\PYZdl{}]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{vc}\PY{o}{.}\PY{n}{plot\PYZus{}residual}\PY{p}{(}\PY{n}{run}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{xlog}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{co}\PY{p}{,}\PY{n}{points}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{)}
+         
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{l+m+mf}{0.4}\PY{p}{,}\PY{l+m+mf}{1.7}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{l+m+mf}{0.08}\PY{p}{,}\PY{l+m+mf}{0.72}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}29}]:} (0.08, 0.72)
+\end{Verbatim}
+            
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_38_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}30}]:} \PY{n}{ycol}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals}\PY{l+s+s1}{\PYZsq{}}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}31}]:} \PY{n}{fig}\PY{p}{,} \PY{n}{axs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{col}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{14}\PY{p}{)}\PY{p}{)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{,}\PY{n}{wspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{)}
+         
+         \PY{k}{for} \PY{n}{co}\PY{p}{,}\PY{n}{run} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{colors}\PY{p}{,}\PY{n}{runs}\PY{p}{)}\PY{p}{:}
+             \PY{n}{vc}\PY{o}{.}\PY{n}{plot\PYZus{}residual}\PY{p}{(}\PY{n}{run}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{redshift}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{n}{xlog}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{co}\PY{p}{,}\PY{n}{points}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{)}
+             \PY{c+c1}{\PYZsh{} vc.plot\PYZus{}residual(run2,\PYZsq{}redshift\PYZsq{},ycol,ax=axs[0],xlog=False,color=\PYZsq{}b\PYZsq{},points=False,shift=0.01)}
+             \PY{n}{vc}\PY{o}{.}\PY{n}{plot\PYZus{}residual}\PY{p}{(}\PY{n}{run}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M200\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{xlog}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{co}\PY{p}{,}\PY{n}{points}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{,}\PY{n}{units}\PY{o}{=}\PY{l+s+sa}{r}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{  [\PYZdl{}M\PYZus{}\PYZob{}}\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{odot\PYZcb{}}\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{, h\PYZca{}\PYZob{}\PYZhy{}1\PYZcb{}\PYZdl{}]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{vc}\PY{o}{.}\PY{n}{plot\PYZus{}residual}\PY{p}{(}\PY{n}{run}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{xlog}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{co}\PY{p}{,}\PY{n}{points}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{)}
+             
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{l+m+mf}{0.4}\PY{p}{,}\PY{l+m+mf}{2.1}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{l+m+mf}{0.08}\PY{p}{,}\PY{l+m+mf}{0.72}\PY{p}{)}
+         
+         
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_40_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}32}]:} \PY{n}{ycol}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{R200}\PY{l+s+s1}{\PYZsq{}}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}33}]:} \PY{n}{fig}\PY{p}{,} \PY{n}{axs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{col}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{14}\PY{p}{)}\PY{p}{)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{,}\PY{n}{wspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{)}
+         
+         \PY{k}{for} \PY{n}{co}\PY{p}{,}\PY{n}{run} \PY{o+ow}{in} \PY{n+nb}{zip}\PY{p}{(}\PY{n}{colors}\PY{p}{,}\PY{n}{runs}\PY{p}{)}\PY{p}{:}
+             \PY{n}{vc}\PY{o}{.}\PY{n}{plot\PYZus{}residual}\PY{p}{(}\PY{n}{run}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{redshift}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{,}\PY{n}{xlog}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{co}\PY{p}{,}\PY{n}{points}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{)}
+             \PY{c+c1}{\PYZsh{} vc.plot\PYZus{}residual(run2,\PYZsq{}redshift\PYZsq{},ycol,ax=axs[0],xlog=False,color=\PYZsq{}b\PYZsq{},points=False,shift=0.01)}
+             \PY{n}{vc}\PY{o}{.}\PY{n}{plot\PYZus{}residual}\PY{p}{(}\PY{n}{run}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M200\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{xlog}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{co}\PY{p}{,}\PY{n}{points}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{,}\PY{n}{units}\PY{o}{=}\PY{l+s+sa}{r}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{  [\PYZdl{}M\PYZus{}\PYZob{}}\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{odot\PYZcb{}}\PY{l+s+s1}{\PYZbs{}}\PY{l+s+s1}{, h\PYZca{}\PYZob{}\PYZhy{}1\PYZcb{}\PYZdl{}]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n}{vc}\PY{o}{.}\PY{n}{plot\PYZus{}residual}\PY{p}{(}\PY{n}{run}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{xlog}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{n}{co}\PY{p}{,}\PY{n}{points}\PY{o}{=}\PY{n+nb+bp}{False}\PY{p}{)}
+             
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{l+m+mf}{0.25}\PY{p}{,}\PY{l+m+mf}{1.5}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xlim}\PY{p}{(}\PY{l+m+mf}{0.08}\PY{p}{,}\PY{l+m+mf}{0.72}\PY{p}{)}
+         
+         
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_42_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}34}]:} \PY{k}{def} \PY{n+nf}{plot\PYZus{}scatter\PYZus{}xvar}\PY{p}{(}\PY{n}{vc}\PY{p}{,}\PY{n}{xcol}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{runs}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n+nb+bp}{None}\PY{p}{,}\PY{n}{metric}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{scatter\PYZus{}nmad}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{:}
+             \PY{k}{if} \PY{n}{ax} \PY{o+ow}{is} \PY{n+nb+bp}{None}\PY{p}{:} \PY{n}{ax}\PY{o}{=}\PY{n}{plt}\PY{o}{.}\PY{n}{axes}\PY{p}{(}\PY{p}{)}
+             
+             \PY{k}{for} \PY{n}{run} \PY{o+ow}{in} \PY{n}{runs}\PY{p}{:}
+                 \PY{n}{xmean}\PY{p}{,}\PY{n}{ymean}\PY{p}{,}\PY{n}{sigma}\PY{p}{,}\PY{n}{of}\PY{p}{,}\PY{n}{lower}\PY{p}{,}\PY{n}{upper} \PY{o}{=} \PY{n}{vc}\PY{o}{.}\PY{n}{get\PYZus{}residual\PYZus{}metrics\PYZus{}binned}\PY{p}{(}\PY{n}{run}\PY{p}{,}\PY{n}{xcol}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{metric}\PY{o}{=}\PY{n}{metric}\PY{p}{)}
+                 \PY{n}{ymin}\PY{p}{,}\PY{n}{ymax} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n}{ymean}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{o}{*}\PY{n}{sigma}\PY{p}{)}\PY{p}{,}\PY{n}{np}\PY{o}{.}\PY{n}{mean}\PY{p}{(}\PY{n}{ymean}\PY{o}{+}\PY{l+m+mi}{3}\PY{o}{*}\PY{n}{sigma}\PY{p}{)}
+                 \PY{n}{xmin}\PY{p}{,}\PY{n}{xmax} \PY{o}{=} \PY{l+m+mf}{0.8}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{min}\PY{p}{(}\PY{n}{xmean}\PY{o}{\PYZhy{}}\PY{n}{lower}\PY{p}{)}\PY{p}{,}\PY{l+m+mf}{1.2}\PY{o}{*}\PY{n}{np}\PY{o}{.}\PY{n}{max}\PY{p}{(}\PY{n}{xmean}\PY{o}{+}\PY{n}{upper}\PY{p}{)}
+                 \PY{n}{ylabel} \PY{o}{=} \PY{l+s+sa}{r}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZdl{}}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{/}\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZus{}\PYZob{}true\PYZcb{}\PYZdl{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{\PYZpc{}}\PY{p}{(}\PY{n}{ycol}\PY{p}{,}\PY{n}{ycol}\PY{p}{)}
+                 \PY{n}{ax}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{xmean}\PY{p}{,}\PY{n}{sigma}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{label}\PY{o}{=}\PY{n}{run}\PY{p}{)}
+                 \PY{n}{ax}\PY{o}{.}\PY{n}{scatter}\PY{p}{(}\PY{n}{xmean}\PY{p}{,}\PY{n}{sigma}\PY{p}{)}
+         
+             \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}xlabel}\PY{p}{(}\PY{n}{xcol}\PY{p}{)}
+             \PY{n}{ax}\PY{o}{.}\PY{n}{set\PYZus{}ylabel}\PY{p}{(}\PY{n}{metric}\PY{p}{)}
+             \PY{n}{ax}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}35}]:} \PY{n}{ycol} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MU}\PY{l+s+s1}{\PYZsq{}}
+         
+         \PY{n}{fig}\PY{p}{,} \PY{n}{axs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{n}{sharex}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{row}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}  \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{14}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{)}\PY{p}{)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.3}\PY{p}{,}\PY{n}{wspace}\PY{o}{=}\PY{l+m+mf}{0.3}\PY{p}{)}
+         
+         \PY{n}{plot\PYZus{}scatter\PYZus{}xvar}\PY{p}{(}\PY{n}{vc}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{redshift}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{runs}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{metric}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bias}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{12}\PY{p}{,}\PY{n}{bbox\PYZus{}to\PYZus{}anchor}\PY{o}{=}\PY{p}{(}\PY{o}{.}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mf}{1.02}\PY{p}{)}\PY{p}{,} \PY{n}{loc}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{upper center}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{shadow}\PY{o}{=}\PY{n+nb+bp}{True}\PY{p}{,} \PY{n}{borderaxespad}\PY{o}{=}\PY{l+m+mf}{0.}\PY{p}{,}\PY{n}{ncol}\PY{o}{=}\PY{n+nb}{len}\PY{p}{(}\PY{n}{runs}\PY{p}{)}\PY{p}{,}\PY{n}{borderpad}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{plot\PYZus{}scatter\PYZus{}xvar}\PY{p}{(}\PY{n}{vc}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{redshift}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{runs}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{axhline}\PY{p}{(}\PY{l+m+mf}{0.2}\PY{p}{,}\PY{n}{ls}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{k}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{lw}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{plot\PYZus{}scatter\PYZus{}xvar}\PY{p}{(}\PY{n}{vc}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{runs}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{metric}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bias}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{plot\PYZus{}scatter\PYZus{}xvar}\PY{p}{(}\PY{n}{vc}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{runs}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{axhline}\PY{p}{(}\PY{l+m+mf}{0.2}\PY{p}{,}\PY{n}{ls}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{k}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{lw}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xscale}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{log}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xscale}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{log}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         
+         
+         \PY{c+c1}{\PYZsh{} axs[0].set\PYZus{}title(ycol,fontsize=22)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{tight\PYZus{}layout}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_44_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}36}]:} \PY{n}{mycols} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{redshift}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M200\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         \PY{n}{ycol} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals}\PY{l+s+s1}{\PYZsq{}}
+         
+         \PY{n}{fig}\PY{p}{,} \PY{n}{axs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{col}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{14}\PY{p}{)}\PY{p}{)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{,}\PY{n}{wspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{)}
+         
+         \PY{k}{for} \PY{n}{i}\PY{p}{,}\PY{n}{xcol} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{mycols}\PY{p}{)}\PY{p}{:}
+             \PY{n}{plot\PYZus{}scatter\PYZus{}xvar}\PY{p}{(}\PY{n}{vc}\PY{p}{,}\PY{n}{xcol}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{runs}\PY{p}{[}\PY{p}{:}\PY{p}{]}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}
+             \PY{k}{if} \PY{n}{i}\PY{o}{\PYZgt{}}\PY{l+m+mi}{0}\PY{p}{:} \PY{n}{axs}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xscale}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{log}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{n}{ycol}\PY{p}{,}\PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{22}\PY{p}{)}
+         
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_45_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}37}]:} \PY{n}{mycols} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{redshift}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M200\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         \PY{n}{ycol} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MU}\PY{l+s+s1}{\PYZsq{}}
+         
+         \PY{n}{fig}\PY{p}{,} \PY{n}{axs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{col}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{14}\PY{p}{)}\PY{p}{)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{,}\PY{n}{wspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{)}
+         
+         \PY{k}{for} \PY{n}{i}\PY{p}{,}\PY{n}{xcol} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{mycols}\PY{p}{)}\PY{p}{:}
+             \PY{n}{plot\PYZus{}scatter\PYZus{}xvar}\PY{p}{(}\PY{n}{vc}\PY{p}{,}\PY{n}{xcol}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{runs}\PY{p}{[}\PY{p}{:}\PY{p}{]}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}
+             \PY{k}{if} \PY{n}{i}\PY{o}{\PYZgt{}}\PY{l+m+mi}{0}\PY{p}{:} \PY{n}{axs}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xscale}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{log}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{n}{ycol}\PY{p}{,}\PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{22}\PY{p}{)}
+         
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_46_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}38}]:} \PY{n}{mycols} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{redshift}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M200\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         \PY{n}{ycol} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals}\PY{l+s+s1}{\PYZsq{}}
+         
+         \PY{n}{fig}\PY{p}{,} \PY{n}{axs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{col}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{14}\PY{p}{)}\PY{p}{)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{,}\PY{n}{wspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{)}
+         
+         \PY{k}{for} \PY{n}{i}\PY{p}{,}\PY{n}{xcol} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{mycols}\PY{p}{)}\PY{p}{:}
+             \PY{n}{plot\PYZus{}scatter\PYZus{}xvar}\PY{p}{(}\PY{n}{vc}\PY{p}{,}\PY{n}{xcol}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{runs}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{,}\PY{n}{metric}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bias}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{k}{if} \PY{n}{i}\PY{o}{\PYZgt{}}\PY{l+m+mi}{0}\PY{p}{:} \PY{n}{axs}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xscale}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{log}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{n}{ycol}\PY{p}{,}\PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{22}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{14}\PY{p}{)}
+         \PY{c+c1}{\PYZsh{} axs[0].get\PYZus{}legend().remove()}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.2}\PY{p}{,}\PY{l+m+mf}{0.3}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}38}]:} (-0.2, 0.3)
+\end{Verbatim}
+            
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_47_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}39}]:} \PY{n}{mycols} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{redshift}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M200\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         \PY{n}{ycol} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MU}\PY{l+s+s1}{\PYZsq{}}
+         
+         \PY{n}{fig}\PY{p}{,} \PY{n}{axs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{col}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{14}\PY{p}{)}\PY{p}{)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{,}\PY{n}{wspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{)}
+         
+         \PY{k}{for} \PY{n}{i}\PY{p}{,}\PY{n}{xcol} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{mycols}\PY{p}{)}\PY{p}{:}
+             \PY{n}{plot\PYZus{}scatter\PYZus{}xvar}\PY{p}{(}\PY{n}{vc}\PY{p}{,}\PY{n}{xcol}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{runs}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{,}\PY{n}{metric}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{bias}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{k}{if} \PY{n}{i}\PY{o}{\PYZgt{}}\PY{l+m+mi}{0}\PY{p}{:} \PY{n}{axs}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xscale}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{log}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{n}{ycol}\PY{p}{,}\PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{22}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{14}\PY{p}{)}
+         \PY{c+c1}{\PYZsh{} axs[0].get\PYZus{}legend().remove()}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.18}\PY{p}{,}\PY{l+m+mf}{0.07}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}39}]:} (-0.18, 0.07)
+\end{Verbatim}
+            
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_48_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}40}]:} \PY{n}{mycols} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{redshift}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{M200\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Ngals\PYZus{}true}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+         \PY{n}{ycol} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MU}\PY{l+s+s1}{\PYZsq{}}
+         
+         \PY{n}{fig}\PY{p}{,} \PY{n}{axs} \PY{o}{=} \PY{n}{plt}\PY{o}{.}\PY{n}{subplots}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{sharey}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{col}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{14}\PY{p}{)}\PY{p}{)}
+         \PY{n}{fig}\PY{o}{.}\PY{n}{subplots\PYZus{}adjust}\PY{p}{(}\PY{n}{hspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{,}\PY{n}{wspace}\PY{o}{=}\PY{l+m+mf}{0.4}\PY{p}{)}
+         
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}title}\PY{p}{(}\PY{n}{ycol}\PY{p}{,}\PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{22}\PY{p}{)}
+         \PY{k}{for} \PY{n}{i}\PY{p}{,}\PY{n}{xcol} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{mycols}\PY{p}{)}\PY{p}{:}
+             \PY{n}{plot\PYZus{}scatter\PYZus{}xvar}\PY{p}{(}\PY{n}{vc}\PY{p}{,}\PY{n}{xcol}\PY{p}{,}\PY{n}{ycol}\PY{p}{,}\PY{n}{runs}\PY{p}{,}\PY{n}{ax}\PY{o}{=}\PY{n}{axs}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{,}\PY{n}{metric}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{outlier\PYZus{}frac}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{k}{if} \PY{n}{i}\PY{o}{\PYZgt{}}\PY{l+m+mi}{0}\PY{p}{:} \PY{n}{axs}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}xscale}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{log}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+                 
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{get\PYZus{}legend}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{p}{)}
+         \PY{n}{axs}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{set\PYZus{}ylim}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mf}{0.02}\PY{p}{,}\PY{l+m+mf}{0.1}\PY{p}{)}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}40}]:} (-0.02, 0.1)
+\end{Verbatim}
+            
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_49_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}41}]:} \PY{c+c1}{\PYZsh{} import sys}
+         \PY{c+c1}{\PYZsh{} sys.path.append(\PYZdq{}/home/s1/jesteves/git/ccopa/python/\PYZdq{})}
+         
+         \PY{c+c1}{\PYZsh{} from main import copacabana}
+         
+         \PY{c+c1}{\PYZsh{} class viewClusters:}
+         \PY{c+c1}{\PYZsh{}     def \PYZus{}\PYZus{}init\PYZus{}\PYZus{}(self,cfg=\PYZsq{}/home/s1/jesteves/git/ccopa/config\PYZus{}files/config\PYZus{}buzzard\PYZus{}v2.yaml\PYZsq{},dataset=\PYZsq{}buzzard\PYZus{}v2\PYZsq{}):}
+         \PY{c+c1}{\PYZsh{}         self.copa = copacabana(cfg,dataset=dataset)}
+         
+         \PY{c+c1}{\PYZsh{}         self.models  = defaultdict(dict)}
+         \PY{c+c1}{\PYZsh{}         self.metrics = defaultdict(dict)}
+         
+         \PY{c+c1}{\PYZsh{}         self.predictors = [\PYZsq{}Ngals\PYZsq{},\PYZsq{}MU\PYZsq{},\PYZsq{}R200\PYZsq{}]}
+         \PY{c+c1}{\PYZsh{}         self.regressors = [\PYZsq{}Ngals\PYZus{}true\PYZsq{},\PYZsq{}MU\PYZus{}TRUE\PYZsq{},\PYZsq{}R200\PYZus{}true\PYZsq{}]}
+         \PY{c+c1}{\PYZsh{}         self.aux\PYZus{}vars   = [\PYZsq{}Ngals\PYZus{}true\PYZsq{},\PYZsq{}MU\PYZus{}TRUE\PYZsq{},\PYZsq{}R200\PYZus{}true\PYZsq{},\PYZsq{}redshift\PYZsq{},\PYZsq{}M200\PYZus{}true\PYZsq{}]}
+                 
+         \PY{c+c1}{\PYZsh{}         self.npredictors = len(self.predictors)}
+         \PY{c+c1}{\PYZsh{}         self.nauxialiars = len(self.aux\PYZus{}vars)}
+                 
+         \PY{c+c1}{\PYZsh{}         self.metric\PYZus{}funcs = \PYZob{}\PYZdq{}bias\PYZdq{}: bias\PYZus{}log\PYZus{}res,}
+         \PY{c+c1}{\PYZsh{}                              \PYZdq{}scatter\PYZus{}stdev\PYZdq{}: fractional\PYZus{}error\PYZus{}stdev,}
+         \PY{c+c1}{\PYZsh{}                              \PYZdq{}scatter\PYZus{}percentile\PYZdq{}: fractional\PYZus{}error\PYZus{}percentile,}
+         \PY{c+c1}{\PYZsh{}                              \PYZdq{}scatter\PYZus{}nmad\PYZdq{}: get\PYZus{}sigmaNMAD,}
+         \PY{c+c1}{\PYZsh{}                              \PYZdq{}outlier\PYZus{}frac\PYZdq{}: get\PYZus{}outlier\PYZus{}frac\PYZcb{}}
+         \PY{c+c1}{\PYZsh{}         pass}
+         
+         \PY{c+c1}{\PYZsh{}     def load\PYZus{}data(self,run\PYZus{}name):}
+         \PY{c+c1}{\PYZsh{}         dat = self.copa.load\PYZus{}copa\PYZus{}out(\PYZsq{}cluster\PYZsq{},run\PYZus{}name)}
+         \PY{c+c1}{\PYZsh{}         cat = dat[(dat[\PYZsq{}redshift\PYZsq{}]\PYZlt{}=0.7)\PYZam{}(dat[\PYZsq{}Ngals\PYZus{}true\PYZsq{}]\PYZgt{}0.)].copy()}
+         \PY{c+c1}{\PYZsh{}         \PYZsh{}self.df  = cat.to\PYZus{}pandas()}
+                 
+         \PY{c+c1}{\PYZsh{}         self.models[run\PYZus{}name][\PYZsq{}predictors\PYZsq{}] = np.array(cat[self.predictors])}
+         \PY{c+c1}{\PYZsh{}         self.models[run\PYZus{}name][\PYZsq{}regressors\PYZsq{}] = np.array(cat[self.regressors])}
+         \PY{c+c1}{\PYZsh{}         self.models[run\PYZus{}name][\PYZsq{}aux\PYZus{}vars\PYZsq{}]   = np.array(cat[self.aux\PYZus{}vars])}
+         \PY{c+c1}{\PYZsh{}         self.compute\PYZus{}residuals(run\PYZus{}name)}
+             
+         \PY{c+c1}{\PYZsh{}     def compute\PYZus{}resiudal\PYZus{}all(self):}
+         \PY{c+c1}{\PYZsh{}         runs = self.models.keys()}
+         \PY{c+c1}{\PYZsh{}         for run\PYZus{}name in runs:}
+         \PY{c+c1}{\PYZsh{}             self.compute\PYZus{}residuals(run\PYZus{}name)}
+                     
+         \PY{c+c1}{\PYZsh{}     def compute\PYZus{}residuals(self,run\PYZus{}name):}
+         \PY{c+c1}{\PYZsh{}         self.models[run\PYZus{}name][\PYZsq{}residual\PYZsq{}]     = np.full\PYZus{}like(self.models[run\PYZus{}name][\PYZsq{}predictors\PYZsq{}],\PYZhy{}99.)}
+         \PY{c+c1}{\PYZsh{}         self.models[run\PYZus{}name][\PYZsq{}log\PYZus{}residual\PYZsq{}] = np.full\PYZus{}like(self.models[run\PYZus{}name][\PYZsq{}predictors\PYZsq{}],\PYZhy{}99.)}
+         
+         \PY{c+c1}{\PYZsh{}         for colx,coly in zip(self.regressors,self.predictors):}
+         \PY{c+c1}{\PYZsh{}             x = self.models[run\PYZus{}name][\PYZsq{}regressors\PYZsq{}][colx]}
+         \PY{c+c1}{\PYZsh{}             y = self.models[run\PYZus{}name][\PYZsq{}predictors\PYZsq{}][coly]}
+         \PY{c+c1}{\PYZsh{}             res, log\PYZus{}res = get\PYZus{}frac\PYZus{}residual(x,y)}
+         \PY{c+c1}{\PYZsh{}             self.models[run\PYZus{}name][\PYZsq{}residual\PYZsq{}][coly] = res}
+         \PY{c+c1}{\PYZsh{}             self.models[run\PYZus{}name][\PYZsq{}log\PYZus{}residual\PYZsq{}][coly] = log\PYZus{}res}
+         
+         \PY{c+c1}{\PYZsh{}     def make\PYZus{}bins(self, runs, ngals\PYZus{}bins, mu\PYZus{}star\PYZus{}bins, r200\PYZus{}bins, zcls\PYZus{}bins, mass\PYZus{}bins):}
+         \PY{c+c1}{\PYZsh{}         mybins             = [ngals\PYZus{}bins, mu\PYZus{}star\PYZus{}bins, r200\PYZus{}bins, zcls\PYZus{}bins, mass\PYZus{}bins]}
+         \PY{c+c1}{\PYZsh{}         self.metrics[\PYZsq{}bins\PYZsq{}]= dict()}
+         \PY{c+c1}{\PYZsh{}         for jj,xbin in zip(self.aux\PYZus{}vars,mybins):}
+         \PY{c+c1}{\PYZsh{}             self.metrics[\PYZsq{}bins\PYZsq{}][jj]  = xbin}
+         \PY{c+c1}{\PYZsh{}             self.metrics[\PYZsq{}nbins\PYZsq{}][jj] = xbin.size \PYZhy{} 1}
+                 
+         \PY{c+c1}{\PYZsh{}         for run\PYZus{}name in runs:}
+         \PY{c+c1}{\PYZsh{}             labels,values = self.\PYZus{}make\PYZus{}bins(mybins,run\PYZus{}name)}
+         \PY{c+c1}{\PYZsh{}             self.models[run\PYZus{}name][\PYZsq{}bins\PYZus{}idx\PYZsq{}] = labels}
+         \PY{c+c1}{\PYZsh{}             self.models[run\PYZus{}name][\PYZsq{}bins\PYZus{}val\PYZsq{}] = values}
+                 
+         \PY{c+c1}{\PYZsh{}     def \PYZus{}make\PYZus{}bins(self,bins,run\PYZus{}name):}
+         \PY{c+c1}{\PYZsh{}         labels = np.full\PYZus{}like(self.models[run\PYZus{}name][\PYZsq{}aux\PYZus{}vars\PYZsq{}],\PYZhy{}99.)}
+         \PY{c+c1}{\PYZsh{}         values = np.full\PYZus{}like(self.models[run\PYZus{}name][\PYZsq{}aux\PYZus{}vars\PYZsq{}],\PYZhy{}99.)}
+         \PY{c+c1}{\PYZsh{}         for xbin,col in zip(bins,self.aux\PYZus{}vars):}
+         \PY{c+c1}{\PYZsh{}             x = self.models[run\PYZus{}name][\PYZsq{}aux\PYZus{}vars\PYZsq{}][col]}
+         \PY{c+c1}{\PYZsh{}             keys,xbins = get\PYZus{}bins(x,xbin)}
+         \PY{c+c1}{\PYZsh{}             labels[col]= keys}
+         \PY{c+c1}{\PYZsh{}             values[col]= xbins}
+         \PY{c+c1}{\PYZsh{}         return labels,values}
+         
+         \PY{c+c1}{\PYZsh{}     \PYZsh{}\PYZsh{}\PYZsh{} compute metrics}
+         \PY{c+c1}{\PYZsh{}     def compute\PYZus{}bin\PYZus{}statstics(self,run\PYZus{}name):}
+         \PY{c+c1}{\PYZsh{}         \PYZsh{}\PYZsh{} out: dict(\PYZsq{}xbins\PYZsq{},\PYZsq{}xmean\PYZsq{},\PYZsq{}nobjs\PYZsq{})}
+         \PY{c+c1}{\PYZsh{}         for jj in self.aux\PYZus{}vars:}
+         \PY{c+c1}{\PYZsh{}             id\PYZus{}bins = self.models[run\PYZus{}name][\PYZsq{}bins\PYZus{}idx\PYZsq{}][jj].astype(np.int)    }
+         \PY{c+c1}{\PYZsh{}             xs\PYZus{}vals = self.models[run\PYZus{}name][\PYZsq{}aux\PYZus{}vars\PYZsq{}][jj]}
+         \PY{c+c1}{\PYZsh{}             ys\PYZus{}true = self.models[run\PYZus{}name][\PYZsq{}predictors\PYZsq{}]}
+         \PY{c+c1}{\PYZsh{}             res     = self.models[run\PYZus{}name][\PYZsq{}residual\PYZsq{}]}
+                         
+         \PY{c+c1}{\PYZsh{}             nbins    = self.metrics[\PYZsq{}nbins\PYZsq{}][jj]}
+         \PY{c+c1}{\PYZsh{}             xbins    = self.metrics[\PYZsq{}bins\PYZsq{}][jj]}
+                     
+         \PY{c+c1}{\PYZsh{}             indices  = np.arange(nbins,dtype=np.int)}
+         \PY{c+c1}{\PYZsh{}             xmean    = get\PYZus{}binned\PYZus{}mean(xs\PYZus{}vals,xs\PYZus{}vals,xbins)\PYZsh{}0.5*(xbins[1:]+xbins[:\PYZhy{}1])}
+         \PY{c+c1}{\PYZsh{}             nobjs    = np.histogram(xs\PYZus{}vals,bins=xbins)[0]}
+                     
+         \PY{c+c1}{\PYZsh{}             ymean       = np.full\PYZus{}like(ys\PYZus{}true,np.nan)[:nbins]}
+         \PY{c+c1}{\PYZsh{}             resmean     = ymean.copy()}
+                     
+         \PY{c+c1}{\PYZsh{}             for ii in self.predictors:}
+         \PY{c+c1}{\PYZsh{}                 ymean[ii]     = get\PYZus{}binned\PYZus{}mean(xs\PYZus{}vals,ys\PYZus{}true[ii],xbins)}
+         \PY{c+c1}{\PYZsh{}                 resmean[ii]   = get\PYZus{}binned\PYZus{}mean(xs\PYZus{}vals,res[ii],xbins)}
+                         
+         \PY{c+c1}{\PYZsh{}             mydict   = \PYZob{}\PYZsq{}bins\PYZsq{}:indices,\PYZsq{}xbins\PYZsq{}:xbins,\PYZsq{}xmean\PYZsq{}:xmean,\PYZsq{}ymean\PYZsq{}:ymean,\PYZsq{}res\PYZus{}mean\PYZsq{}:resmean,}
+         \PY{c+c1}{\PYZsh{}                         \PYZsq{}nobjs\PYZsq{}:nobjs\PYZcb{}            }
+         \PY{c+c1}{\PYZsh{}             self.metrics[run\PYZus{}name][jj] = mydict}
+             
+         \PY{c+c1}{\PYZsh{}     def eval\PYZus{}metrics(self,run\PYZus{}name,metric):}
+         \PY{c+c1}{\PYZsh{}         ys\PYZus{}predict = self.models[run\PYZus{}name][\PYZsq{}predictors\PYZsq{}]}
+         \PY{c+c1}{\PYZsh{}         ys\PYZus{}true    = self.models[run\PYZus{}name][\PYZsq{}regressors\PYZsq{}]}
+                 
+         \PY{c+c1}{\PYZsh{}         dtypes      = [(col,\PYZsq{}\PYZlt{}f8\PYZsq{}) for col in self.predictors]}
+         \PY{c+c1}{\PYZsh{}         scores      = np.full((1,),\PYZhy{}99.,dtype=dtypes)}
+         \PY{c+c1}{\PYZsh{}         for ii,kk in zip(self.predictors,self.regressors):}
+         \PY{c+c1}{\PYZsh{}             scores[ii]  = self.metric\PYZus{}funcs[metric](ys\PYZus{}true[kk],ys\PYZus{}predict[ii])}
+         \PY{c+c1}{\PYZsh{}         self.metrics[run\PYZus{}name][metric] = scores}
+             
+         \PY{c+c1}{\PYZsh{}     def eval\PYZus{}all\PYZus{}metrics(self,run\PYZus{}name,binned=False):}
+         \PY{c+c1}{\PYZsh{}         \PYZsh{}\PYZsh{}\PYZsh{} func can be: eval\PYZus{}metrics\PYZus{}bin, eval\PYZus{}metrics}
+         \PY{c+c1}{\PYZsh{}         metrics= self.metric\PYZus{}funcs.keys()}
+         \PY{c+c1}{\PYZsh{}         if not binned:}
+         \PY{c+c1}{\PYZsh{}             for metric in metrics:}
+         \PY{c+c1}{\PYZsh{}                 self.eval\PYZus{}metrics(run\PYZus{}name, metric)}
+         \PY{c+c1}{\PYZsh{}         else:}
+         \PY{c+c1}{\PYZsh{}             for metric in metrics: }
+         \PY{c+c1}{\PYZsh{}                 self.eval\PYZus{}metrics\PYZus{}bin(run\PYZus{}name, metric)}
+         
+         \PY{c+c1}{\PYZsh{}     def eval\PYZus{}metrics\PYZus{}bin(self, run\PYZus{}name, metric):}
+         \PY{c+c1}{\PYZsh{}         \PYZsh{}error\PYZus{}message = f\PYZdq{}\PYZob{}run\PYZus{}name\PYZcb{} not yet trained\PYZdq{}}
+         \PY{c+c1}{\PYZsh{}         \PYZsh{}assert run\PYZus{}name in self.models, error\PYZus{}message}
+         
+         \PY{c+c1}{\PYZsh{}         ys\PYZus{}predict = self.models[run\PYZus{}name][\PYZsq{}predictors\PYZsq{}]}
+         \PY{c+c1}{\PYZsh{}         ys\PYZus{}true    = self.models[run\PYZus{}name][\PYZsq{}regressors\PYZsq{}]}
+         \PY{c+c1}{\PYZsh{}         xs\PYZus{}vals    = self.models[run\PYZus{}name][\PYZsq{}aux\PYZus{}vars\PYZsq{}]}
+                 
+         \PY{c+c1}{\PYZsh{}         for jj in self.aux\PYZus{}vars:}
+         \PY{c+c1}{\PYZsh{}             xbins   = self.metrics[run\PYZus{}name][jj][\PYZsq{}xbins\PYZsq{}]}
+         \PY{c+c1}{\PYZsh{}             dtypes      = [(col,\PYZsq{}\PYZlt{}f8\PYZsq{}) for col in self.predictors]}
+         \PY{c+c1}{\PYZsh{}             scores      = np.full\PYZus{}like(xbins[1:],\PYZhy{}99.,dtype=dtypes)}
+         \PY{c+c1}{\PYZsh{}             for ii,kk in zip(self.predictors,self.regressors):}
+         \PY{c+c1}{\PYZsh{}                 scores[ii]  = self.metrics\PYZus{}bin(metric, ys\PYZus{}true[kk],ys\PYZus{}predict[ii], xs\PYZus{}vals[jj], xbins)}
+         \PY{c+c1}{\PYZsh{}             self.metrics[run\PYZus{}name][jj][metric] = scores}
+         
+         \PY{c+c1}{\PYZsh{}     def metrics\PYZus{}bin(self,metric,ytrue,ypred,xvar,xbins):}
+         \PY{c+c1}{\PYZsh{}         error\PYZus{}message = (\PYZsq{}\PYZob{}\PYZcb{} not recognized! options are: \PYZob{}\PYZcb{}\PYZsq{}}
+         \PY{c+c1}{\PYZsh{}                          \PYZsq{}\PYZsq{}.format(metric, self.metric\PYZus{}funcs.keys()))}
+         \PY{c+c1}{\PYZsh{}         assert metric in self.metric\PYZus{}funcs, error\PYZus{}message}
+                 
+         \PY{c+c1}{\PYZsh{}         keys     = get\PYZus{}bins\PYZus{}group\PYZus{}indices(xvar,xbins)}
+         \PY{c+c1}{\PYZsh{}         ytrue\PYZus{}bin= group\PYZus{}by(ytrue,keys)\PYZsh{}get\PYZus{}bins\PYZus{}group(x,ytrue,xbins)}
+         \PY{c+c1}{\PYZsh{}         ypred\PYZus{}bin= group\PYZus{}by(ypred,keys)\PYZsh{}get\PYZus{}bins\PYZus{}group(x,ypred,xbins)\PYZsh{}[ypred[idx] for idx in keys]}
+                 
+         \PY{c+c1}{\PYZsh{}         nbins    = len(xbins)\PYZhy{}1}
+         \PY{c+c1}{\PYZsh{}         scores   = np.full\PYZus{}like(xbins[:\PYZhy{}1],\PYZhy{}99.,dtype=np.float64)}
+                 
+         \PY{c+c1}{\PYZsh{}         for i,yt,yp in zip(range(nbins),ytrue\PYZus{}bin,ypred\PYZus{}bin):}
+         \PY{c+c1}{\PYZsh{}             scores[i] = self.metric\PYZus{}funcs[metric](yt,yp)}
+         \PY{c+c1}{\PYZsh{}         return scores}
+         
+         \PY{c+c1}{\PYZsh{}     def show\PYZus{}metrics\PYZus{}table\PYZus{}all(self,run):}
+         \PY{c+c1}{\PYZsh{}         metrics= self.metric\PYZus{}funcs.keys()}
+         \PY{c+c1}{\PYZsh{}         mydict = dict.fromkeys(metrics)}
+         \PY{c+c1}{\PYZsh{}         for ycol in self.predictors:}
+         \PY{c+c1}{\PYZsh{}             for col in metrics:}
+         \PY{c+c1}{\PYZsh{}                 mydict[col] = np.append(mydict[col],self.metrics[run][col][ycol])}
+         \PY{c+c1}{\PYZsh{}         df = pd.DataFrame(mydict,index=[None]+self.predictors)[1:]}
+         \PY{c+c1}{\PYZsh{}         \PYZsh{}df.set\PYZus{}index(\PYZsq{}index\PYZsq{})}
+         \PY{c+c1}{\PYZsh{}         return df}
+                     
+         \PY{c+c1}{\PYZsh{}     def get\PYZus{}residual\PYZus{}metrics(self,run,ycol,log\PYZus{}residual=False):}
+         \PY{c+c1}{\PYZsh{}         bias = self.metrics[run][\PYZsq{}bias\PYZsq{}][ycol]+1}
+         \PY{c+c1}{\PYZsh{}         sigma= self.metrics[run][\PYZsq{}scatter\PYZus{}percentile\PYZsq{}][ycol]}
+         \PY{c+c1}{\PYZsh{}         sigma\PYZus{}nmad = self.metrics[run][\PYZsq{}scatter\PYZus{}nmad\PYZsq{}][ycol]}
+         \PY{c+c1}{\PYZsh{}         of   = self.metrics[run][\PYZsq{}outlier\PYZus{}frac\PYZsq{}][ycol]}
+         
+         \PY{c+c1}{\PYZsh{}         if log\PYZus{}residual:}
+         \PY{c+c1}{\PYZsh{}             bias,sigma = np.log10(bias), np.log10(sigma+1)}
+         \PY{c+c1}{\PYZsh{}             sigma\PYZus{}nmad = np.log10(sigma\PYZus{}nmad+1)}
+         \PY{c+c1}{\PYZsh{}         return bias,sigma,sigma\PYZus{}nmad,of}
+             
+         \PY{c+c1}{\PYZsh{}     def get\PYZus{}residual\PYZus{}metrics\PYZus{}binned(self,run,xcol,ycol,log\PYZus{}residual=False,metric=\PYZsq{}scatter\PYZus{}nmad\PYZsq{}):}
+         \PY{c+c1}{\PYZsh{}         xbins = self.metrics[run][xcol][\PYZsq{}xbins\PYZsq{}]}
+         \PY{c+c1}{\PYZsh{}         xmean = self.metrics[run][xcol][\PYZsq{}xmean\PYZsq{}]}
+         \PY{c+c1}{\PYZsh{}         bias  = self.metrics[run][xcol][\PYZsq{}bias\PYZsq{}][ycol]+1}
+         \PY{c+c1}{\PYZsh{}         sigma = self.metrics[run][xcol][metric][ycol]}
+         \PY{c+c1}{\PYZsh{}         of    = self.metrics[run][xcol][\PYZsq{}outlier\PYZus{}frac\PYZsq{}][ycol]}
+                 
+         \PY{c+c1}{\PYZsh{}         lower  = xmean\PYZhy{}xbins[:\PYZhy{}1]}
+         \PY{c+c1}{\PYZsh{}         upper  = xbins[1:]\PYZhy{}xmean}
+         \PY{c+c1}{\PYZsh{}         return xmean,bias,sigma,of,lower,upper}
+                 
+         \PY{c+c1}{\PYZsh{}     def plot\PYZus{}residual\PYZus{}distribution(self,run,ycol,axs=None,xlims=None,log\PYZus{}residual=False):}
+         \PY{c+c1}{\PYZsh{}         if axs is None: axs=plt.axes()}
+         \PY{c+c1}{\PYZsh{}         residual    = filter\PYZus{}nan\PYZus{}inf(self.models[run][\PYZsq{}residual\PYZsq{}][ycol])}
+         \PY{c+c1}{\PYZsh{}         log\PYZus{}res     = filter\PYZus{}nan\PYZus{}inf(self.models[run][\PYZsq{}log\PYZus{}residual\PYZsq{}][ycol])}
+         \PY{c+c1}{\PYZsh{}         mask        = get\PYZus{}oulier\PYZus{}mask(log\PYZus{}res)}
+         
+         \PY{c+c1}{\PYZsh{}         xlabel   = r\PYZsq{}\PYZdl{}\PYZpc{}s/\PYZpc{}s\PYZus{}\PYZob{}true\PYZcb{}\PYZdl{}\PYZsq{}\PYZpc{}(ycol,ycol)}
+         \PY{c+c1}{\PYZsh{}         units    = \PYZsq{}\PYZbs{}n\PYZsq{}}
+         \PY{c+c1}{\PYZsh{}         if log\PYZus{}residual:}
+         \PY{c+c1}{\PYZsh{}             residual = log\PYZus{}res}
+         \PY{c+c1}{\PYZsh{}             xlabel   = r\PYZsq{}Log(\PYZpc{}s)\PYZsq{}\PYZpc{}xlabel}
+         \PY{c+c1}{\PYZsh{}             units    = \PYZsq{}dex\PYZbs{}n\PYZsq{}}
+         
+         \PY{c+c1}{\PYZsh{}         bias,sigma,sigma\PYZus{}nmad,of = self.get\PYZus{}residual\PYZus{}metrics(run,ycol,log\PYZus{}residual=log\PYZus{}residual)}
+         \PY{c+c1}{\PYZsh{}         xmin,xmax   = np.nanpercentile(residual[residual\PYZgt{}\PYZhy{}99],[0,100])}
+         \PY{c+c1}{\PYZsh{}         xlo,xup     = bias\PYZhy{}2*sigma\PYZus{}nmad, bias+2*sigma\PYZus{}nmad}
+         
+         \PY{c+c1}{\PYZsh{}         if xlims is not None:}
+         \PY{c+c1}{\PYZsh{}             xmin,xmax = xlims}
+         
+         \PY{c+c1}{\PYZsh{}         l1 = r\PYZsq{}bias  : \PYZpc{}.2f \PYZpc{}s\PYZdl{}\PYZbs{}sigma\PYZus{}\PYZob{}NMAD\PYZcb{}\PYZdl{}: \PYZpc{}.2f \PYZpc{}s\PYZsq{}\PYZpc{}(bias,units,sigma\PYZus{}nmad,units)}
+         \PY{c+c1}{\PYZsh{}         l2 = r\PYZsq{}outlier: \PYZpc{}.2f\PYZsq{}\PYZpc{}(of)}
+         
+         \PY{c+c1}{\PYZsh{}         xbins = np.linspace(xmin,xmax,50)}
+         \PY{c+c1}{\PYZsh{}         \PYZus{} = axs.hist(residual,bins=xbins,label=l1,histtype=\PYZsq{}step\PYZsq{},lw=3)}
+         \PY{c+c1}{\PYZsh{}         \PYZus{} = axs.hist(residual[mask],bins=xbins,label=l2,histtype=\PYZsq{}step\PYZsq{},lw=3)}
+         \PY{c+c1}{\PYZsh{}         axs.axvline(bias,color=\PYZsq{}k\PYZsq{},ls=\PYZsq{}\PYZhy{}\PYZhy{}\PYZsq{})}
+         \PY{c+c1}{\PYZsh{}         axs.axvline(xup,color=\PYZsq{}r\PYZsq{},ls=\PYZsq{}\PYZhy{}\PYZhy{}\PYZsq{})}
+         \PY{c+c1}{\PYZsh{}         axs.axvline(xlo,color=\PYZsq{}r\PYZsq{},ls=\PYZsq{}\PYZhy{}\PYZhy{}\PYZsq{})}
+         
+         \PY{c+c1}{\PYZsh{}         \PYZsh{}plt.yscale(\PYZsq{}log\PYZsq{})}
+         \PY{c+c1}{\PYZsh{}         axs.set\PYZus{}xlabel(xlabel,fontsize=20)}
+         \PY{c+c1}{\PYZsh{}         axs.legend(fontsize=12)}
+         \PY{c+c1}{\PYZsh{}         axs.set\PYZus{}title(run,fontsize=14)}
+                 
+         \PY{c+c1}{\PYZsh{}     def get\PYZus{}binned\PYZus{}variables(self,xcol,ycol,run,metric=\PYZsq{}scatter\PYZus{}nmad\PYZsq{}):}
+         \PY{c+c1}{\PYZsh{}         \PYZsh{}\PYZsh{} get variables}
+         \PY{c+c1}{\PYZsh{}         x = self.models[run][\PYZsq{}regressors\PYZsq{}][xcol]}
+         \PY{c+c1}{\PYZsh{}         y = self.models[run][\PYZsq{}predictors\PYZsq{}][ycol]}
+                 
+         \PY{c+c1}{\PYZsh{}         xbins = self.metrics[run][xcol][\PYZsq{}xbins\PYZsq{}]}
+         \PY{c+c1}{\PYZsh{}         xb= self.metrics[run][xcol][\PYZsq{}xmean\PYZsq{}]\PYZsh{}0.5*(xbins[1:]+xbins[:\PYZhy{}1])\PYZsh{}self.metrics[run][xcol][\PYZsq{}xmean\PYZsq{}]}
+         \PY{c+c1}{\PYZsh{}         yb= self.metrics[run][xcol][\PYZsq{}ymean\PYZsq{}][ycol]}
+                 
+         \PY{c+c1}{\PYZsh{}         lower,upper = xb\PYZhy{}xbins[:\PYZhy{}1],xbins[1:]\PYZhy{}xb}
+                 
+         \PY{c+c1}{\PYZsh{}         yb\PYZus{}err= self.metrics[run][xcol][metric][ycol]}
+         \PY{c+c1}{\PYZsh{}         xb\PYZus{}err= [lower,upper]}
+                 
+         \PY{c+c1}{\PYZsh{}         xmin,xmax = 0.8*(np.nanmin(xbins)), 1.2*(np.nanmax(xbins))}
+         \PY{c+c1}{\PYZsh{}         xlims = (xmin,xmax)}
+                 
+         \PY{c+c1}{\PYZsh{}         mask  = np.logical\PYZus{}not(np.isnan(x)|np.isnan(y))}
+         \PY{c+c1}{\PYZsh{}         x = x[mask]}
+         \PY{c+c1}{\PYZsh{}         y = y[mask]}
+         \PY{c+c1}{\PYZsh{}         return x,y,xb,yb,xb\PYZus{}err,yb\PYZus{}err*xb,xlims}
+                 
+         \PY{c+c1}{\PYZsh{}     def plot\PYZus{}scaling\PYZus{}relation(self,xcol,ycol,run,color=\PYZsq{}r\PYZsq{},axs=None,xlims=None,points=False,metric=\PYZsq{}scatter\PYZus{}nmad\PYZsq{},fit=False,title=\PYZsq{}\PYZsq{},log\PYZus{}scale=True):}
+         \PY{c+c1}{\PYZsh{}         \PYZsh{}\PYZsh{} get variables}
+         \PY{c+c1}{\PYZsh{}         x,y,xb,yb,xb\PYZus{}err,yb\PYZus{}err,xlims0 = self.get\PYZus{}binned\PYZus{}variables(xcol,ycol,run,metric=metric)}
+         \PY{c+c1}{\PYZsh{}         if xlims is None: xlims=xlims0}
+         \PY{c+c1}{\PYZsh{}         \PYZus{}plot\PYZus{}scaling\PYZus{}relation(x,y,xb,yb,xb\PYZus{}err,yb\PYZus{}err,xlims,xcol,ycol,li=run,points=points,axs=axs,fit=fit,title=title,log\PYZus{}scale=log\PYZus{}scale,color=color)}
+             
+         \PY{c+c1}{\PYZsh{}     def plot\PYZus{}residual(self,run,xcol,ycol,ax=None,xlog=False,color=\PYZsq{}r\PYZsq{},points=True,units=\PYZsq{}\PYZsq{},shift=0.):}
+         \PY{c+c1}{\PYZsh{}         if ax is None: ax = plt.axes()}
+         \PY{c+c1}{\PYZsh{}         xmean,ymean,sigma,of,lower,upper = self.get\PYZus{}residual\PYZus{}metrics\PYZus{}binned(run,xcol,ycol,log\PYZus{}residual=False)}
+         \PY{c+c1}{\PYZsh{}         ymin,ymax = np.nanmean(ymean\PYZhy{}3*sigma),np.nanmean(ymean+3*sigma)}
+         \PY{c+c1}{\PYZsh{}         xmin,xmax = 0.8*np.nanmin(xmean\PYZhy{}lower),1.2*np.nanmax(xmean+upper)}
+         \PY{c+c1}{\PYZsh{}         ylabel = r\PYZsq{}\PYZdl{}\PYZpc{}s/\PYZpc{}s\PYZus{}\PYZob{}true\PYZcb{}\PYZdl{}\PYZsq{}\PYZpc{}(ycol,ycol)}
+         
+         \PY{c+c1}{\PYZsh{}         if points:}
+         \PY{c+c1}{\PYZsh{}             x  = self.models[run][\PYZsq{}aux\PYZus{}vars\PYZsq{}][xcol]}
+         \PY{c+c1}{\PYZsh{}             res= self.models[run][\PYZsq{}residual\PYZsq{}][ycol]}
+         \PY{c+c1}{\PYZsh{}             ax.scatter(x,res,color=color,alpha=0.3,s=40)}
+         
+         \PY{c+c1}{\PYZsh{}         ax.plot([xmin,xmax],[1.,1.],\PYZsq{}k\PYZhy{}\PYZhy{}\PYZsq{})}
+         \PY{c+c1}{\PYZsh{}         ax.errorbar(shift+xmean,ymean,xerr=[lower,upper],yerr=sigma,color=color, fmt=\PYZsq{}o\PYZsq{}, capsize=4, capthick=2,label=run)}
+         \PY{c+c1}{\PYZsh{}         ax.set\PYZus{}ylim(ymin,ymax)}
+         \PY{c+c1}{\PYZsh{}         ax.set\PYZus{}xlabel(xcol+units,fontsize=20)}
+         \PY{c+c1}{\PYZsh{}         ax.set\PYZus{}ylabel(ylabel,fontsize=20)}
+         \PY{c+c1}{\PYZsh{}         ax.legend()}
+         \PY{c+c1}{\PYZsh{}         if xlog:}
+         \PY{c+c1}{\PYZsh{}             ax.set\PYZus{}xscale(\PYZsq{}log\PYZsq{})}
+         
+         \PY{c+c1}{\PYZsh{} def group\PYZus{}by(x,keys):}
+         \PY{c+c1}{\PYZsh{}     return [x[idx] for idx in keys]}
+         
+         \PY{c+c1}{\PYZsh{} def get\PYZus{}bins\PYZus{}group\PYZus{}indices(x,bins):}
+         \PY{c+c1}{\PYZsh{}     idx  = np.argsort(x)}
+         \PY{c+c1}{\PYZsh{}     \PYZsh{}\PYZsh{} to avoid the boundary condition of the digitize function as xlow \PYZlt{}= x \PYZlt{} xup}
+         \PY{c+c1}{\PYZsh{}     mybins = bins.copy()}
+         \PY{c+c1}{\PYZsh{}     mybins[\PYZhy{}1] += 0.1}
+         \PY{c+c1}{\PYZsh{}     inds = np.digitize(x,mybins)}
+         \PY{c+c1}{\PYZsh{}     return np.split(idx, np.unique(inds[idx], return\PYZus{}index=True)[1][1:])}
+             
+         \PY{c+c1}{\PYZsh{} def get\PYZus{}bins\PYZus{}group(x,y,bins):}
+         \PY{c+c1}{\PYZsh{}     idx  = np.argsort(x)}
+         \PY{c+c1}{\PYZsh{}     \PYZsh{}\PYZsh{} to avoid the boundary condition of the digitize function as xlow \PYZlt{}= x \PYZlt{} xup}
+         \PY{c+c1}{\PYZsh{}     mybins = bins.copy()}
+         \PY{c+c1}{\PYZsh{}     mybins[\PYZhy{}1] += 0.1}
+         \PY{c+c1}{\PYZsh{}     inds = np.digitize(x,mybins)}
+         \PY{c+c1}{\PYZsh{}     return np.split(y[idx], np.unique(inds[idx], return\PYZus{}index=True)[1][1:])}
+             
+         \PY{c+c1}{\PYZsh{} def get\PYZus{}binned\PYZus{}mean(x,y,bins):}
+         \PY{c+c1}{\PYZsh{}     y     = filter\PYZus{}nan\PYZus{}inf(y)}
+         \PY{c+c1}{\PYZsh{}     y     = np.where(y==\PYZhy{}99,0.,y)}
+         \PY{c+c1}{\PYZsh{}     x     = filter\PYZus{}nan\PYZus{}inf(x)}
+         \PY{c+c1}{\PYZsh{}     sum\PYZus{}y = np.histogram(x, bins, weights=y)[0]}
+         \PY{c+c1}{\PYZsh{}     nobjs = np.histogram(x, bins)[0]}
+         \PY{c+c1}{\PYZsh{}     return sum\PYZus{}y/nobjs}
+             
+         \PY{c+c1}{\PYZsh{} def get\PYZus{}bins(variable,xedges):}
+         \PY{c+c1}{\PYZsh{}     nbins   = len(xedges)\PYZhy{}1}
+         \PY{c+c1}{\PYZsh{}     indices = np.full\PYZus{}like(variable,\PYZhy{}99,dtype=np.int)}
+         \PY{c+c1}{\PYZsh{}     xbins   = np.full\PYZus{}like(variable,\PYZhy{}99,dtype=np.float)}
+         
+         \PY{c+c1}{\PYZsh{}     means = (xedges[1:]+xedges[:\PYZhy{}1])/2.}
+         \PY{c+c1}{\PYZsh{}     for i in range(nbins):}
+         \PY{c+c1}{\PYZsh{}         idx = np.where((variable \PYZgt{}= xedges[i]) \PYZam{} (variable \PYZlt{}= xedges[i + 1]))[0]}
+         \PY{c+c1}{\PYZsh{}         xbins[idx]   = means[i]}
+         \PY{c+c1}{\PYZsh{}         indices[idx] = i}
+         \PY{c+c1}{\PYZsh{}     return indices, xbins}
+         
+         \PY{c+c1}{\PYZsh{} def get\PYZus{}log(x):}
+         \PY{c+c1}{\PYZsh{}     xlog = np.log10(x)}
+         \PY{c+c1}{\PYZsh{}     xlog[np.isinf(xlog)] = \PYZhy{}99}
+         \PY{c+c1}{\PYZsh{}     xlog[np.isnan(xlog)] = \PYZhy{}99}
+         \PY{c+c1}{\PYZsh{}     return xlog}
+         
+         \PY{c+c1}{\PYZsh{} def get\PYZus{}frac\PYZus{}residual(x,y):}
+         \PY{c+c1}{\PYZsh{}     res = y/(x+1e\PYZhy{}6)}
+         \PY{c+c1}{\PYZsh{}     log\PYZus{}res = get\PYZus{}log(res)}
+         \PY{c+c1}{\PYZsh{}     return res,log\PYZus{}res}
+         
+         \PY{c+c1}{\PYZsh{} def mad(data, axis=None):}
+         \PY{c+c1}{\PYZsh{}     return np.median(np.abs(data \PYZhy{} np.median(data)))}
+         
+         \PY{c+c1}{\PYZsh{} def median\PYZus{}absolute\PYZus{}dev(x,y):}
+         \PY{c+c1}{\PYZsh{}     res, log\PYZus{}res = get\PYZus{}frac\PYZus{}residual(x,y)}
+         \PY{c+c1}{\PYZsh{}     return 10**mad(log\PYZus{}res[log\PYZus{}res\PYZgt{}\PYZhy{}99])}
+         
+         \PY{c+c1}{\PYZsh{} def bias\PYZus{}log\PYZus{}res(x,y):}
+         \PY{c+c1}{\PYZsh{}     res, log\PYZus{}res = get\PYZus{}frac\PYZus{}residual(x,y)}
+         \PY{c+c1}{\PYZsh{}     mask = log\PYZus{}res\PYZgt{}\PYZhy{}99.}
+         \PY{c+c1}{\PYZsh{}     return 10**np.median(log\PYZus{}res[mask])\PYZhy{}1.}
+         
+         \PY{c+c1}{\PYZsh{} def fractional\PYZus{}error\PYZus{}stdev(x, y):}
+         \PY{c+c1}{\PYZsh{}     res, log\PYZus{}res = get\PYZus{}frac\PYZus{}residual(x,y)}
+         \PY{c+c1}{\PYZsh{}     score = np.std(log\PYZus{}res[log\PYZus{}res\PYZgt{}\PYZhy{}99])}
+         \PY{c+c1}{\PYZsh{}     return 10**score\PYZhy{}1.}
+         
+         \PY{c+c1}{\PYZsh{} def fractional\PYZus{}error\PYZus{}percentile(x, y):}
+         \PY{c+c1}{\PYZsh{}     res, log\PYZus{}res = get\PYZus{}frac\PYZus{}residual(x,y)}
+         \PY{c+c1}{\PYZsh{}     mask = log\PYZus{}res\PYZgt{}\PYZhy{}99.}
+         \PY{c+c1}{\PYZsh{}     if np.count\PYZus{}nonzero(mask)\PYZgt{}2:}
+         \PY{c+c1}{\PYZsh{}         p16 = np.percentile(log\PYZus{}res[mask], 16)}
+         \PY{c+c1}{\PYZsh{}         p84 = np.percentile(log\PYZus{}res[mask], 84)}
+         \PY{c+c1}{\PYZsh{}         score = 0.5*(p84\PYZhy{}p16)}
+         \PY{c+c1}{\PYZsh{}     else:}
+         \PY{c+c1}{\PYZsh{}         score = \PYZhy{}99}
+         \PY{c+c1}{\PYZsh{}     return 10**score\PYZhy{}1.}
+         
+         \PY{c+c1}{\PYZsh{} def get\PYZus{}sigmaNMAD(x,y):}
+         \PY{c+c1}{\PYZsh{}     sigmaNMAD = 1.4*(median\PYZus{}absolute\PYZus{}dev(x,y)\PYZhy{}1.)}
+         \PY{c+c1}{\PYZsh{}     return sigmaNMAD}
+         
+         \PY{c+c1}{\PYZsh{} def get\PYZus{}outlier\PYZus{}frac(x,y):}
+         \PY{c+c1}{\PYZsh{}     res, log\PYZus{}res = get\PYZus{}frac\PYZus{}residual(x,y)}
+         \PY{c+c1}{\PYZsh{}     sigmaNMAD = 1.4*mad(log\PYZus{}res[log\PYZus{}res\PYZgt{}\PYZhy{}99])}
+         \PY{c+c1}{\PYZsh{}     bias      = np.nanmedian(log\PYZus{}res[log\PYZus{}res\PYZgt{}\PYZhy{}99])}
+         \PY{c+c1}{\PYZsh{}     out       = np.where(np.abs((log\PYZus{}res\PYZhy{}bias)\PYZgt{}=3.*sigmaNMAD))[0]}
+         \PY{c+c1}{\PYZsh{}     frac      = 1.*out.size/x.size}
+         \PY{c+c1}{\PYZsh{}     return frac}
+         
+         \PY{c+c1}{\PYZsh{} def get\PYZus{}oulier\PYZus{}mask(log\PYZus{}res):}
+         \PY{c+c1}{\PYZsh{}     sigmaNMAD = 1.4*mad(log\PYZus{}res[log\PYZus{}res\PYZgt{}\PYZhy{}99])}
+         \PY{c+c1}{\PYZsh{}     bias      = np.nanmedian(log\PYZus{}res[log\PYZus{}res\PYZgt{}\PYZhy{}99])}
+         \PY{c+c1}{\PYZsh{}     out       = np.where(np.abs((log\PYZus{}res\PYZhy{}bias)\PYZgt{}=3.*sigmaNMAD))[0]}
+         \PY{c+c1}{\PYZsh{}     return out}
+             
+         \PY{c+c1}{\PYZsh{} def r2\PYZus{}score(x,y):}
+         \PY{c+c1}{\PYZsh{}     \PYZdq{}\PYZdq{}\PYZdq{} returns non\PYZhy{}aggregate version of r2 score.}
+         
+         \PY{c+c1}{\PYZsh{}     based on r2\PYZus{}score() function from sklearn (http://sklearn.org)}
+         \PY{c+c1}{\PYZsh{}     \PYZdq{}\PYZdq{}\PYZdq{}}
+         \PY{c+c1}{\PYZsh{}     res, log\PYZus{}res = get\PYZus{}frac\PYZus{}residual(x,y)}
+         \PY{c+c1}{\PYZsh{}     mask = log\PYZus{}res\PYZgt{}\PYZhy{}99.}
+         \PY{c+c1}{\PYZsh{}     return sklearn.metrics.r2\PYZus{}score(x[mask],y[mask]) }
+         
+         \PY{c+c1}{\PYZsh{} def filter\PYZus{}nan\PYZus{}inf(x):}
+         \PY{c+c1}{\PYZsh{}     mask = np.isinf(x)|np.isnan(x)}
+         \PY{c+c1}{\PYZsh{}     x[mask] = \PYZhy{}99.}
+         \PY{c+c1}{\PYZsh{}     return x}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}42}]:} \PY{c+c1}{\PYZsh{} def \PYZus{}plot\PYZus{}scaling\PYZus{}relation(x,y,xb,yb,xb\PYZus{}err,yb\PYZus{}err,xlims,xcol,ycol,li=\PYZsq{}\PYZus{}\PYZsq{},color=\PYZsq{}b\PYZsq{},points=False,axs=None,fit=False,title=\PYZsq{}\PYZsq{},log\PYZus{}scale=True):}
+         \PY{c+c1}{\PYZsh{}     if axs is None: axs = plt.axes()}
+             
+         \PY{c+c1}{\PYZsh{}     \PYZsh{}\PYZsh{} linear fit}
+         \PY{c+c1}{\PYZsh{}     linreg=lin\PYZus{}reg(x,y)}
+             
+         \PY{c+c1}{\PYZsh{}     idx = np.argsort(x)}
+         \PY{c+c1}{\PYZsh{}     xt,yh = x[idx],linreg[\PYZsq{}Yhat\PYZsq{}][idx]}
+         
+         \PY{c+c1}{\PYZsh{}     b0 = round(linreg[\PYZsq{}b0\PYZsq{}],3)}
+         \PY{c+c1}{\PYZsh{}     b1 = round(linreg[\PYZsq{}b1\PYZsq{}],3)}
+         \PY{c+c1}{\PYZsh{}     cb\PYZus{}u, cb\PYZus{}l = linreg[\PYZsq{}cb\PYZus{}u\PYZsq{}], linreg[\PYZsq{}cb\PYZus{}l\PYZsq{}]}
+             
+         \PY{c+c1}{\PYZsh{}     \PYZsh{}\PYZsh{} Plot}
+         \PY{c+c1}{\PYZsh{}     if fit:}
+         \PY{c+c1}{\PYZsh{}         axs.plot(xt,yh, color=\PYZdq{}r\PYZdq{},label=\PYZsq{}y=\PYZpc{}.2f+\PYZpc{}.2fx\PYZsq{}\PYZpc{}(b0,b1))}
+         \PY{c+c1}{\PYZsh{}         axs.fill\PYZus{}between(xt, cb\PYZus{}l, cb\PYZus{}u, color=\PYZdq{}gray\PYZdq{}, alpha=0.25, label=\PYZsq{}\PYZus{}nolabel\PYZus{}\PYZsq{})}
+         \PY{c+c1}{\PYZsh{}         axs.plot(xt,cb\PYZus{}l, color=\PYZdq{}r\PYZdq{}, label=\PYZsq{}\PYZus{}nolabel\PYZus{}\PYZsq{})}
+         \PY{c+c1}{\PYZsh{}         axs.plot(xt,cb\PYZus{}u, color=\PYZdq{}r\PYZdq{}, label=\PYZsq{}\PYZus{}nolabel\PYZus{}\PYZsq{})}
+         
+         \PY{c+c1}{\PYZsh{}     if points:}
+         \PY{c+c1}{\PYZsh{}         sc = axs.scatter(x,y,s=75, alpha=0.1, color=\PYZsq{}gray\PYZsq{})}
+         
+         \PY{c+c1}{\PYZsh{}     axs.errorbar(xb,yb,xerr=xb\PYZus{}err,yerr=yb\PYZus{}err,color=color,linewidth=2.,fmt=\PYZsq{}o\PYZsq{},label=li)}
+         \PY{c+c1}{\PYZsh{}     axs.plot(np.linspace(xlims[0],xlims[1]),np.linspace(xlims[0],xlims[1]),linestyle=\PYZsq{}\PYZhy{}\PYZhy{}\PYZsq{},color=\PYZsq{}k\PYZsq{})}
+             
+         \PY{c+c1}{\PYZsh{}     if log\PYZus{}scale:}
+         \PY{c+c1}{\PYZsh{}         xlims = np.where(xlims\PYZlt{}1.,2.,xlims)}
+         \PY{c+c1}{\PYZsh{}         axs.set\PYZus{}xscale(\PYZsq{}log\PYZsq{})}
+         \PY{c+c1}{\PYZsh{}         axs.set\PYZus{}yscale(\PYZsq{}log\PYZsq{})}
+             
+         \PY{c+c1}{\PYZsh{}     axs.set\PYZus{}ylim(xlims)}
+         \PY{c+c1}{\PYZsh{}     axs.set\PYZus{}xlim(xlims)}
+             
+         \PY{c+c1}{\PYZsh{}     axs.set\PYZus{}xlabel(xcol,fontsize=22)}
+         \PY{c+c1}{\PYZsh{}     axs.set\PYZus{}ylabel(ycol,fontsize=22)}
+         \PY{c+c1}{\PYZsh{}     axs.legend(fontsize=12)}
+             
+         \PY{c+c1}{\PYZsh{}     \PYZsh{}axs.set\PYZus{}title(run,fontsize=22)}
+         \PY{c+c1}{\PYZsh{}     \PYZsh{}fig.tight\PYZus{}layout()}
+         \PY{c+c1}{\PYZsh{} def lin\PYZus{}reg(X,Y):}
+         \PY{c+c1}{\PYZsh{}     barX=np.mean(X); barY=np.mean(Y)}
+         \PY{c+c1}{\PYZsh{}     XminusbarX=X\PYZhy{}barX; YminusbarY=Y\PYZhy{}barY}
+         \PY{c+c1}{\PYZsh{}     b1=sum(XminusbarX*YminusbarY)/sum(XminusbarX**2)}
+         \PY{c+c1}{\PYZsh{}     b0=barY\PYZhy{}b1*barX}
+         \PY{c+c1}{\PYZsh{}     Yhat=b0+b1*X}
+         \PY{c+c1}{\PYZsh{}     e\PYZus{}i=Y\PYZhy{}Yhat}
+         \PY{c+c1}{\PYZsh{}     sse=np.sum(e\PYZus{}i**2)}
+         \PY{c+c1}{\PYZsh{}     ssr=np.sum((Yhat\PYZhy{}barY )**2)}
+         \PY{c+c1}{\PYZsh{}     n=len(X)}
+         \PY{c+c1}{\PYZsh{}     MSE=sse/np.float(n\PYZhy{}2)}
+         
+         \PY{c+c1}{\PYZsh{}     s\PYZus{}of\PYZus{}yh\PYZus{}hat=np.sqrt(MSE*(1.0/n+(X\PYZhy{}barX)**2/sum(XminusbarX**2)))}
+         \PY{c+c1}{\PYZsh{}     W=np.sqrt(2.0*st.f.ppf(0.95,2,n\PYZhy{}2))}
+         
+         \PY{c+c1}{\PYZsh{}     cb\PYZus{}upper=Yhat+W*s\PYZus{}of\PYZus{}yh\PYZus{}hat}
+         \PY{c+c1}{\PYZsh{}     cb\PYZus{}lower=Yhat\PYZhy{}W*s\PYZus{}of\PYZus{}yh\PYZus{}hat}
+         \PY{c+c1}{\PYZsh{}     idx=np.argsort(X)}
+         
+         \PY{c+c1}{\PYZsh{}     return \PYZob{}\PYZsq{}Yhat\PYZsq{}:Yhat,\PYZsq{}b0\PYZsq{}:b0,\PYZsq{}b1\PYZsq{}:b1,\PYZsq{}cb\PYZus{}u\PYZsq{}:cb\PYZus{}upper[idx], \PYZsq{}cb\PYZus{}l\PYZsq{}: cb\PYZus{}lower[idx]\PYZcb{}}
+         
+             
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}43}]:} \PY{c+c1}{\PYZsh{} import seaborn as sns}
+         
+         \PY{c+c1}{\PYZsh{} def get\PYZus{}dataFrame\PYZus{}residual(vc,runs):}
+         \PY{c+c1}{\PYZsh{}     out = []}
+         \PY{c+c1}{\PYZsh{}     for run in runs:}
+         \PY{c+c1}{\PYZsh{}         df = pd.DataFrame(columns=[\PYZsq{}runs\PYZsq{}]+vc.predictors)}
+         \PY{c+c1}{\PYZsh{}         for col in vc.predictors:}
+         \PY{c+c1}{\PYZsh{}             res = vc.models[run][\PYZsq{}residual\PYZsq{}][col]}
+         \PY{c+c1}{\PYZsh{}             df[col] = res}
+         \PY{c+c1}{\PYZsh{}         df[\PYZsq{}runs\PYZsq{}]     = np.repeat(run,len(res))}
+         \PY{c+c1}{\PYZsh{}         out.append(df)}
+         \PY{c+c1}{\PYZsh{}     odf = pd.concat(out)}
+         \PY{c+c1}{\PYZsh{}     return odf}
+         
+         \PY{c+c1}{\PYZsh{} def box\PYZus{}plot(planets,ycol,ax=None,xlims=(0.,2.6)):}
+         \PY{c+c1}{\PYZsh{}     \PYZsh{}f, ax = plt.subplots(figsize=(7, 6))}
+             
+         \PY{c+c1}{\PYZsh{}     \PYZsh{} Plot the orbital period with horizontal boxes}
+         \PY{c+c1}{\PYZsh{}     sns.boxplot(x=ycol, y=\PYZdq{}runs\PYZdq{}, data=planets,}
+         \PY{c+c1}{\PYZsh{}                 whis=[4, 96], width=.6, palette=\PYZdq{}husl\PYZdq{},ax=ax)}
+         
+         \PY{c+c1}{\PYZsh{}     \PYZsh{} Add in points to show each observation}
+         \PY{c+c1}{\PYZsh{}     \PYZsh{} sns.stripplot(x=ycol, y=\PYZdq{}runs\PYZdq{}, data=planets,}
+         \PY{c+c1}{\PYZsh{}     \PYZsh{}               size=2, color=\PYZdq{}.3\PYZdq{}, linewidth=0)}
+         
+         \PY{c+c1}{\PYZsh{}     \PYZsh{} Tweak the visual presentation}
+         \PY{c+c1}{\PYZsh{}     ax.xaxis.grid(True)}
+         \PY{c+c1}{\PYZsh{}     ax.set\PYZus{}xlim(xlims)}
+         \PY{c+c1}{\PYZsh{}     ax.set(ylabel=\PYZdq{}\PYZdq{})}
+         \PY{c+c1}{\PYZsh{}     ax.set\PYZus{}xlabel(\PYZsq{}\PYZdl{}\PYZpc{}s/\PYZpc{}s\PYZus{}\PYZob{}TRUE\PYZcb{}\PYZdl{}\PYZsq{}\PYZpc{}(ycol,ycol),fontsize=18)}
+         \PY{c+c1}{\PYZsh{}     \PYZsh{}sns.despine(trim=True, left=True,ax=ax)}
+\end{Verbatim}
+
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}
