@@ -1,9 +1,9 @@
 ##### Buzzard v2.0 imput files
 ## copacabana master files
-members_infile   : /data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/tiles/buzzard_y3_v2.0.0_redmapper_heidi_lgt5_lw20_copper_hpx8_{:05d}.hdf5
-cluster_infile   : /data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/halos/buzzard-1.9.8_3y3a_run_halos_lambda_lgt5_lw20.fits
-master_outfile   : /data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/output/buzzard_v2.0.0_rm_lgt5_lw20_copa_{:05d}.hdf5
-columns_yaml_file: /home/s1/jesteves/git/ccopa/config_files/buzzard_v2_grc_columns.yaml
+members_infile   : /data/des61.a/data/johnny/Buzzard/Buzzard-3_v1.9.8_Y3a/catalog/y3/buzzard_y3_v1.9.8_all_raw_hpx8_{:06d}.hdf
+cluster_infile   : /data/des61.a/data/johnny/Buzzard/Buzzard_v2.0.0/y3_rm/halos/buzzard-1.9.8_3y3a_run_halos_lambda_chisq_mu_star_hpx.fit
+master_outfile   : /data/des61.a/data/johnny/Buzzard/Buzzard-3_v1.9.8_Y3a/output/buzzard_y3_v1.9.8_all_copa_{:06d}.hdf5
+columns_yaml_file: /data/des61.a/data/johnny/DESY3/projects/buzzardAllHalos/CopacabanaRuns/analysis/aux_files/buzzard_v2_grc_columns.yaml
 pixelmap_file    : 
 
 
@@ -41,16 +41,12 @@ z_model_file : /home/s1/jesteves/git/ccopa/aux_files/zwindow_model_buzzard_dnf.t
 
 ## Healpixel config
 healpixel_setup : True
-#healpixel_list  : [0, 256, 257, 260]
 ## for the whole sample use the pixel list below
-healpixel_list  : [541, 542, 543, 544, 545, 546, 547, 548, 549, 550]
-
-                   #  530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540]
-                   #, 519, ]
+healpixel_list  : [   0,    1,    2,    3]
 
 ######## bma setup #######
 ## paralell
-bma_number_of_chunks: 1000
+bma_number_of_chunks: 1500
 
 ## stellar population libray file
 lib_inPath: /data/des61.a/data/pbarchi/galaxyClusters/simha_miles_Nov2016/
