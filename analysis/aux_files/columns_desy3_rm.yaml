@@ -4,8 +4,8 @@
 HALOID   : MEM_MATCH_ID
 RA       : RA
 DEC      : DEC
-redshift : Z_LAMBDA
-M200_true: LAMBDA_CHISQ
+redshift : REDSHIFT
+M200_true: M200
 R200_true: R_LAMBDA
 tile     : tile
 MASKFRAC : SCALEVAL 

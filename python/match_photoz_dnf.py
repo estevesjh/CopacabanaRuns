@@ -1,3 +1,8 @@
+################## README ##################
+# The y3kp h5 file does not have DNF_ZSIGMA_SOF
+# I created a full y3kp DNF file by retrieving the DNF sample from the ilinois des server
+# Here I match the DNF files with the cutouts
+
 import numpy as np
 import os
 import h5py
@@ -15,7 +20,7 @@ def print_fractions(m,x1,x2):
     print('Fraction 1: %.3f'%(1.*m[0].size/len(x1)))
     print('Fraction 2: %.3f'%(1.*m[1].size/len(x2)))
 
-path0 = '/data/des61.a/data/johnny/DESY3/data/photoz/dnf_gold_2_2/'
+path0 = '/data/des61.a/data/johnny/DESY3/desy3/data/photoz/dnf_gold_2_2/'
 infile = path0+ 'dnf_mag23_5_{:06d}.fits'
 
 path  = '/data/des81.b/data/mariaeli/y3_cats/full/'
@@ -32,9 +37,10 @@ infile1 = path1+'spec_y3_gold_2_2_27JUN19_photoz.fits'
 # outfile = path0+'Y3_GOLD_2_2.1_DNF_subsampled_jesteves.h5'
 outfile = path0+'Y3_GOLD_2_2.1_DNF_12_3_19_full_jesteves.h5'
 
-cutouts = '/data/des61.a/data/johnny/DESY3/data/cutouts/'
-cluster_file = cutouts+'y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full.fits'
-outfile_base = cutouts+'y3_gold_2.2.1_wide_sofcol_run_redmapper_v6.4.22_wv1.2_full_hpx8_{:05d}.hdf5'
+
+cutouts = '/data/des61.a/data/johnny/DESY3/desy3/data/spt/cutouts/'
+cluster_file = '/data/des61.a/data/johnny/DESY3/desy3/data/spt/join_2500d_sptecs.fits'
+outfile_base = cutouts+'y3_gold_2.2.1_wide_sofcol_run_join_2500d_sptecs_hpx2_{:05d}.hdf5'
 
 ## loading dataset
 # spec redshift sample
@@ -144,10 +150,12 @@ indexes= h5py.File(outfile,'r')
 dnf    = indexes['catalog']
 d_cid  = dnf['coadd_object_id'][:][:]
 d_z    = dnf[u'DNF_ZMEAN_SOF'][:][:]
+d_zmc  = dnf[u'DNF_ZMC_SOF'][:][:]
 d_zt   = dnf[u'Z'][:][:]
 d_zerr = dnf[u'DNF_ZSIGMA_SOF'][:][:]
 d_indices = dnf[u'indices'][:][:]
 indexes.close()
+
 
 for hi in tiles:
     outfile = outfile_base.format(hi)
@@ -160,10 +168,11 @@ for hi in tiles:
         idx = np.array(gi['index'])
         match = esutil.numpy_util.match(idx,d_indices)
         
-        gi = initiate_columns(gi,columns=['z','z_mean_dnf','z_sigma_dnf'])
+        gi = initiate_columns(gi,columns=['z', 'z_mc_dnf','z_mean_dnf','z_sigma_dnf'])
         gi['z'][match[0]] = d_zt[match[1]]
         gi['z_mean_dnf'][match[0]] = d_z[match[1]]
         gi['z_sigma_dnf'][match[0]] = d_zerr[match[1]]
+        gi['z_mc_dnf'][match[0]] = d_zmc[match[1]]
 
         fdnf = float(1.*match[0].size/len(gi))
         ci['fraction_dnf'] = fdnf

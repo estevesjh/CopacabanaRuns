@@ -12,7 +12,7 @@ from make_input_files.make_photoz_pz import generate_photoz_models
 t0 = time()
 
 root = '/data/des61.a/data/johnny/DESY3/projects/CopacabanaRuns/analysis/aux_files/'
-cfg  = root+'config_desy3_rm_full_04.yaml'
+cfg  = root+'config_desy3_spt.yaml'
 copa = copacabana(cfg,dataset='des_y3')
 
 ## Making input files
@@ -32,8 +32,8 @@ print('Running time: %.2f min' % (time_mag_model))
 
 
 ## DNF Model
-outfile1=root+'modelDNF_correction_z_gold_2_2.txt'
-outfile2=root+'modelDNF_correction_z_gold_2_2.txt'
+outfile1=root+'spt_ecs_2500d_correction.txt'
+outfile2=root+'spt_ecs_2500d_correction.txt'
 
 generate_photoz_models('bias',copa.master_fname_tile_list,0.03,
                        zwindow_file=outfile2,zerror_file=outfile1,
