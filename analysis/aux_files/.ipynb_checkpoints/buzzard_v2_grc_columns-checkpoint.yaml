@@ -1,0 +1,24 @@
+## Buzzard v2.0.0.3 from GCRCatalogs
+
+# cluster_columns
+HALOID   : haloid
+RA       : RA
+DEC      : DEC
+redshift : Z_COS
+M200_true: M200
+R200_true: R200
+tile     : hpx32
+
+# master_columns
+---
+HALOID: haloid
+GID   : id
+RA    : ra
+DEC   : dec
+z_true: z
+z     : z_mean_dnf
+zerr  : z_sigma_dnf
+Mr    : mag_r
+mag   : ['mag_g','mag_r','mag_i','mag_z']
+magerr: ['mag_err_g','mag_err_r','mag_err_i','mag_err_z']
+tile  : tile
