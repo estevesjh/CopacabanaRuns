@@ -30,7 +30,7 @@ r_aper_model : r200
 r_aper_value : 
 
 ## parallel process
-copa_number_of_chunks: 200
+copa_number_of_chunks: 900
 
 ## Photo-z setup
 # 1st model: a gaussian distribution centered on zcls with a std of z_window
